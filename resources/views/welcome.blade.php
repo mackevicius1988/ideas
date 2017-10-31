@@ -263,8 +263,8 @@
                         <div class="widget" style="margin-bottom: 10px">
                             <form class="" role="form">
                                 <div class="search-wrap">
-                                    <button class="search-button" type="submit" title="Start Search">
-                                        <i class="fa fa-search"></i>
+                                    <button class="search-button" type="submit" >
+                                        <i class="fa fa-sort"></i>
                                     </button>
                                     <select name="sortBy" id="orderBy" class="input-field">
                                         <option value="votes">Popularity</option>
@@ -332,6 +332,14 @@
                         $(this).parent().find('.details').removeClass("active");
                     }
                 );
+            })
+
+
+            $(function () {
+                $('.rememberMe').click(function(e) {
+                    localStorage.setItem('ids', $(this).data('id'));
+                    $(this).toggleClass('categorySelected');
+                });
             })
 
             $(function () {
@@ -539,36 +547,39 @@
                                 }
 
                                 Preview.prototype = {
-                                    create: function () {
+                                    create : function() {
                                         // create Preview structure:
-                                        this.$title = $('<h3></h3>');
-                                        this.$price = $('<h2></h2> ');
-                                        this.$description = $('<p></p>');
-                                        this.$href = $('<a href="#">Buy now</a>');
-                                        this.$details = $('<div class="og-details"></div>').append(this.$title, this.$price, this.$description, this.$href);
-                                        this.$loading = $('<div class="og-loading"></div>');
-                                        this.$fullimage = $('<div class="og-fullimg"></div>').append(this.$loading);
-                                        this.$closePreview = $('<span class="og-close"></span>');
-                                        this.$previewInner = $('<div class="og-expander-inner"></div>').append(this.$closePreview, this.$fullimage, this.$details);
-                                        this.$previewEl = $('<div class="og-expander"></div>').append(this.$previewInner);
+                                        this.$title = $( '<h3></h3>' );
+                                        this.$price = $( '<h2></h2> ' );
+
+                                        this.$description = $( '<p></p>' );
+                                        this.$href = $( '<a  target="_blank" href="#">Buy now</a>' );
+                                        this.$post = $( '<a style="margin-left: 10px" href="#">View details</a>' );
+
+                                        this.$details = $( '<div class="og-details"></div>' ).append( this.$title,this.$price, this.$description, this.$href, this.$post );
+                                        this.$loading = $( '<div class="og-loading"></div>' );
+                                        this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
+                                        this.$closePreview = $( '<span class="og-close"></span>' );
+                                        this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
+                                        this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
                                         // append preview element to the item
-                                        this.$item.append(this.getEl());
+                                        this.$item.append( this.getEl() );
                                         // set the transitions for the preview and the item
-                                        if (support) {
+                                        if( support ) {
                                             this.setTransition();
                                         }
                                     },
-                                    update: function ($item) {
+                                    update : function( $item ) {
 
-                                        if ($item) {
+                                        if( $item ) {
                                             this.$item = $item;
                                         }
 
                                         // if already expanded remove class "og-expanded" from current item and add it to new item
-                                        if (current !== -1) {
-                                            var $currentItem = $items.eq(current);
-                                            $currentItem.removeClass('og-expanded');
-                                            this.$item.addClass('og-expanded');
+                                        if( current !== -1 ) {
+                                            var $currentItem = $items.eq( current );
+                                            $currentItem.removeClass( 'og-expanded' );
+                                            this.$item.addClass( 'og-expanded' );
                                             // position the preview correctly
                                             this.positionPreview();
                                         }
@@ -577,134 +588,136 @@
                                         current = this.$item.index();
 
                                         // update preview´s content
-                                        var $itemEl = this.$item.children('a'),
+                                        var $itemEl = this.$item.children( 'a' ),
                                             eldata = {
-                                                href: $itemEl.attr('href'),
-                                                largesrc: $itemEl.data('largesrc'),
-                                                title: $itemEl.data('title'),
-                                                price: $itemEl.data('price') + ' bucks',
-                                                description: $itemEl.data('description')
+                                                href : $itemEl.attr( 'href' ),
+                                                largesrc : $itemEl.data( 'largesrc' ),
+                                                title : $itemEl.data( 'title' ),
+                                                price : $itemEl.data( 'price' ) + ' $',
+                                                description : $itemEl.data( 'description' ),
+                                                post : $itemEl.data( 'id' )
                                             };
 
-                                        this.$title.html(eldata.title);
-                                        this.$price.html(eldata.price);
-                                        this.$description.html(eldata.description);
-                                        this.$href.attr('href', eldata.href);
+                                        this.$title.html( eldata.title );
+                                        this.$price.html( eldata.price );
+                                        this.$description.html( eldata.description );
+                                        this.$href.attr( 'href', eldata.href );
+                                        this.$post.attr( 'href', eldata.post );
 
                                         var self = this;
 
                                         // remove the current image in the preview
-                                        if (typeof self.$largeImg != 'undefined') {
+                                        if( typeof self.$largeImg != 'undefined' ) {
                                             self.$largeImg.remove();
                                         }
 
                                         // preload large image and add it to the preview
                                         // for smaller screens we don´t display the large image (the media query will hide the fullimage wrapper)
-                                        if (self.$fullimage.is(':visible')) {
+                                        if( self.$fullimage.is( ':visible' ) ) {
                                             this.$loading.show();
-                                            $('<img/>').load(function () {
-                                                var $img = $(this);
-                                                if ($img.attr('src') === self.$item.children('a').data('largesrc')) {
+                                            $( '<img/>' ).load( function() {
+                                                var $img = $( this );
+                                                if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
                                                     self.$loading.hide();
-                                                    self.$fullimage.find('img').remove();
-                                                    self.$largeImg = $img.fadeIn(350);
-                                                    self.$fullimage.append(self.$largeImg);
+                                                    self.$fullimage.find( 'img' ).remove();
+                                                    self.$largeImg = $img.fadeIn( 350 );
+                                                    self.$fullimage.append( self.$largeImg );
                                                 }
-                                            }).attr('src', eldata.largesrc);
+                                            } ).attr( 'src', eldata.largesrc );
                                         }
 
                                     },
-                                    open: function () {
+                                    open : function() {
 
-                                        setTimeout($.proxy(function () {
+                                        setTimeout( $.proxy( function() {
                                             // set the height for the preview and the item
                                             this.setHeights();
                                             // scroll to position the preview in the right place
                                             this.positionPreview();
-                                        }, this), 25);
+                                        }, this ), 25 );
 
                                     },
-                                    close: function () {
+                                    close : function() {
 
                                         var self = this,
-                                            onEndFn = function () {
-                                                if (support) {
-                                                    $(this).off(transEndEventName);
+                                            onEndFn = function() {
+                                                if( support ) {
+                                                    $( this ).off( transEndEventName );
                                                 }
-                                                self.$item.removeClass('og-expanded');
+                                                self.$item.removeClass( 'og-expanded' );
                                                 self.$previewEl.remove();
                                             };
 
-                                        setTimeout($.proxy(function () {
+                                        setTimeout( $.proxy( function() {
 
-                                            if (typeof this.$largeImg !== 'undefined') {
-                                                this.$largeImg.fadeOut('fast');
+                                            if( typeof this.$largeImg !== 'undefined' ) {
+                                                this.$largeImg.fadeOut( 'fast' );
                                             }
-                                            this.$previewEl.css('height', 0);
+                                            this.$previewEl.css( 'height', 0 );
                                             // the current expanded item (might be different from this.$item)
-                                            var $expandedItem = $items.eq(this.expandedIdx);
-                                            $expandedItem.css('height', $expandedItem.data('height')).on(transEndEventName, onEndFn);
+                                            var $expandedItem = $items.eq( this.expandedIdx );
+                                            $expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
 
-                                            if (!support) {
+                                            if( !support ) {
                                                 onEndFn.call();
                                             }
 
-                                        }, this), 25);
+                                        }, this ), 25 );
 
                                         return false;
 
                                     },
-                                    calcHeight: function () {
+                                    calcHeight : function() {
 
-                                        var heightPreview = winsize.height - this.$item.data('height') - marginExpanded,
+                                        var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
                                             itemHeight = winsize.height;
 
-                                        if (heightPreview < settings.minHeight) {
+                                        if( heightPreview < settings.minHeight ) {
                                             heightPreview = settings.minHeight;
-                                            itemHeight = settings.minHeight + this.$item.data('height') + marginExpanded;
+                                            itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
                                         }
 
                                         this.height = heightPreview;
                                         this.itemHeight = itemHeight;
 
                                     },
-                                    setHeights: function () {
+                                    setHeights : function() {
 
                                         var self = this,
-                                            onEndFn = function () {
-                                                if (support) {
-                                                    self.$item.off(transEndEventName);
+                                            onEndFn = function() {
+                                                if( support ) {
+                                                    self.$item.off( transEndEventName );
                                                 }
-                                                self.$item.addClass('og-expanded');
+                                                self.$item.addClass( 'og-expanded' );
                                             };
 
                                         this.calcHeight();
-                                        this.$previewEl.css('height', this.height);
-                                        this.$item.css('height', this.itemHeight).on(transEndEventName, onEndFn);
+                                        this.$previewEl.css( 'height', this.height );
+                                        this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
 
-                                        if (!support) {
+                                        if( !support ) {
                                             onEndFn.call();
                                         }
 
                                     },
-                                    positionPreview: function () {
+                                    positionPreview : function() {
 
                                         // scroll page
                                         // case 1 : preview height + item height fits in window´s height
                                         // case 2 : preview height + item height does not fit in window´s height and preview height is smaller than window´s height
                                         // case 3 : preview height + item height does not fit in window´s height and preview height is bigger than window´s height
-                                        var position = this.$item.data('offsetTop'),
+                                        var position = this.$item.data( 'offsetTop' ),
                                             previewOffsetT = this.$previewEl.offset().top - scrollExtra,
-                                            scrollVal = this.height + this.$item.data('height') + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
+                                            scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
 
-                                        $body.animate({scrollTop: scrollVal}, settings.speed);
+                                        $body.animate( { scrollTop : scrollVal }, settings.speed );
 
                                     },
-                                    setTransition: function () {
-                                        this.$previewEl.css('transition', 'height ' + settings.speed + 'ms ' + settings.easing);
-                                        this.$item.css('transition', 'height ' + settings.speed + 'ms ' + settings.easing);
+                                    setTransition  : function() {
+                                        this.$previewEl.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
+                                        this.$item.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
                                     },
-                                    getEl: function () {
+                                    getEl : function() {
                                         return this.$previewEl;
                                     }
                                 }
@@ -1341,36 +1354,39 @@
                                 }
 
                                 Preview.prototype = {
-                                    create: function () {
+                                    create : function() {
                                         // create Preview structure:
-                                        this.$title = $('<h3></h3>');
-                                        this.$price = $('<h2></h2> ');
-                                        this.$description = $('<p></p>');
-                                        this.$href = $('<a href="#">Buy now</a>');
-                                        this.$details = $('<div class="og-details"></div>').append(this.$title, this.$price, this.$description, this.$href);
-                                        this.$loading = $('<div class="og-loading"></div>');
-                                        this.$fullimage = $('<div class="og-fullimg"></div>').append(this.$loading);
-                                        this.$closePreview = $('<span class="og-close"></span>');
-                                        this.$previewInner = $('<div class="og-expander-inner"></div>').append(this.$closePreview, this.$fullimage, this.$details);
-                                        this.$previewEl = $('<div class="og-expander"></div>').append(this.$previewInner);
+                                        this.$title = $( '<h3></h3>' );
+                                        this.$price = $( '<h2></h2> ' );
+
+                                        this.$description = $( '<p></p>' );
+                                        this.$href = $( '<a  target="_blank" href="#">Buy now</a>' );
+                                        this.$post = $( '<a style="margin-left: 10px" href="#">View details</a>' );
+
+                                        this.$details = $( '<div class="og-details"></div>' ).append( this.$title,this.$price, this.$description, this.$href, this.$post );
+                                        this.$loading = $( '<div class="og-loading"></div>' );
+                                        this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
+                                        this.$closePreview = $( '<span class="og-close"></span>' );
+                                        this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
+                                        this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
                                         // append preview element to the item
-                                        this.$item.append(this.getEl());
+                                        this.$item.append( this.getEl() );
                                         // set the transitions for the preview and the item
-                                        if (support) {
+                                        if( support ) {
                                             this.setTransition();
                                         }
                                     },
-                                    update: function ($item) {
+                                    update : function( $item ) {
 
-                                        if ($item) {
+                                        if( $item ) {
                                             this.$item = $item;
                                         }
 
                                         // if already expanded remove class "og-expanded" from current item and add it to new item
-                                        if (current !== -1) {
-                                            var $currentItem = $items.eq(current);
-                                            $currentItem.removeClass('og-expanded');
-                                            this.$item.addClass('og-expanded');
+                                        if( current !== -1 ) {
+                                            var $currentItem = $items.eq( current );
+                                            $currentItem.removeClass( 'og-expanded' );
+                                            this.$item.addClass( 'og-expanded' );
                                             // position the preview correctly
                                             this.positionPreview();
                                         }
@@ -1379,134 +1395,136 @@
                                         current = this.$item.index();
 
                                         // update preview´s content
-                                        var $itemEl = this.$item.children('a'),
+                                        var $itemEl = this.$item.children( 'a' ),
                                             eldata = {
-                                                href: $itemEl.attr('href'),
-                                                largesrc: $itemEl.data('largesrc'),
-                                                title: $itemEl.data('title'),
-                                                price: $itemEl.data('price') + ' bucks',
-                                                description: $itemEl.data('description')
+                                                href : $itemEl.attr( 'href' ),
+                                                largesrc : $itemEl.data( 'largesrc' ),
+                                                title : $itemEl.data( 'title' ),
+                                                price : $itemEl.data( 'price' ) + ' $',
+                                                description : $itemEl.data( 'description' ),
+                                                post : $itemEl.data( 'id' )
                                             };
 
-                                        this.$title.html(eldata.title);
-                                        this.$price.html(eldata.price);
-                                        this.$description.html(eldata.description);
-                                        this.$href.attr('href', eldata.href);
+                                        this.$title.html( eldata.title );
+                                        this.$price.html( eldata.price );
+                                        this.$description.html( eldata.description );
+                                        this.$href.attr( 'href', eldata.href );
+                                        this.$post.attr( 'href', eldata.post );
 
                                         var self = this;
 
                                         // remove the current image in the preview
-                                        if (typeof self.$largeImg != 'undefined') {
+                                        if( typeof self.$largeImg != 'undefined' ) {
                                             self.$largeImg.remove();
                                         }
 
                                         // preload large image and add it to the preview
                                         // for smaller screens we don´t display the large image (the media query will hide the fullimage wrapper)
-                                        if (self.$fullimage.is(':visible')) {
+                                        if( self.$fullimage.is( ':visible' ) ) {
                                             this.$loading.show();
-                                            $('<img/>').load(function () {
-                                                var $img = $(this);
-                                                if ($img.attr('src') === self.$item.children('a').data('largesrc')) {
+                                            $( '<img/>' ).load( function() {
+                                                var $img = $( this );
+                                                if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
                                                     self.$loading.hide();
-                                                    self.$fullimage.find('img').remove();
-                                                    self.$largeImg = $img.fadeIn(350);
-                                                    self.$fullimage.append(self.$largeImg);
+                                                    self.$fullimage.find( 'img' ).remove();
+                                                    self.$largeImg = $img.fadeIn( 350 );
+                                                    self.$fullimage.append( self.$largeImg );
                                                 }
-                                            }).attr('src', eldata.largesrc);
+                                            } ).attr( 'src', eldata.largesrc );
                                         }
 
                                     },
-                                    open: function () {
+                                    open : function() {
 
-                                        setTimeout($.proxy(function () {
+                                        setTimeout( $.proxy( function() {
                                             // set the height for the preview and the item
                                             this.setHeights();
                                             // scroll to position the preview in the right place
                                             this.positionPreview();
-                                        }, this), 25);
+                                        }, this ), 25 );
 
                                     },
-                                    close: function () {
+                                    close : function() {
 
                                         var self = this,
-                                            onEndFn = function () {
-                                                if (support) {
-                                                    $(this).off(transEndEventName);
+                                            onEndFn = function() {
+                                                if( support ) {
+                                                    $( this ).off( transEndEventName );
                                                 }
-                                                self.$item.removeClass('og-expanded');
+                                                self.$item.removeClass( 'og-expanded' );
                                                 self.$previewEl.remove();
                                             };
 
-                                        setTimeout($.proxy(function () {
+                                        setTimeout( $.proxy( function() {
 
-                                            if (typeof this.$largeImg !== 'undefined') {
-                                                this.$largeImg.fadeOut('fast');
+                                            if( typeof this.$largeImg !== 'undefined' ) {
+                                                this.$largeImg.fadeOut( 'fast' );
                                             }
-                                            this.$previewEl.css('height', 0);
+                                            this.$previewEl.css( 'height', 0 );
                                             // the current expanded item (might be different from this.$item)
-                                            var $expandedItem = $items.eq(this.expandedIdx);
-                                            $expandedItem.css('height', $expandedItem.data('height')).on(transEndEventName, onEndFn);
+                                            var $expandedItem = $items.eq( this.expandedIdx );
+                                            $expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
 
-                                            if (!support) {
+                                            if( !support ) {
                                                 onEndFn.call();
                                             }
 
-                                        }, this), 25);
+                                        }, this ), 25 );
 
                                         return false;
 
                                     },
-                                    calcHeight: function () {
+                                    calcHeight : function() {
 
-                                        var heightPreview = winsize.height - this.$item.data('height') - marginExpanded,
+                                        var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
                                             itemHeight = winsize.height;
 
-                                        if (heightPreview < settings.minHeight) {
+                                        if( heightPreview < settings.minHeight ) {
                                             heightPreview = settings.minHeight;
-                                            itemHeight = settings.minHeight + this.$item.data('height') + marginExpanded;
+                                            itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
                                         }
 
                                         this.height = heightPreview;
                                         this.itemHeight = itemHeight;
 
                                     },
-                                    setHeights: function () {
+                                    setHeights : function() {
 
                                         var self = this,
-                                            onEndFn = function () {
-                                                if (support) {
-                                                    self.$item.off(transEndEventName);
+                                            onEndFn = function() {
+                                                if( support ) {
+                                                    self.$item.off( transEndEventName );
                                                 }
-                                                self.$item.addClass('og-expanded');
+                                                self.$item.addClass( 'og-expanded' );
                                             };
 
                                         this.calcHeight();
-                                        this.$previewEl.css('height', this.height);
-                                        this.$item.css('height', this.itemHeight).on(transEndEventName, onEndFn);
+                                        this.$previewEl.css( 'height', this.height );
+                                        this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
 
-                                        if (!support) {
+                                        if( !support ) {
                                             onEndFn.call();
                                         }
 
                                     },
-                                    positionPreview: function () {
+                                    positionPreview : function() {
 
                                         // scroll page
                                         // case 1 : preview height + item height fits in window´s height
                                         // case 2 : preview height + item height does not fit in window´s height and preview height is smaller than window´s height
                                         // case 3 : preview height + item height does not fit in window´s height and preview height is bigger than window´s height
-                                        var position = this.$item.data('offsetTop'),
+                                        var position = this.$item.data( 'offsetTop' ),
                                             previewOffsetT = this.$previewEl.offset().top - scrollExtra,
-                                            scrollVal = this.height + this.$item.data('height') + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
+                                            scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
 
-                                        $body.animate({scrollTop: scrollVal}, settings.speed);
+                                        $body.animate( { scrollTop : scrollVal }, settings.speed );
 
                                     },
-                                    setTransition: function () {
-                                        this.$previewEl.css('transition', 'height ' + settings.speed + 'ms ' + settings.easing);
-                                        this.$item.css('transition', 'height ' + settings.speed + 'ms ' + settings.easing);
+                                    setTransition  : function() {
+                                        this.$previewEl.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
+                                        this.$item.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
                                     },
-                                    getEl: function () {
+                                    getEl : function() {
                                         return this.$previewEl;
                                     }
                                 }

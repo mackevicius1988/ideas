@@ -3,16 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Category;
-use Illuminate\Http\Request;
-
 use App\Posts;
-use Log;
 use DB;
+use Illuminate\Http\Request;
+use Log;
 
 class PostsController extends Controller
 {
 
-    public function index(Request $request) {
+    public function index(Request $request)
+    {
         $posts = Posts::paginate(16);
         $tags = Category::all();
 
@@ -28,7 +28,8 @@ class PostsController extends Controller
 
     }
 
-    public function find($categoryIds, $priceFrom, $priceTo, $query, $order) {
+    public function find($categoryIds, $priceFrom, $priceTo, $query, $order)
+    {
         DB::connection()->enableQueryLog();
         $builder = new Posts();
 
@@ -37,13 +38,9 @@ class PostsController extends Controller
             $builder = $builder->findByCategories($categoryIdsArray);
         }
 
-
-
         if ($query != '0') {
-            $builder = $builder->where('name', 'LIKE',  '%'.$query.'%');
+            $builder = $builder->where('name', 'LIKE', '%' . $query . '%');
         }
-
-
 
         Log::info($priceFrom);
         Log::info($priceTo);
@@ -59,28 +56,38 @@ class PostsController extends Controller
         Log::info($queries);
 
 
-
         $tags = Category::all();
-        sleep(5) ;
+        sleep(1);
         return view('load', [
             'posts' => $posts,
             'tags' => $tags,
         ]);
     }
 
-    public function findByTag($tagId) {
-        $posts = Posts::where('categoryId', $tagId)->paginate(16);
-        return view('load', [
-            'posts' => $posts
-        ]);
 
-    }
-
-    public function post($postId) {
+    public function post($postId)
+    {
         $post = Posts::findOrFail($postId);
         return view('post', [
             'post' => $post
         ]);
 
+    }
+
+    public function memory()
+    {
+        return view('memory');
+    }
+
+    public function memories($postIds)
+    {
+        $posts = [];
+        if ($postIds != '0') {
+            $postIdsArray = explode(',', $postIds);
+            $posts = Posts::find($postIdsArray);
+        }
+        return view('memories', [
+            'posts' => $posts,
+        ]);
     }
 }
