@@ -10,16 +10,20 @@
 
         gtag('config', 'UA-109033621-1');
     </script>
+    <title>Christmas Gifts, Presents and Gift Ideas - Buy from fakingoodideas.com</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="copyright" content="Copyright ©2017">
+    <meta name="description" content="Christmas Gifts for everyone! From amazing gadgets through to unusual Christmas presents, there's a perfect Xmas Gift for everyone at Fakingoodideas!">
+    <meta name="robots" content="index,follow">
+    <base href="https://www.fakingoodideas.com/">
 
-    <title>Fakin good ideas</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900%7COpen+Sans:300,400,600,700'
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900%7COpen+Sans:300,400,600,700'
           rel='stylesheet' type='text/css'>
 
     <!-- Latest compiled and minified CSS -->
@@ -37,7 +41,7 @@
     <!-- Fonts Icons -->
     <link rel="stylesheet" href="css/custom-icons.css">
     <link rel="stylesheet" href="css/et-line-icons.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <!-- Nivo Lightbox -->
@@ -54,7 +58,7 @@
     <!-- Styles -->
     <style>
 
-        @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
         body {
             font-family: 'Open Sans', sans-serif;
         }
@@ -231,14 +235,13 @@
     </style>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
-<body>
+<body class="christmas-gift">
 
 <div id="page" class="animsition equal" data-loader-type="loader2" data-page-loader-text="Langama"
      data-animsition-in="fade-in" data-animsition-out="fade-out-up-sm" style="transform-origin: 50% 50vh;">
 
     @include('header')
     @include('navigation')
-
 
     <div id="page-2">
         <section id="about-section" class="about-section section" style="padding: 15px;">
@@ -371,7 +374,7 @@
 
                     $.ajax({
                         type: 'GET',
-                        url: 'http://localhost:8000/find/'+categoryIds + '/' + priceFrom + '/' + priceTo + '/' + query + '/' + order,
+                        url: 'https://localhost:8000/find/'+categoryIds + '/' + priceFrom + '/' + priceTo + '/' + query + '/' + order,
                         before: function () {
                             console.log('Before in');
                         },
