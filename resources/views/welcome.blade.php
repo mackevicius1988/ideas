@@ -374,7 +374,7 @@
 
                     $.ajax({
                         type: 'GET',
-                        url: 'https://localhost:8000/find/'+categoryIds + '/' + priceFrom + '/' + priceTo + '/' + query + '/' + order,
+                        url: 'https://fakingoodideas/find/'+categoryIds + '/' + priceFrom + '/' + priceTo + '/' + query + '/' + order,
                         before: function () {
                             console.log('Before in');
                         },
