@@ -18,7 +18,7 @@
     <meta name="copyright" content="Copyright ©2017">
     <meta name="description" content="Christmas Gifts for everyone! From amazing gadgets through to unusual Christmas presents, there's a perfect Xmas Gift for everyone at Fakingoodideas!">
     <meta name="robots" content="index,follow">
-
+    <meta property="og:url"content="/img/back.jpg" />
 
 
     <!-- Fonts -->
