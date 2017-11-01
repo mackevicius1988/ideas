@@ -1,4 +1,4 @@
-<img id = 'spinner' style="display:none; width: 200px; position: absolute; left: 50%;transform: translateX(-50%); top: 50px; z-index: 100000;" src="http://img71.laughinggif.com/pic/HTTP3NtYXJ0bW8udW5sLmVkdS9wb3J0YWxfaW5jbHVkZXMvaW1hZ2VzL2xvYWRpbmdfY2lyY2xlLmdpZgloglog.gif" />
+<img id = 'spinner' style="display:none; width: 200px; position: absolute; left: 50%;transform: translateX(-50%); top: 50px; z-index: 100000;" src="img/loading_circle.gif"/>
 
 <ul id="og-grid" class="og-grid">
 
