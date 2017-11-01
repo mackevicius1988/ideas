@@ -57,7 +57,6 @@ class PostsController extends Controller
 
 
         $tags = Category::all();
-        sleep(1);
         return view('load', [
             'posts' => $posts,
             'tags' => $tags,
