@@ -3,7 +3,9 @@
 <ul id="og-grid" class="og-grid">
 
 @foreach($posts as $post)
+
     <li style="width: 275px; height: 275px; overflow: hidden" class="gridItem">
+
         <a target="_blank" href="{{$post->url}}" data-id="{{$post->id}}" data-price="{{$post->price}}" data-largesrc="{{$post->url}}" data-title="{{$post->name}}" data-description="{{$post->desc}}">
 
             <div class="item" style="background: url('{{$post->url}}');
@@ -17,9 +19,9 @@
                         <span style="font-size: 10px"> {{$post->votes}} saves</span>
                     </div>
                     <div class="col-sm-4" style="border-left : 1px solid #ccc; text-align: center">
-                        <span class = 'itemPrice' style="font-size: 18px">{{$post->price}}$</span>
+                        <span class = 'itemPrice' style="font-size: 18px">{{$post->price}}$</span><br />
+                        <span>-75%</span>
                           <!--img  data-id="{{$post->id}}" class = 'rememberMe' src="http://www.iconsdb.com/icons/preview/dark-gray/save-xxl.png" width="20px"-->
-
 
                     </div>
                 </div>

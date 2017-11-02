@@ -243,6 +243,8 @@
         .categoryItem {
             font-size : 28px;
             cursor : pointer;
+            letter-spacing : 4px !important;
+            background-color: white;
         }
         .categorySelected {
             background-color : #551313;
@@ -273,7 +275,7 @@
                     <div class="col-xs-12 col-sm-4">
                         <div class="widget" style="margin: 0">
                             <div class="widget-body">
-                                <div class="tags">
+                                <div class="tags" style="text-align: center">
                                     @foreach($tags as $tag)
                                         <a class="categoryItem" data-id = '{{$tag->id}}'>{{$tag->name}}</a>
                                     @endforeach
@@ -282,24 +284,24 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4" style="text-align: center">
-
-                    </div>
-                    <div class="col-xs-12 col-sm-4" style="padding: 10px; text-align: center">
                         <div class="widget">
                             <form class="" role="form">
                                 <div class="search-wrap">
-                                    <button class="search-button" type="submit" title="Start Search">
+                                    <button class="search-button" title="Start Search">
                                         <i class="fa fa-search"></i>
                                     </button>
                                     <input id = 'searchQuery' type="text" class="input-field " placeholder="Search...">
                                 </div>
                             </form>
                         </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4" style="padding: 10px; text-align: center">
+
 
                         <div class="widget" style="margin-bottom: 10px">
                             <form class="" role="form">
                                 <div class="search-wrap">
-                                    <button class="search-button" type="submit" >
+                                    <button class="search-button">
                                         <i class="fa fa-sort"></i>
                                     </button>
                                     <select name="sortBy" id="orderBy" class="input-field">
@@ -407,7 +409,7 @@
                             console.log('Before in');
                         },
                         success: function (data) {
-                            console.log('in' + data);
+                            console.log('in' +data);
                             $('.gridWrapper').html(data);
                             $('.gridWrapper').css('opacity', '1');
                             var Grid = (function () {
