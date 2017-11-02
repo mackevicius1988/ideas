@@ -8,7 +8,7 @@
                     <div class="page-header-title-left">
                         <h1 class="hs-text-12 init-animation-4 fadeInLeft" style="opacity: 1;">Fakin <span>good</span> ideas</h1>
                         <div class="hs-text-6 init-animation-4 delay0-2s fadeInLeft" style="opacity: 1;">
-                            <h2>Make yoour Christmass perfect</h2>
+                            <h2 style="font-weight: 100">Make yoour Christmass perfect</h2>
                         </div>
                     </div>
                 </div>

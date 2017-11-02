@@ -318,6 +318,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12"   style="text-align: center">
+                        
                         <button id="btn-find" style="background-color: #551313" type="submit" class="btn btn-animated btn-contact ripple-alone" data-text="FIND MY ITEMS"><span class="btn-icon"><span class="loader-parent"><span class="loader2"></span></span>
                                                 </span>
                         </button>
