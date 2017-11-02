@@ -380,12 +380,15 @@
 
             $(function () {
                 $('#btn-find').click(function(e) {
-
+                    console.log('Click');
                     var categoryIds = [];
                     $( ".categoryItem" ).each(function( index ) {
                         if ($(this).attr('class') == 'categoryItem categorySelected')
                             categoryIds.push($( this ).data("id"));
                     });
+
+                    console.log(categoryIds);
+
                     $('.gridWrapper').css('opacity', '0.6');
                     $('#spinner').show();
                     categoryIds = categoryIds.length === 0  ? [0] : categoryIds
