@@ -12,14 +12,14 @@
             </div>
             <div class="details">
                 <div class="row">
-                    <div class="col-sm-9">
-                        <span>{{$post->name }}</span>
-                        <p>{{$post->price}} $</p>
+                    <div class="col-sm-8">
+                        <p style="margin : 0;     font-weight: 400;font-style: normal; font-size : 15px"   >{{$post->name }}</p>
+                        <span style="font-size: 10px"> {{$post->votes}} saves</span>
                     </div>
-                    <div class="col-sm-3" style="border-left : 1px solid #ccc">
-                        <span data-id="{{$post->id}}" class = 'rememberMe' href='#'><i class="fa fa-bookmark"></i></span>
+                    <div class="col-sm-4" style="border-left : 1px solid #ccc; text-align: center">
+                        <span class = 'itemPrice' style="font-size: 18px">{{$post->price}}$</span>
                           <!--img  data-id="{{$post->id}}" class = 'rememberMe' src="http://www.iconsdb.com/icons/preview/dark-gray/save-xxl.png" width="20px"-->
-                        <span style="font-size: 10px"> {{$post->votes}} save</span>
+
 
                     </div>
                 </div>
