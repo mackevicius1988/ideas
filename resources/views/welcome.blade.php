@@ -407,6 +407,7 @@
                             console.log('Before in');
                         },
                         success: function (data) {
+                            console.log('in' + data);
                             $('.gridWrapper').html(data);
                             $('.gridWrapper').css('opacity', '1');
                             var Grid = (function () {
