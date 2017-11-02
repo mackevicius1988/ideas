@@ -8,7 +8,7 @@
 
             <div class="item" style="background: url('{{$post->url}}');
                     background-position: top center;
-                    background-size:80% auto; width: 275px; height: 275px;  background-repeat: no-repeat;">
+                    background-size:100% auto; width: 275px; height: 275px;  background-repeat: no-repeat;">
             </div>
             <div class="details">
                 <div class="row">

@@ -148,7 +148,7 @@
             width: 100%;
             padding: 7px;
             color: black;
-            border-right:1px solid #ccc;
+
             border-bottom:1px solid #ccc;
             text-align: left;
         }
@@ -252,6 +252,10 @@
             font-size: 32px
         }
 
+        #page, #page-2 {
+            background: #eee;
+        }
+
     </style>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
@@ -265,7 +269,7 @@
 
     <div id="page-2">
         <section id="about-section" class="about-section section" style="padding: 15px;">
-            <div style="background-color: #fff; padding-top: 80px">  <div class="row">
+            <div style="padding-top: 80px">  <div class="row">
                     <div class="col-xs-12 col-sm-4">
                         <div class="widget" style="margin: 0">
                             <div class="widget-body">
@@ -278,8 +282,7 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4" style="text-align: center">
-                        <input type="text" id="amount" readonly style="border:0" class="font-second hs-text-12">
-                        <div id="slider-range"></div>
+
                     </div>
                     <div class="col-xs-12 col-sm-4" style="padding: 10px; text-align: center">
                         <div class="widget">
@@ -386,8 +389,10 @@
                     $('.gridWrapper').css('opacity', '0.6');
                     $('#spinner').show();
                     categoryIds = categoryIds.length === 0  ? [0] : categoryIds
-                    var priceFrom = $( "#slider-range" ).slider( "values", 0 );
-                    var priceTo = $( "#slider-range" ).slider( "values", 1 );
+                    var priceFrom =0;
+                        //$( "#slider-range" ).slider( "values", 0 );
+                    var priceTo =1500;
+                        //$( "#slider-range" ).slider( "values", 1 );
                     var query = $( "#searchQuery" ).val() === '' ? '0' : $( "#searchQuery" ).val();
                     var order = $('#orderBy').val();
                     console.log(query);
