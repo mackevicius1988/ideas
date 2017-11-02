@@ -45,7 +45,7 @@ class PostsController extends Controller
         Log::info($priceFrom);
         Log::info($priceTo);
 
-        $builder = $builder->whereBetween('price', [$priceFrom, $priceTo]);
+     //  $builder = $builder->whereBetween('price', [$priceFrom, $priceTo]);
 
 
         $direction = $order === 'priceDesc' ? 'DESC' : 'ASC';
