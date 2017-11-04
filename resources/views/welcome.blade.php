@@ -332,8 +332,8 @@
 
                     <div class="gridWrapper">
                         @include('load')
-
-                    </div>
+                        <button>Load more </button>
+                    </button>
                 </div>
             </div>
         </section>
@@ -357,7 +357,6 @@
                     }
                 );
             })
-
 
             $(function () {
                 $('.rememberMe').click(function(e) {

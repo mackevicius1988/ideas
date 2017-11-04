@@ -297,7 +297,112 @@
 
                             <!--/ End Post body text -->
                         </section>
+                        <section class="blog-comment-section">
+                            <h2 class="blog-page-post-title margin-bottom-60 font-second">Comments</h2>
+                            <ul class="media-list text comment-list clearlist">
+                                <!-- Comment Item -->
+                                <li class="media comment-item">
+                                    <a class="pull-left" href="#"><i class="comment-avatar fa fa-user"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <div class="comment-item-data">
+                                            <div class="comment-author">
+                                                <a href="#">John Doe</a>
+                                            </div>
+                                            May 7, 21:12
+                                        </div>
+                                        <p>
+                                            Soluta recusandae impedit aliquid voluptate quaerat. Beatae, quaerat? Natus dignissimos quibusdam repudiandae placeat saepe, numquam, ab unde minima amet blanditiis tempora. Perferendis.
+                                        </p>
+                                        <a href="#" class="comment-reply"><i class="fa fa-comment"></i>&nbsp;Reply</a>
+                                        <!-- Comment of second level -->
+                                        <div class="media comment-item">
+                                            <a class="pull-left" href="#"><img class="media-object comment-avatar" src="http://placehold.it/200x200" alt="" width="50" height="50">
+                                            </a>
+                                            <div class="media-body">
+                                                <div class="comment-item-data">
+                                                    <div class="comment-author">
+                                                        <a href="#">Tora Pritt</a>
+                                                    </div>
+                                                    May 7, 21:12
+                                                </div>
+                                                <p>
+                                                    Neque, praesentium atque repudiandae! Quaerat provident vero in consequuntur. Autem praesentium amet reiciendis iure, unde, aliquam beatae nihil libero, necessitatibus provident suscipit.
+                                                </p>
+                                                <a href="#" class="comment-reply"><i class="fa fa-comment"></i>&nbsp;Reply</a>
+                                            </div>
+                                        </div>
+                                        <!-- End Comment of second level -->
+                                    </div>
+                                </li>
+                                <!-- End Comment Item -->
+                                <!-- Comment Item -->
+                                <li class="media comment-item">
+                                    <a class="pull-left" href="#"><i class=" comment-avatar fa fa-user"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <div class="comment-item-data">
+                                            <div class="comment-author">
+                                                <a href="#">Angela Cora</a>
+                                            </div>
+                                            May 7, 21:12
+                                        </div>
+                                        <p>
+                                            Tuis quam ipsum exercitationem iure vel error non voluptatum corporis culpa. Laudantium voluptatem magnam quasi soluta, fuga eum minima id architecto porro.
+                                        </p>
+                                        <a href="#" class="comment-reply"><i class="fa fa-comment"></i>&nbsp;Reply</a>
+                                    </div>
+                                </li>
+                                <!-- End Comment Item -->
+                            </ul>
+                        </section>
 
+                        <section class="blog-comment-section">
+                            <h2 class="blog-page-post-title font-second margin-bottom-60">Leave a reply</h2>
+                            <!-- Form -->
+                            <form id="ajax-contact" class="" method="post" action="mailer.php">
+                                <fieldset>
+                                    <div class="row">
+                                        <!--/ End from messages -->
+                                        <div class="input col-xs-12 col-sm-4 padding-bottom-xs-50 padding-bottom-40">
+                                            <label class="input-label" for="name">
+                                                <span class="input-label-content font-second" data-content="name">name *</span>
+                                            </label>
+                                            <input class="input-field" type="text" name="name" id="name" required="">
+                                        </div>
+                                        <div class="input col-xs-12 col-sm-4 padding-bottom-xs-50 padding-bottom-40">
+                                            <label class="input-label" for="company">
+                                                <span class="input-label-content font-second" data-content="company">company</span>
+                                            </label>
+                                            <input class="input-field" type="text" name="company" id="company">
+                                        </div>
+                                        <div class="input col-xs-12 col-sm-4 padding-bottom-xs-50 padding-bottom-40">
+                                            <label class="input-label" for="email">
+                                                <span class="input-label-content font-second" data-content="email">email *</span>
+                                            </label>
+                                            <input class="input-field" type="email" name="email" id="email" required="">
+                                        </div>
+                                    </div>
+                                    <div class="row margin-bottom-20 margin-top-xs-10">
+                                        <div class="message col-xs-12 ">
+                                            <label class="textarea-label font-second" for="message">message *</label>
+                                            <textarea class="input-field textarea" name="message" id="message" required=""></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-3 padding-top-sm-20 padding-top-xs-10 text-left">
+                                            <button id="btn-submit" type="submit" class="btn btn-animated btn-contact ripple-alone" data-text="send it"><span class="btn-icon"><span class="loader-parent"><span class="loader2"></span></span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-9 padding-top-sm-20 padding-top-xs-10">
+                                            <div id="form-messages" class="form-message"></div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <!-- End Form -->
+                        </section>
 
                         <!-- Comments -->
 
@@ -324,18 +429,41 @@
                         </div>
                         <!--/ End widget search -->
                         <div class="widget widget-text">
+
+                            <h4 class="widget-title font-second">Rating</h4>
+                            <div class="widget-body">
+                                <div>
+                                    ...................
+                                </div>
+                            </div>
+
+
                             <h4 class="widget-title font-second">Description</h4>
                             <div class="widget-body">
                                 <div>
                                     {{$post->desc}}
+
+                                    Tuis quam ipsum exercitationem iure vel error non voluptatum corporis culpa. Laudantium voluptatem magnam quasi soluta, fuga eum minima id architecto porro.
+                                    Tuis quam ipsum exercitationem iure vel error non voluptatum corporis culpa. Laudantium voluptatem magnam quasi soluta, fuga eum minima id architecto porro.
                                 </div>
                             </div>
+
+
+                            <h4 class="widget-title font-second">Item specification</h4>
+                            <div class="widget-body">
+                                <div>
+                                    Tuis quam ipsum exercitationem iure vel error non voluptatum corporis culpa. Laudantium voluptatem magnam quasi soluta, fuga eum minima id architecto porro.
+                                </div>
+                            </div>
+
                             <div class="og-details">
                                 <a href="{{$post->url}}">Buy now</a>
 
 
                             </div>
                         </div>
+
+
                         <!--/ End widget-categories -->
                     </div>
                     <!--/ End col -->
