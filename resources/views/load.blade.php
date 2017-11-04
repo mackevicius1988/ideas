@@ -1,4 +1,4 @@
-<img id = 'spinner' style="display:none; width: 200px; position: absolute; left: 50%;transform: translateX(-50%); top: 50px; z-index: 100000;" src="img/loading_circle.gif"/>
+
 
 <ul id="og-grid" class="og-grid">
 
@@ -6,7 +6,7 @@
 
     <li style="width: 275px; height: 275px; overflow: hidden" class="gridItem">
 
-        <a target="_blank" href="{{$post->url}}" data-id="{{$post->id}}" data-price="{{$post->price}}" data-largesrc="{{$post->url}}" data-title="{{$post->name}}" data-description="{{$post->desc}}">
+        <a class="animsition-link" href="{{$post->id}}" data-id="{{$post->id}}" data-price="{{$post->price}}" data-largesrc="{{$post->url}}" data-title="{{$post->name}}" data-description="{{$post->desc}}">
             <div style="position: absolute; top: 0px; left: 0px; padding: 10px; z-index: 999; background: #551313; color: white; opacity: 0.9">SALE</div>
             <div class="item" style="background: url('{{$post->url}}');
                     background-position: top center;
@@ -33,7 +33,7 @@
 @endforeach
 
 </ul>
-{{$posts->links()}}
+
 
 
 
