@@ -298,13 +298,14 @@
         <!-- Do not remove the div below if you want to a sticky navbar! -->
         <div id="about-section"></div>
         <!-- section -->
-        <div class="section" style="padding-top: 150px; padding-left: 10px; padding-right: 10px">
+        <div class="section" style="padding-top: 100px; padding-left: 10px; padding-right: 10px">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6" style="">
+                    <div class="col-xs-12 col-sm-6" style="text-align: center">
                         <h1 class="blog-page-post-title font-second">{{$post->name}} </h1>
+                        <span>99 votes</span>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-xs-12 col-sm-6" style="text-align: center">
                         <h1 class="blog-page-post-title font-second">{{$post->price}} $ </h1>
                     </div>
                 </div>
@@ -340,6 +341,9 @@
                         <!--/ End widget search -->
                         <div class="widget widget-text">
 
+                            <div style="">
+                                <a href="{{$post->url}}">Buy now</a>
+                            </div>
 
                             <h1 class="blog-page-post-title font-second">{{$post->votes}} votes </h1>
 
@@ -368,11 +372,7 @@
                                 </div>
                             </div>
 
-                            <div class="og-details">
-                                <a href="{{$post->url}}">Buy now</a>
 
-
-                            </div>
                         </div>
 
 
