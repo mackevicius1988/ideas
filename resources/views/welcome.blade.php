@@ -18,6 +18,7 @@
     <meta name="copyright" content="Copyright ©2017">
         <meta name="description" content="Christmas Gifts for everyone! From amazing gadgets through to unusual Christmas presents, there's a perfect Xmas Gift for everyone at Fakingoodideas!" />
     <meta name="robots" content="index,follow">
+    <meta property="og:url"content="https://fakingoodideas.com" />
     <meta property="og:image"content="/img/back.jpg" />
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
