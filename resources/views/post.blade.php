@@ -7,13 +7,13 @@
     <base href="/" />
     <title>{{$post->name}}</title>
 
-    <meta property="og:url"           content="http://fakingoodideas/".{{$post->id}} />
+    <meta property="og:url"           content="http://fakingoodideas/{{$post->id}}" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Fakin good ideas" />
     <meta property="og:description"   content="{{$post->desc}}" />
     <meta property="og:image"         content="{{$post->url}}" />
 
-
+    <meta name="description" content="{{$post->desc}}" />
 
 
     <!-- Fonts -->
