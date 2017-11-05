@@ -242,7 +242,7 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 
 <div id="top"></div>
-<div id="page" class="animsition" data-animsition-in="fade-in" data-animsition-out="fade-out-up-sm" data-loader-type="loader2" data-page-loader-text="Volar" style="transform-origin: 50% 50vh;">
+<div id="page" class="animsition" data-animsition-in="fade-in" data-animsition-out="fade-out-up-sm" data-loader-type="loader2" data-page-loader-text="Fakin good ideas loading" style="transform-origin: 50% 50vh;">
 
 
     <div id="top"></div>
