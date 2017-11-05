@@ -301,23 +301,89 @@
         <div class="section" style="padding-top: 150px; padding-left: 10px; padding-right: 10px">
             <div class="container">
                 <div class="row">
+                    <div class="col-sm-6" style="">
+                        <h1 class="blog-page-post-title font-second">{{$post->name}} </h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <h1 class="blog-page-post-title font-second">{{$post->price}} $ </h1>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-sm-6 padding-right-sm-50">
                         <!-- Post -->
-                        <section class="blog-post">
+                        <section class="blog-post" style="margin-bottom: 0">
                             <!-- Post Media -->
 
                             <div class="blog-page-media">
                                <img src="{{$post->url}}" style="max-width:100%; max-height:100%;    ">
                             </div>
-                            <!-- Post Title -->
-
-
-
-                            <!-- Post body text -->
-
-                            <!--/ End Post body text -->
+                            <div class="shareHolder">
+                                <div style="padding: 20px" class="fb-share-button" data-href="https://fakingoodideas.com/{{$post->id}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffakingoodideas.com%2F1&amp;src=sdkpreparse">Share</a></div>
+                            </div>
                         </section>
-                        <section class="blog-comment-section">
+
+
+                        <!-- Comments -->
+
+                        <!-- End Comments -->
+                        <!-- Add Comment -->
+
+                        <!-- End Add Comment -->
+                        <div id="end-content"></div>
+                    </div>
+                    <!--/ End col -->
+
+
+
+
+                    <div class="col-sm-6">
+                        <!--/ End widget search -->
+                        <div class="widget widget-text">
+
+
+                            <h1 class="blog-page-post-title font-second">{{$post->votes}} votes </h1>
+
+
+                            <h4 class="widget-title font-second">Rating</h4>
+                            <div class="widget-body">
+                                <div>
+                                    ...................
+                                </div>
+                            </div>
+
+                            <h4 class="widget-title font-second">Description</h4>
+                            <div class="widget-body">
+                                <div>
+                                    {{$post->desc}}
+
+                                    Tuis quam ipsum exercitationem iure vel error non voluptatum corporis culpa. Laudantium voluptatem magnam quasi soluta, fuga eum minima id architecto porro.
+                                </div>
+                            </div>
+
+
+                            <h4 class="widget-title font-second">Item specification</h4>
+                            <div class="widget-body">
+                                <div>
+                                    Tuis quam ipsum exercitationem iure vel error non voluptatum corporis culpa. Laudantium voluptatem magnam quasi soluta, fuga eum minima id architecto porro.
+                                </div>
+                            </div>
+
+                            <div class="og-details">
+                                <a href="{{$post->url}}">Buy now</a>
+
+
+                            </div>
+                        </div>
+
+
+                        <!--/ End widget-categories -->
+                    </div>
+                    <!--/ End col -->
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-9">
+                        <section class="blog-comment-section" style="margin-top: 0">
                             <h2 class="blog-page-post-title margin-bottom-60 font-second">Comments</h2>
                             <ul class="media-list text comment-list clearlist">
 
@@ -331,15 +397,15 @@
                                                 <div class="comment-author">
                                                     <a href="#">{{$comment->name}}</a>
                                                 </div>
-                                                 {{$comment->created_at}}
+                                                {{$comment->created_at}}
                                             </div>
                                             <p>
                                                 {{$comment->message}}
                                             </p>
                                         </div>
                                     </li>
-                                @endforeach
-                                <!-- End Comment Item -->
+                            @endforeach
+                            <!-- End Comment Item -->
                             </ul>
                         </section>
 
@@ -385,75 +451,8 @@
                             </form>
                             <!-- End Form -->
                         </section>
-
-                        <!-- Comments -->
-
-                        <!-- End Comments -->
-                        <!-- Add Comment -->
-
-                        <!-- End Add Comment -->
-                        <div id="end-content"></div>
                     </div>
-                    <!--/ End col -->
-
-
-
-
-                    <div class="col-sm-6">
-
-                        <div class="row" style="margin-bottom: 50px">
-                            <div class="col-sm-9">
-                                <h1 class="blog-page-post-title font-second">{{$post->name}} </h1>
-                            </div>
-                            <div class="col-sm-3">
-                                <h1 class="blog-page-post-title font-second">{{$post->price}} $ </h1>
-                            </div>
-
-
-
-                            <div class="fb-share-button" data-href="https://fakingoodideas.com/{{$post->id}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffakingoodideas.com%2F1&amp;src=sdkpreparse">Share</a></div>
-1
-                        </div>
-                        <!--/ End widget search -->
-                        <div class="widget widget-text">
-
-                            <h4 class="widget-title font-second">Rating</h4>
-                            <div class="widget-body">
-                                <div>
-                                    ...................
-                                </div>
-                            </div>
-
-
-                            <h4 class="widget-title font-second">Description</h4>
-                            <div class="widget-body">
-                                <div>
-                                    {{$post->desc}}
-
-                                    Tuis quam ipsum exercitationem iure vel error non voluptatum corporis culpa. Laudantium voluptatem magnam quasi soluta, fuga eum minima id architecto porro.
-
-                                </div>
-                            </div>
-
-
-                            <h4 class="widget-title font-second">Item specification</h4>
-                            <div class="widget-body">
-                                <div>
-                                    Tuis quam ipsum exercitationem iure vel error non voluptatum corporis culpa. Laudantium voluptatem magnam quasi soluta, fuga eum minima id architecto porro.
-                                </div>
-                            </div>
-
-                            <div class="og-details">
-                                <a href="{{$post->url}}">Buy now</a>
-
-
-                            </div>
-                        </div>
-
-
-                        <!--/ End widget-categories -->
-                    </div>
-                    <!--/ End col -->
+                    <div class="col-sm-6"></div>
                 </div>
                 <!--/ End row -->
             </div>

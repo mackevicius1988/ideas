@@ -6,7 +6,7 @@
 
     <li style="width: 275px; height: 275px; overflow: hidden" class="gridItem">
 
-        <button class="in" style=" position: absolute; top: 0px; right: 0px; padding: 10px; z-index: 999; background: #551313; color: white; opacity: 0.9; width: 50px; margin: 0">SAVE ME</button>
+
         <a class="animsition-link" href="{{$post->id}}" data-id="{{$post->id}}" data-price="{{$post->price}}" data-largesrc="{{$post->url}}" data-title="{{$post->name}}" data-description="{{$post->desc}}">
             <div style="position: absolute; top: 0px; left: 0px; padding: 10px; z-index: 999; background: #551313; color: white; opacity: 0.9">SALE</div>
 
