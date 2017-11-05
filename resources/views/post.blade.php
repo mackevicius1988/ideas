@@ -324,38 +324,44 @@
                         </section>
 
 
-                        <!-- Comments -->
-
-                        <!-- End Comments -->
-                        <!-- Add Comment -->
-
-                        <!-- End Add Comment -->
                         <div id="end-content"></div>
                     </div>
-                    <!--/ End col -->
-
-
-
 
                     <div class="col-sm-6">
                         <!--/ End widget search -->
                         <div class="widget widget-text">
 
-                            <div style="">
-                                <a href="{{$post->url}}">Buy now</a>
-                            </div>
-
-                            <h1 class="blog-page-post-title font-second">{{$post->votes}} votes </h1>
-
-
-                            <h4 class="widget-title font-second">Rating</h4>
-                            <div class="widget-body">
-                                <div>
-                                    ...................
+                            <div class="row">
+                                <div class="col-xs-12" style="text-align: center">
+                                    <a style="border: 1px solid black; padding: 10px;" href="{{$post->url}}">Buy now</a>
+                                    <a style="border: 1px solid black; padding: 10px;" href="{{$post->url}}">Vote</a>
                                 </div>
                             </div>
 
-                            <h4 class="widget-title font-second">Description</h4>
+
+                            <div class="row" style="margin-top:40px">
+                                <div class="col-xs-9">
+                                    <h1 class="blog-page-post-title font-second"> Votes</h1>
+                                </div>
+                                <div class="col-xs-3" >
+                                    <h1 class="blog-page-post-title font-second">  {{$post->votes}}</h1>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-9">
+                                    <h1 class="blog-page-post-title font-second">Rating</h1>
+                                </div>
+                                <div class="col-xs-3" >
+                                    <h1 class="blog-page-post-title font-second"> 4.75</h1>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <h4 class="widget-title font-second" style="margin-top: 20px">Description</h4>
                             <div class="widget-body">
                                 <div>
                                     {{$post->desc}}
