@@ -9,7 +9,7 @@
 
     <meta property="og:url"           content="http://fakingoodideas/{{$post->id}}" />
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Fakin good ideas" />
+    <meta property="og:title"         content="{{$post->name}}" />
     <meta property="og:description"   content="{{$post->desc}}" />
     <meta property="og:image"         content="{{$post->url}}" />
 
