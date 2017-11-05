@@ -23,7 +23,7 @@
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Fakin good ideas" />
     <meta property="og:description"   content="Christmas Gifts for everyone! From amazing gadgets through to unusual Christmas presents, there's a perfect Xmas Gift for everyone at Fakingoodideas!" />
-    <meta property="og:image"content="https://fakingoodideas.com/img/back.jpg" />
+    <meta property="og:image"content="https://images-na.ssl-images-amazon.com/images/I/71EJ6shbuYL._SL1500_.jpg" />
 
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -269,6 +269,16 @@
 </head>
 <body class="christmas-gift">
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10&appId=341948169308496';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
 <div id="page" class="animsition equal" data-loader-type="loader2" data-page-loader-text="Fakin good ideas loading"
      data-animsition-in="fade-in" data-animsition-out="fade-out-up-sm" style="transform-origin: 50% 50vh;">
 
@@ -282,6 +292,7 @@
                         <div class="widget" style="margin: 0">
                             <div class="widget-body">
                                 <div class="tags" style="text-align: center">
+
                                     @foreach($tags as $tag)
                                         <a class="categoryItem" data-id = '{{$tag->id}}'>{{$tag->name}}</a>
                                     @endforeach
