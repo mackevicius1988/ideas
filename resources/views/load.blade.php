@@ -6,8 +6,13 @@
 
     <li style="width: 275px; height: 275px; overflow: hidden" class="gridItem">
 
-        <a class="animsition-link in" href="{{$post->id}}" data-id="{{$post->id}}" data-price="{{$post->price}}" data-largesrc="{{$post->url}}" data-title="{{$post->name}}" data-description="{{$post->desc}}">
+        <button class="in" style=" position: absolute; top: 0px; right: 0px; padding: 10px; z-index: 999; background: #551313; color: white; opacity: 0.9; width: 50px; margin: 0">SAVE ME</button>
+        <a class="animsition-link" href="{{$post->id}}" data-id="{{$post->id}}" data-price="{{$post->price}}" data-largesrc="{{$post->url}}" data-title="{{$post->name}}" data-description="{{$post->desc}}">
             <div style="position: absolute; top: 0px; left: 0px; padding: 10px; z-index: 999; background: #551313; color: white; opacity: 0.9">SALE</div>
+
+
+
+
             <div class="item" style="background: url('{{$post->url}}');
                     background-position: top center;
                     background-size:100% auto; width: 275px; height: 275px;  background-repeat: no-repeat;">
@@ -30,13 +35,14 @@
             </div>
         </a>
     </li>
+
 @endforeach
 
 </ul>
 
-
-
 <script>
+
+
 
         $(function () {
             $(".item").hover(
@@ -48,8 +54,12 @@
             );
 
 
+
+
             $('.in').click(
                 function (e) {
+                    e.preventDefault();
+
                     console.log(e);
                 }
             );

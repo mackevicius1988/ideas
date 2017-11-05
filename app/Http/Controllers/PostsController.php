@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Posts;
+use App\Comment;
 use DB;
 use Illuminate\Http\Request;
 use Log;
@@ -67,8 +68,10 @@ class PostsController extends Controller
     public function post($postId)
     {
         $post = Posts::findOrFail($postId);
+        $comments = $post->comments;
         return view('post', [
-            'post' => $post
+            'post' => $post,
+            'comments' => $comments
         ]);
 
     }
@@ -88,5 +91,24 @@ class PostsController extends Controller
         return view('memories', [
             'posts' => $posts,
         ]);
+    }
+
+
+    public function postComment(Request $request)
+    {
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $message = $request->input('message');
+        $id = $request->input('id');
+
+        $comment = new Comment();
+        $comment->name = $name;
+        $comment->email = $email;
+        $comment->message = $message;
+        $comment->postId = $id;
+        $comment->save();
+
+
+        return $comment->id;
     }
 }

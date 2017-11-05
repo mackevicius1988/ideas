@@ -23,4 +23,10 @@ class Posts extends Model
     public function findByCategories($categoryIds) {
         return Posts::whereIn('categoryId', $categoryIds);
     }
+
+
+    public function comments(){
+        return $this->hasMany('App\Comment','postId');
+    }
+
 }

@@ -5,7 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="/" />
-    <title>Fakin good ideas</title>
+    <title>{{$post->name}}</title>
+
+    <meta property="og:url"           content="http://fakingoodideas/".{{$post->id}} />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Fakin good ideas" />
+    <meta property="og:description"   content="{{$post->desc}}" />
+    <meta property="og:image"         content="{{$post->url}}" />
+
+
+
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -222,6 +231,16 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10&appId=341948169308496';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
 <div id="top"></div>
 <div id="page" class="animsition" data-animsition-in="fade-in" data-animsition-out="fade-out-up-sm" data-loader-type="loader2" data-page-loader-text="Volar" style="transform-origin: 50% 50vh;">
 
@@ -293,6 +312,7 @@
                             <!-- Post Title -->
 
 
+
                             <!-- Post body text -->
 
                             <!--/ End Post body text -->
@@ -300,59 +320,25 @@
                         <section class="blog-comment-section">
                             <h2 class="blog-page-post-title margin-bottom-60 font-second">Comments</h2>
                             <ul class="media-list text comment-list clearlist">
-                                <!-- Comment Item -->
-                                <li class="media comment-item">
-                                    <a class="pull-left" href="#"><i class="comment-avatar fa fa-user"></i>
-                                    </a>
-                                    <div class="media-body">
-                                        <div class="comment-item-data">
-                                            <div class="comment-author">
-                                                <a href="#">John Doe</a>
-                                            </div>
-                                            May 7, 21:12
-                                        </div>
-                                        <p>
-                                            Soluta recusandae impedit aliquid voluptate quaerat. Beatae, quaerat? Natus dignissimos quibusdam repudiandae placeat saepe, numquam, ab unde minima amet blanditiis tempora. Perferendis.
-                                        </p>
-                                        <a href="#" class="comment-reply"><i class="fa fa-comment"></i>&nbsp;Reply</a>
-                                        <!-- Comment of second level -->
-                                        <div class="media comment-item">
-                                            <a class="pull-left" href="#"><img class="media-object comment-avatar" src="http://placehold.it/200x200" alt="" width="50" height="50">
-                                            </a>
-                                            <div class="media-body">
-                                                <div class="comment-item-data">
-                                                    <div class="comment-author">
-                                                        <a href="#">Tora Pritt</a>
-                                                    </div>
-                                                    May 7, 21:12
+
+
+                                @foreach($comments as $comment)
+                                    <li class="media comment-item">
+                                        <a class="pull-left" href="#"><i class="comment-avatar fa fa-user"></i>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="comment-item-data">
+                                                <div class="comment-author">
+                                                    <a href="#">{{$comment->name}}</a>
                                                 </div>
-                                                <p>
-                                                    Neque, praesentium atque repudiandae! Quaerat provident vero in consequuntur. Autem praesentium amet reiciendis iure, unde, aliquam beatae nihil libero, necessitatibus provident suscipit.
-                                                </p>
-                                                <a href="#" class="comment-reply"><i class="fa fa-comment"></i>&nbsp;Reply</a>
+                                                 {{$comment->created_at}}
                                             </div>
+                                            <p>
+                                                {{$comment->message}}
+                                            </p>
                                         </div>
-                                        <!-- End Comment of second level -->
-                                    </div>
-                                </li>
-                                <!-- End Comment Item -->
-                                <!-- Comment Item -->
-                                <li class="media comment-item">
-                                    <a class="pull-left" href="#"><i class=" comment-avatar fa fa-user"></i>
-                                    </a>
-                                    <div class="media-body">
-                                        <div class="comment-item-data">
-                                            <div class="comment-author">
-                                                <a href="#">Angela Cora</a>
-                                            </div>
-                                            May 7, 21:12
-                                        </div>
-                                        <p>
-                                            Tuis quam ipsum exercitationem iure vel error non voluptatum corporis culpa. Laudantium voluptatem magnam quasi soluta, fuga eum minima id architecto porro.
-                                        </p>
-                                        <a href="#" class="comment-reply"><i class="fa fa-comment"></i>&nbsp;Reply</a>
-                                    </div>
-                                </li>
+                                    </li>
+                                @endforeach
                                 <!-- End Comment Item -->
                             </ul>
                         </section>
@@ -360,23 +346,18 @@
                         <section class="blog-comment-section">
                             <h2 class="blog-page-post-title font-second margin-bottom-60">Leave a reply</h2>
                             <!-- Form -->
-                            <form id="ajax-contact" class="" method="post" action="mailer.php">
+                            <form>
                                 <fieldset>
                                     <div class="row">
                                         <!--/ End from messages -->
-                                        <div class="input col-xs-12 col-sm-4 padding-bottom-xs-50 padding-bottom-40">
+                                        <div class="input col-xs-12 col-sm-6 padding-bottom-xs-50 padding-bottom-40">
                                             <label class="input-label" for="name">
                                                 <span class="input-label-content font-second" data-content="name">name *</span>
                                             </label>
                                             <input class="input-field" type="text" name="name" id="name" required="">
                                         </div>
-                                        <div class="input col-xs-12 col-sm-4 padding-bottom-xs-50 padding-bottom-40">
-                                            <label class="input-label" for="company">
-                                                <span class="input-label-content font-second" data-content="company">company</span>
-                                            </label>
-                                            <input class="input-field" type="text" name="company" id="company">
-                                        </div>
-                                        <div class="input col-xs-12 col-sm-4 padding-bottom-xs-50 padding-bottom-40">
+
+                                        <div class="input col-xs-12 col-sm-6 padding-bottom-xs-50 padding-bottom-40">
                                             <label class="input-label" for="email">
                                                 <span class="input-label-content font-second" data-content="email">email *</span>
                                             </label>
@@ -391,7 +372,8 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-3 padding-top-sm-20 padding-top-xs-10 text-left">
-                                            <button id="btn-submit" type="submit" class="btn btn-animated btn-contact ripple-alone" data-text="send it"><span class="btn-icon"><span class="loader-parent"><span class="loader2"></span></span>
+                                            <input type="hidden" value="{{$post->id}}" id="id"/>
+                                            <button id="commentMe" class="btn btn-animated btn-contact ripple-alone" data-text="send it"><span class="btn-icon"><span class="loader-parent"><span class="loader2"></span></span>
                                                 </span>
                                             </button>
                                         </div>
@@ -426,6 +408,11 @@
                             <div class="col-sm-3">
                                 <h1 class="blog-page-post-title font-second">{{$post->price}} $ </h1>
                             </div>
+
+
+
+                            <div class="fb-share-button" data-href="https://fakingoodideas.com/1" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffakingoodideas.com%2F1&amp;src=sdkpreparse">Share</a></div>
+
                         </div>
                         <!--/ End widget search -->
                         <div class="widget widget-text">
@@ -444,7 +431,7 @@
                                     {{$post->desc}}
 
                                     Tuis quam ipsum exercitationem iure vel error non voluptatum corporis culpa. Laudantium voluptatem magnam quasi soluta, fuga eum minima id architecto porro.
-                                    Tuis quam ipsum exercitationem iure vel error non voluptatum corporis culpa. Laudantium voluptatem magnam quasi soluta, fuga eum minima id architecto porro.
+
                                 </div>
                             </div>
 
@@ -485,6 +472,7 @@
 
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/comments.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
     <script src="js/grid.js"></script>

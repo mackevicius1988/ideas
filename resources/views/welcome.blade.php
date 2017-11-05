@@ -332,7 +332,6 @@
 
                     <div class="gridWrapper">
                         @include('load')
-                        <button>Load more </button>
                     </button>
                 </div>
             </div>
@@ -346,6 +345,7 @@
     <script src="js/jquery.jscroll.js"></script>
     <script type="text/javascript"></script>
     <script src="js/infinity.js"></script>
+    <script src="js/comment.js"></script>
     <script>
         $(document).ready(function () {
             $(function () {

@@ -6,7 +6,7 @@ $(document).ready(function () {
             var aTop = $('#page-2').height();
             console.log(aTop);
             console.log($(this).scrollTop());
-            if ($(this).scrollTop() >= aTop) {
+            if ($(this).scrollTop() + 10 >= aTop) {
 
                 $('#spinner').show();
                 var articles;
