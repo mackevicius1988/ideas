@@ -18,8 +18,13 @@
     <meta name="copyright" content="Copyright ©2017">
         <meta name="description" content="Christmas Gifts for everyone! From amazing gadgets through to unusual Christmas presents, there's a perfect Xmas Gift for everyone at Fakingoodideas!" />
     <meta name="robots" content="index,follow">
-    <meta property="og:url"content="https://fakingoodideas.com" />
-    <meta property="og:image"content="/img/back.jpg" />
+
+    <meta property="og:url"           content="http://fakingoodideas.com" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Fakin good ideas" />
+    <meta property="og:description"   content="Christmas Gifts for everyone! From amazing gadgets through to unusual Christmas presents, there's a perfect Xmas Gift for everyone at Fakingoodideas!" />
+    <meta property="og:image"content="https://fakingoodideas.com/img/back.jpg" />
+
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
