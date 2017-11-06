@@ -16,11 +16,14 @@ class CreatePostTable extends Migration
         Schema::create('post', function (Blueprint $table) {
             $table->increments('id');
             $table->string('url');
-            $table->integer('votes');
+            $table->integer('saves');
             $table->string('price');
+            $table->string('priceIndex');
             $table->string('name');
             $table->string('desc');
-            $table->float('rating');
+            $table->string('rating');
+            $table->string('features');
+            $table->string('imageUrl');
             $table->integer('categoryId')->unsigned();
             $table->foreign('categoryId')->references('id')->on('category');
             $table->timestamps();
