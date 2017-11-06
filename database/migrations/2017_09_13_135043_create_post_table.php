@@ -20,7 +20,7 @@ class CreatePostTable extends Migration
             $table->string('price');
             $table->string('priceIndex');
             $table->string('name');
-            $table->string('desc');
+            $table->string('description');
             $table->string('rating');
             $table->string('features');
             $table->string('imageUrl');
