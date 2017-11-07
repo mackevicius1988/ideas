@@ -329,7 +329,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-xs-12 col-sm-6" style="text-align: center">
+                            <div class="col-xs-12 col-sm-6" style="text-align: left">
                                 <h1 class="blog-page-post-title font-second">{{$post->price}} $ </h1>
                             </div>
                         </div>
@@ -337,7 +337,7 @@
                         <div class="widget widget-text">
 
                             <div class="row">
-                                <div class="col-xs-12" style="text-align: center">
+                                <div class="col-xs-12" style="padding: 20px">
                                     <a style="border: 1px solid black; padding: 10px;" href="{{$post->url}}">Buy now</a>
                                     <a style="border: 1px solid black; padding: 10px;" href="{{$post->url}}">Vote</a>
                                 </div>
