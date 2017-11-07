@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-sm-8">
                         <p style="margin : 0;     font-weight: 400;font-style: normal; font-size : 15px"   >
-                            {{ str_limit($post->name, 10) }}</p>
+                            {{ str_limit($post->name, 20) }}</p>
                         <span style="font-size: 10px"> {{$post->votes}} saves</span>
                     </div>
                     <div class="col-sm-4" style="border-left : 1px solid #ccc; text-align: center; padding-top:10px">
