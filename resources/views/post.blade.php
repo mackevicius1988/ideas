@@ -282,8 +282,8 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="ripple-group" href="/about">
-                                        <span data-hover="about">about</span>
+                                    <a class="ripple-group" href="/get/memorry">
+                                        <span data-hover="about">MEMORIES</span>
                                     </a>
                                 </li>
                             </ul>
@@ -303,7 +303,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6" style="text-align: center">
                         <h1 class="blog-page-post-title font-second">{{$post->name}} </h1>
-                        <span>99 votes</span>
+                        <span>{{$post->rating}}</span>
                     </div>
                     <div class="col-xs-12 col-sm-6" style="text-align: center">
                         <h1 class="blog-page-post-title font-second">{{$post->price}} $ </h1>
@@ -316,7 +316,7 @@
                             <!-- Post Media -->
 
                             <div class="blog-page-media">
-                               <img src="{{$post->url}}" style="max-width:100%; max-height:100%;    ">
+                               <img src="{{$post->imageUrl}}" style="max-width:100%; max-height:100%;    ">
                             </div>
                             <div class="shareHolder">
                                 <div style="padding: 20px" class="fb-share-button" data-href="https://fakingoodideas.com/{{$post->id}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffakingoodideas.com%2F1&amp;src=sdkpreparse">Share</a></div>

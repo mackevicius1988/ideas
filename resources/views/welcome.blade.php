@@ -261,7 +261,7 @@
         }
 
         #page, #page-2 {
-            background: #eee;
+
         }
 
     </style>

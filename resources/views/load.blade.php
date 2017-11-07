@@ -6,7 +6,7 @@
             <div style="position: absolute; top: 0px; left: 0px; padding: 10px; z-index: 999; background: #551313; color: white; opacity: 0.9">SALE</div>
             <div class="item" style="background: url('{{$post->imageUrl}}');
                     background-position: top center;
-                    background-size:100% auto; width: 275px; height: 275px;  background-repeat: no-repeat;">
+                    background-size:50% auto; width: 275px; height: 275px;  background-repeat: no-repeat;">
             </div>
             <div class="details">
                 <div class="row">
