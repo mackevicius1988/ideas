@@ -300,15 +300,7 @@
         <!-- section -->
         <div class="section" style="padding-top: 100px; padding-left: 10px; padding-right: 10px">
             <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6" style="text-align: center">
-                        <h1 class="blog-page-post-title font-second">{{$post->name}} </h1>
-                        <span>{{$post->rating}}</span>
-                    </div>
-                    <div class="col-xs-12 col-sm-6" style="text-align: center">
-                        <h1 class="blog-page-post-title font-second">{{$post->price}} $ </h1>
-                    </div>
-                </div>
+
                 <div class="row">
                     <div class="col-sm-6 padding-right-sm-50">
                         <!-- Post -->
@@ -318,7 +310,7 @@
                             <div class="blog-page-media">
                                <img src="{{$post->imageUrl}}" style="max-width:100%; max-height:100%;    ">
                             </div>
-                            <div class="shareHolder">
+                            <div class="shareHolder" style="text-emphasis: center;">
                                 <div style="padding: 20px" class="fb-share-button" data-href="https://fakingoodideas.com/{{$post->id}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffakingoodideas.com%2F1&amp;src=sdkpreparse">Share</a></div>
                             </div>
                         </section>
@@ -328,6 +320,20 @@
                     </div>
 
                     <div class="col-sm-6">
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12" style="">
+                                <h1 class="blog-page-post-title font-second">{{$post->name}} </h1>
+                                <span>{{$post->rating}}</span>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6" style="text-align: center">
+                                <h1 class="blog-page-post-title font-second">{{$post->price}} $ </h1>
+                            </div>
+                        </div>
                         <!--/ End widget search -->
                         <div class="widget widget-text">
 
