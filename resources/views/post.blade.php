@@ -306,7 +306,7 @@
                         <!-- Post -->
                         <section class="blog-post" style="margin-bottom: 0">
                             <!-- Post Media -->
-                            <div class="blog-page-media" style="height: 500px;">
+                            <div class="blog-page-media" style="height: 500px;text-align: center;">
                                <img src="{{$post->imageUrl}}" style="max-width:100%; max-height:100%;    ">
                             </div>
                             <div class="shareHolder" style="text-align: center;">
