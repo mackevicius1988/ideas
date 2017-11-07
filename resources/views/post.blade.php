@@ -321,7 +321,7 @@
                     <div class="col-sm-6">
 
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12" style="">
+                            <div class="col-xs-12 col-sm-12" style=" border-bottom: 1px solid black;padding-top: 50px;">
                                 <h1 class="blog-page-post-title font-second">{{$post->name}} </h1>
                                 <span>{{$post->rating}}</span>
                             </div>
@@ -330,7 +330,7 @@
 
                         <div class="row">
                             <div class="col-xs-12 col-sm-6" style="text-align: left">
-                                <h1 class="blog-page-post-title font-second">{{$post->price}} $ </h1>
+                                <h1 class="blog-page-post-title font-second">{{$post->price}} </h1>
                             </div>
                         </div>
                         <!--/ End widget search -->
