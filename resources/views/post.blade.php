@@ -298,7 +298,7 @@
         <!-- Do not remove the div below if you want to a sticky navbar! -->
         <div id="about-section"></div>
         <!-- section -->
-        <div class="section" style="padding-top: 100px; padding-left: 10px; padding-right: 10px">
+        <div class="section" style="padding-top: 150px; padding-left: 10px; padding-right: 10px">
             <div class="container">
 
                 <div class="row">
@@ -321,7 +321,7 @@
                     <div class="col-sm-6">
 
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12" style=" border-bottom: 1px solid black;padding-top: 50px;">
+                            <div class="col-xs-12 col-sm-12" style=" border-bottom: 1px solid black;">
                                 <h1 class="blog-page-post-title font-second">{{$post->name}} </h1>
                                 <span>{{$post->rating}}</span>
                             </div>
