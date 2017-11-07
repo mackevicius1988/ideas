@@ -312,84 +312,6 @@
                             <div class="shareHolder" style="text-align: center;">
                                 <div style="padding: 20px" class="fb-share-button" data-href="https://fakingoodideas.com/{{$post->id}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffakingoodideas.com%2F1&amp;src=sdkpreparse">Share</a></div>
                             </div>
-
-                            <div class="row">
-
-                                <div class="col-sm-12">
-                                    <section class="blog-comment-section" style="margin-top: 0">
-                                        <h2 class="blog-page-post-title margin-bottom-60 font-second">Comments</h2>
-                                        <ul class="media-list text comment-list clearlist">
-
-
-                                            @foreach($comments as $comment)
-                                                <li class="media comment-item">
-                                                    <a class="pull-left" href="#"><i class="comment-avatar fa fa-user"></i>
-                                                    </a>
-                                                    <div class="media-body">
-                                                        <div class="comment-item-data">
-                                                            <div class="comment-author">
-                                                                <a href="#">{{$comment->name}}</a>
-                                                            </div>
-                                                            {{$comment->created_at}}
-                                                        </div>
-                                                        <p>
-                                                            {{$comment->message}}
-                                                        </p>
-                                                    </div>
-                                                </li>
-                                        @endforeach
-                                        <!-- End Comment Item -->
-                                        </ul>
-                                    </section>
-
-                                    <section class="blog-comment-section">
-                                        <h2 class="blog-page-post-title font-second margin-bottom-60">Leave a reply</h2>
-                                        <!-- Form -->
-                                        <form>
-                                            <fieldset>
-                                                <div class="row">
-                                                    <!--/ End from messages -->
-                                                    <div class="input col-xs-12 col-sm-6 padding-bottom-xs-50 padding-bottom-40">
-                                                        <label class="input-label" for="name">
-                                                            <span class="input-label-content font-second" data-content="name">name *</span>
-                                                        </label>
-                                                        <input class="input-field" type="text" name="name" id="name" required="">
-                                                    </div>
-
-                                                    <div class="input col-xs-12 col-sm-6 padding-bottom-xs-50 padding-bottom-40">
-                                                        <label class="input-label" for="email">
-                                                            <span class="input-label-content font-second" data-content="email">email *</span>
-                                                        </label>
-                                                        <input class="input-field" type="email" name="email" id="email" required="">
-                                                    </div>
-                                                </div>
-                                                <div class="row margin-bottom-20 margin-top-xs-10">
-                                                    <div class="message col-xs-12 ">
-                                                        <label class="textarea-label font-second" for="message">message *</label>
-                                                        <textarea class="input-field textarea" name="message" id="message" required=""></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-3 padding-top-sm-20 padding-top-xs-10 text-left">
-                                                        <input type="hidden" value="{{$post->id}}" id="id"/>
-                                                        <button id="commentMe" class="btn btn-animated btn-contact ripple-alone" data-text="send it"><span class="btn-icon"><span class="loader-parent"><span class="loader2"></span></span>
-                                                </span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-9 padding-top-sm-20 padding-top-xs-10">
-                                                        <div id="form-messages" class="form-message"></div>
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-                                        </form>
-                                        <!-- End Form -->
-                                    </section>
-                                </div>
-                                <div class="col-sm-6"></div>
-                            </div>
-                            <!--/ End row -->
-
-
                         </section>
 
 
@@ -440,10 +362,16 @@
                             </div>
 
 
+
+
+
+
                             <h4 class="widget-title font-second" style="margin-top: 20px">Description</h4>
                             <div class="widget-body">
                                 <div>
                                     {{$post->description}}
+
+
                                 </div>
                             </div>
 
@@ -454,12 +382,91 @@
                                     {{$post->features}}
                                 </div>
                             </div>
+
+
                         </div>
+
+
                         <!--/ End widget-categories -->
                     </div>
                     <!--/ End col -->
                 </div>
+                <div class="row">
 
+                    <div class="col-sm-9">
+                        <section class="blog-comment-section" style="margin-top: 0">
+                            <h2 class="blog-page-post-title margin-bottom-60 font-second">Comments</h2>
+                            <ul class="media-list text comment-list clearlist">
+
+
+                                @foreach($comments as $comment)
+                                    <li class="media comment-item">
+                                        <a class="pull-left" href="#"><i class="comment-avatar fa fa-user"></i>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="comment-item-data">
+                                                <div class="comment-author">
+                                                    <a href="#">{{$comment->name}}</a>
+                                                </div>
+                                                {{$comment->created_at}}
+                                            </div>
+                                            <p>
+                                                {{$comment->message}}
+                                            </p>
+                                        </div>
+                                    </li>
+                            @endforeach
+                            <!-- End Comment Item -->
+                            </ul>
+                        </section>
+
+                        <section class="blog-comment-section">
+                            <h2 class="blog-page-post-title font-second margin-bottom-60">Leave a reply</h2>
+                            <!-- Form -->
+                            <form>
+                                <fieldset>
+                                    <div class="row">
+                                        <!--/ End from messages -->
+                                        <div class="input col-xs-12 col-sm-6 padding-bottom-xs-50 padding-bottom-40">
+                                            <label class="input-label" for="name">
+                                                <span class="input-label-content font-second" data-content="name">name *</span>
+                                            </label>
+                                            <input class="input-field" type="text" name="name" id="name" required="">
+                                        </div>
+
+                                        <div class="input col-xs-12 col-sm-6 padding-bottom-xs-50 padding-bottom-40">
+                                            <label class="input-label" for="email">
+                                                <span class="input-label-content font-second" data-content="email">email *</span>
+                                            </label>
+                                            <input class="input-field" type="email" name="email" id="email" required="">
+                                        </div>
+                                    </div>
+                                    <div class="row margin-bottom-20 margin-top-xs-10">
+                                        <div class="message col-xs-12 ">
+                                            <label class="textarea-label font-second" for="message">message *</label>
+                                            <textarea class="input-field textarea" name="message" id="message" required=""></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-3 padding-top-sm-20 padding-top-xs-10 text-left">
+                                            <input type="hidden" value="{{$post->id}}" id="id"/>
+                                            <button id="commentMe" class="btn btn-animated btn-contact ripple-alone" data-text="send it"><span class="btn-icon"><span class="loader-parent"><span class="loader2"></span></span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-9 padding-top-sm-20 padding-top-xs-10">
+                                            <div id="form-messages" class="form-message"></div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <!-- End Form -->
+                        </section>
+                    </div>
+                    <div class="col-sm-6"></div>
+                </div>
+                <!--/ End row -->
+            </div>
             <!--/ End container -->
         </div>
         <!--/ End section -->
