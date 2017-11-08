@@ -321,12 +321,12 @@
                                     <button class="search-button">
                                         <i class="fa fa-sort"></i>
                                     </button>
-                                    <select name="sortBy" id="orderBy" class="input-field">
-                                        <option value="votes">Popularity</option>
-                                        <option value="name">Title</option>
-                                        <option value="price">Price Low to High</option>
-                                        <option value="priceDesc">Price High to Low</option>
-                                    </select>
+
+                                    <span>SORT BY</span>
+                                    <a class="categoryItem">POPULARITY</a>
+                                    <a class="categoryItem">NEWEST FIRST</a>
+                                    <a class="categoryItem">PRICE HIGH to LOW</a>
+                                    <a class="categoryItem">PRICE LOW to HIGH</a>
                                 </div>
                             </form>
                         </div>
