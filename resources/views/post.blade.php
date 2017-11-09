@@ -330,7 +330,7 @@
                     <div class="col-sm-6">
 
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12" style=" border-bottom: 1px solid black;">
+                            <div class="col-xs-12 col-sm-12" style=" border-bottom: 1px solid #ccc; padding: 10px">
                                 <h1 class="blog-page-post-title font-second" style="font-size: 24px">{{$post->name}} </h1>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
