@@ -232,6 +232,10 @@
         .checked {
             color: orange;
         }
+
+        .fa-star {
+            font-size: 24px;
+        }
     </style>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
@@ -288,7 +292,7 @@
                                 </li>
                                 <li>
                                     <a class="ripple-group" href="/get/memorry">
-                                        <span data-hover="about">MEMORIES</span>
+                                        <span data-hover="LOVERS">My lovers</span>
                                     </a>
                                 </li>
                             </ul>
@@ -327,7 +331,7 @@
 
                         <div class="row">
                             <div class="col-xs-12 col-sm-12" style=" border-bottom: 1px solid black;">
-                                <h1 class="blog-page-post-title font-second">{{$post->name}} </h1>
+                                <h1 class="blog-page-post-title font-second" style="font-size: 24px">{{$post->name}} </h1>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
