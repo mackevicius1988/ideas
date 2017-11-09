@@ -276,7 +276,7 @@
         }
 
 
-        div.catalogueItemInner .desc {
+         .desc {
             display: none;
         }
 
