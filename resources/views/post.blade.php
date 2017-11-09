@@ -293,7 +293,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <a class="navbar-brand ripple-group" href="index.html#top">
-                                <a class="animisation-link" href="https://fakingoodideas.com">Fakin good ideas</p>
+                                <a class="animsition-link" href="https://fakingoodideas.com">Fakin good ideas</p>
                             </a>
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
