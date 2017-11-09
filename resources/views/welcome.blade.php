@@ -353,24 +353,11 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
-    <script src="js/grid.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.jscroll.js"></script>
-    <script type="text/javascript"></script>
-    <script src="js/infinity.js"></script>
     <script src="js/comment.js"></script>
     <script>
         $(document).ready(function () {
-            $(function () {
-                $(".item").hover(
-                    function () {
-                        $(this).parent().find('.details').addClass("active");
-                    }, function () {
-                        $(this).parent().find('.details').removeClass("active");
-                    }
-                );
-            })
-
             $(function () {
                 $('.rememberMe').click(function(e) {
                     localStorage.setItem('ids', $(this).data('id'));
@@ -410,16 +397,6 @@
                             console.log('in' +data);
                             $('.gridWrapper').html(data);
                             $('.gridWrapper').css('opacity', '1');
-
-                            $(function () {
-                                $(".item").hover(
-                                    function () {
-                                        $(this).parent().find('.details').addClass("active");
-                                    }, function () {
-                                        $(this).parent().find('.details').removeClass("active");
-                                    }
-                                );
-                            })
                             $('#spinner').hide();
                         },
                         error: function(error) {
@@ -440,9 +417,6 @@
                 $('.categoryItem').click(function(e) {
                     $(this).toggleClass('categorySelected');
                 });
-                // $('html, body').animate({
-                //   scrollTop: $("#about-section").offset().top + offset
-                //   }, 1000);
             })
 
             $(document).ready(function () {

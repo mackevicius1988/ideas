@@ -2,10 +2,8 @@ $(document).ready(function () {
     var pageNumber = 1;
     $(function () {
         $(window).scroll(function () {
-            console.log('Scroll');
+
             var aTop = $('#page-2').height();
-            console.log(aTop);
-            console.log($(this).scrollTop());
             if ($(this).scrollTop() + 10 >= aTop) {
 
                 $('#spinner').show();

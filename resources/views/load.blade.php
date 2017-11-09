@@ -28,34 +28,7 @@
 @endforeach
 
 </ul>
-
-<script>
-
-
-
-        $(function () {
-            $(".item").hover(
-                function () {
-                    $(this).parent().find('.details').addClass("active");
-                }, function () {
-                    $(this).parent().find('.details').removeClass("active");
-                }
-            );
-
-
-
-
-            $('.in').click(
-                function (e) {
-                    e.preventDefault();
-
-                    console.log(e);
-                }
-            );
-
-        })
-
-</script>
+{{$posts->links()}}
 
 
 
