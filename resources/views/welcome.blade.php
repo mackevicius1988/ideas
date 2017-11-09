@@ -275,6 +275,15 @@
             filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand');
         }
 
+
+        div.catalogueItemInner .desc {
+            display: none;
+        }
+
+        div.catalogueItemInner:HOVER .desc{
+            display: block;
+        }
+
         .catalogueItemInner {
             width: 275px;
             transition: all 2s ease;
