@@ -1,6 +1,6 @@
 <ul style="list-style-type: none">
 @foreach($posts as $post)
-    <li style="width: 275px; float:left" >
+    <li style="width: 275px; float:left; margin: 10px" >
 
         <a class="animsition-link" href="{{$post->id}}" data-id="{{$post->id}}" data-price="{{$post->price}}" data-largesrc="{{$post->imageUrl}}" data-title="{{$post->name}}" data-description="{{$post->desc}}">
             <div style="position: absolute; top: 0px; left: 0px; padding: 10px; z-index: 999; background: #551313; color: white; opacity: 0.9">SALE</div>
@@ -13,12 +13,12 @@
         <div class="details" style="border-right:1px solid #ccc ">
             <div class="row">
                 <div class="col-sm-10 col-xs-10">
-                    <p style="margin : 0;     font-weight: 400;font-style: normal; font-size : 15px"   >
+                    <p style="margin : 0;     font-weight: 400;font-style: normal; font-size : 14px"   >
                         {{ str_limit($post->name, 25) }}</p>
                     <span style="font-size: 10px; color: #333"> {{$post->price}} </span>
                 </div>
                 <div class="col-sm-2  col-xs-2" style="border-left : 1px solid #ccc; text-align: center;">
-                    <i style="font-size: 16px" class="fa fa-heart"></i>
+                    <i style="font-size: 16px; color : #ccc; margin: 0 auto" class="fa fa-heart"></i>
                     <span style="font-size: 9px" >1161</span>
                 </div>
             </div>
