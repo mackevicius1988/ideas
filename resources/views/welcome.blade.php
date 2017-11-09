@@ -258,7 +258,7 @@
         }
 
 
-        div.catalogueItem {
+        li.catalogueItem {
             transition: all 2s ease;
             overflow: hidden;
             width: 275px;
@@ -266,8 +266,8 @@
             margin: 10px;
         }
 
-        
-        div.catalogueItem:HOVER {
+
+        li.catalogueItem:HOVER {
             opacity: 1;
             transform: scale(1.3);
             -moz-transform: scale(1.3);
