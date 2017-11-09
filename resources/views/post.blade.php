@@ -315,39 +315,9 @@
                         <!-- Post -->
                         <section class="blog-post" style="margin-bottom: 0">
                             <!-- Post Media -->
-                            <section id="gallery" class="simplegallery">
-                                <div class="content">
-                                    <img src="{{$post->imageUrl}}" class="image_1" alt="" />
-                                    <img src="{{$post->imageUrl}}" class="image_2" style="display:none" alt="" />
-                                    <img src="{{$post->imageUrl}}" class="image_3" style="display:none" alt="" />
-                                    <img src="{{$post->imageUrl}}" class="image_4" style="display:none" alt="" />
-                                </div>
-
-                                <div class="clear"></div>
-
-                                <div class="thumbnail">
-                                    <div class="thumb">
-                                        <a href="#" rel="1">
-                                            <img src="{{$post->imageUrl}}" id="thumb_1" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="thumb">
-                                        <a href="#" rel="2">
-                                            <img src="{{$post->imageUrl}}" id="thumb_2" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="thumb">
-                                        <a href="#" rel="3">
-                                            <img src="{{$post->imageUrl}}" id="thumb_3" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="thumb last">
-                                        <a href="#" rel="4">
-                                            <img src="{{$post->imageUrl}}" id="thumb_4" alt="" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </section>
+                            <div class="blog-page-media" style="height: 500px;text-align: center;">
+                               <img src="{{$post->imageUrl}}" style="max-width:100%; max-height:100%;    ">
+                            </div>
                             <div class="shareHolder" style="text-align: center;">
                                 <div style="padding: 20px" class="fb-share-button" data-href="https://fakingoodideas.com/{{$post->id}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a style="padding: 20px" class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffakingoodideas.com%2F1&amp;src=sdkpreparse">Share</a></div>
 
@@ -406,7 +376,6 @@
                                     {{$post->features}}
                                 </div>
                             </div>
-
                         </div>
                         <!--/ End widget-categories -->
                     </div>
