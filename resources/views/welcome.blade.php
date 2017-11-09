@@ -267,7 +267,7 @@
         }
 
 
-        li.catalogueItem:HOVER {
+        li.catalogueItemInner:HOVER {
             opacity: 1;
             transform: scale(1.3);
             -moz-transform: scale(1.3);
