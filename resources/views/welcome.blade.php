@@ -450,7 +450,7 @@
                     ajax();
                 });
 
-
+/**
                 $(function () {
                     $('body').on('click', '.pagination a', function (e) {
                         e.preventDefault();
@@ -491,6 +491,8 @@
                 });
 
             })
+
+ **/
         })
     </script>
 
