@@ -8,20 +8,21 @@
                     background-position: center center;
                     background-size:65% auto; width: 275px; height: 275px;  background-repeat: no-repeat;">
             </div>
-            <div class="details">
-                <div class="row">
-                    <div class="col-sm-10 col-xs-10">
-                        <p style="margin : 0;     font-weight: 400;font-style: normal; font-size : 15px"   >
-                            {{ str_limit($post->name, 25) }}</p>
-                        <span style="font-size: 10px; color: #333"> {{$post->price}} </span>
-                    </div>
-                    <div class="col-sm-2  col-xs-2" style="border-left : 1px solid #ccc; text-align: center;">
-                        <i style="font-size: 16px" class="fa fa-heart"></i>
-                        <span style="font-size: 9px" >1161 saves</span>
-                    </div>
+
+        </a>
+        <div class="details">
+            <div class="row">
+                <div class="col-sm-10 col-xs-10">
+                    <p style="margin : 0;     font-weight: 400;font-style: normal; font-size : 15px"   >
+                        {{ str_limit($post->name, 25) }}</p>
+                    <span style="font-size: 10px; color: #333"> {{$post->price}} </span>
+                </div>
+                <div class="col-sm-2  col-xs-2" style="border-left : 1px solid #ccc; text-align: center;">
+                    <i style="font-size: 16px" class="fa fa-heart"></i>
+                    <span style="font-size: 9px" >1161 saves</span>
                 </div>
             </div>
-        </a>
+        </div>
     </li>
 
 @endforeach

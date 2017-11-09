@@ -147,14 +147,10 @@
         }
 
         .details {
-            position: absolute;
-            left: 0;
-            bottom: 0;
             background-color: white;
             width: 100%;
             padding: 7px;
             color: black;
-
             border-bottom:1px solid #ccc;
             text-align: left;
         }
