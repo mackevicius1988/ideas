@@ -239,8 +239,7 @@
 
         .blog-page-media {
             min-height: 300px;
-            display: table-cell;
-            vertical-align: middle;
+                
         }
 
         @media only screen and (max-width: 500px) {
