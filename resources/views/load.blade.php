@@ -10,19 +10,16 @@
             </div>
             <div class="details">
                 <div class="row">
-                    <div class="col-sm-8">
+                    <div class="col-sm-9">
                         <p style="margin : 0;     font-weight: 400;font-style: normal; font-size : 15px"   >
                             {{ str_limit($post->name, 30) }}</p>
-                        <span style="font-size: 12px"> {{$post->price}} saves</span>
+                        <span style="font-size: 12px"> {{$post->price}} </span>
                     </div>
-                    <div class="col-sm-4" style="border-left : 1px solid #ccc; text-align: center; padding-top:10px">
+                    <div class="col-sm-3" style="border-left : 1px solid #ccc; text-align: center; padding-top:10px">
                         <button class="search-button">
-                            <i class="fa fa-heart"></i>
+                            <i style="font-size: 18px" class="fa fa-heart"></i>
                         </button><br />
-                        <span class = 'itemPrice'>{{$post->votes}}</span><br />
-
-
-
+                        <span class = 'itemPrice'>{{$post->votes}}</span><br />saves
                     </div>
                 </div>
 
