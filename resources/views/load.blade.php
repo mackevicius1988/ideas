@@ -10,12 +10,12 @@
             </div>
             <div class="details">
                 <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-10 col-xs-10">
                         <p style="margin : 0;     font-weight: 400;font-style: normal; font-size : 15px"   >
                             {{ str_limit($post->name, 25) }}</p>
                         <span style="font-size: 12px"> {{$post->price}} </span>
                     </div>
-                    <div class="col-sm-2" style="border-left : 1px solid #ccc; text-align: center;">
+                    <div class="col-sm-2  col-xs-2" style="border-left : 1px solid #ccc; text-align: center;">
                         <button class="search-button">
                             <i style="font-size: 24px" class="fa fa-heart"></i>
                         </button><br />
