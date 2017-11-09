@@ -29,7 +29,7 @@
 
 </ul>
 {{$posts->links()}}
-
+<script src="js/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
             $(function () {
