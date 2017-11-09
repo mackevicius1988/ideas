@@ -30,6 +30,18 @@
 </ul>
 {{$posts->links()}}
 
+<script>
+    $(document).ready(function () {
+            $(function () {
+                $('.heart').click(function (e) {
+                    localStorage.setItem('ids', $(this).data('id'));
+                    $(this).toggleClass('heartLoved');
+                });
+            })
+        })
+</script>
+
+
 
 
 
