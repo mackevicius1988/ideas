@@ -17,9 +17,9 @@
                     </div>
                     <div class="col-sm-2  col-xs-2" style="border-left : 1px solid #ccc; text-align: center;">
                         <button class="search-button">
-                            <i style="font-size: 24px" class="fa fa-heart"></i>
+                            <i style="font-size: 18px" class="fa fa-heart"></i>
                         </button><br />
-                        <span class = 'itemPrice'>{{$post->votes}}</span><br />saves
+                        <span >1161 saves</span>
                     </div>
                 </div>
 
