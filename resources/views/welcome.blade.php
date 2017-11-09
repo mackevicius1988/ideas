@@ -266,8 +266,7 @@
             margin: 10px;
         }
 
-
-        li.catalogueItemInner:HOVER {
+        div.catalogueItemInner:HOVER {
             opacity: 1;
             transform: scale(1.3);
             -moz-transform: scale(1.3);
