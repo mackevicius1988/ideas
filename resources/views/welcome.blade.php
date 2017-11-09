@@ -162,11 +162,11 @@
 
         div.item:HOVER {
             opacity: 1;
-            transform: scale(1.5);
-            -moz-transform: scale(1.5);
-            -webkit-transform: scale(1.5);
-            -o-transform: scale(1.5);
-            -ms-transform: scale(1.5); /* IE 9 */
+            transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -webkit-transform: scale(1.3);
+            -o-transform: scale(1.3);
+            -ms-transform: scale(1.3); /* IE 9 */
             -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand')"; /* IE8 */
             filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand');
         }
@@ -355,7 +355,6 @@
     <script src="js/modernizr.custom.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.jscroll.js"></script>
-    <script src="js/comment.js"></script>
     <script>
         $(document).ready(function () {
             $(function () {

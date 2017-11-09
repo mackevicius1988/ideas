@@ -1,6 +1,6 @@
 <ul style="list-style-type: none">
 @foreach($posts as $post)
-    <li style="width: 275px; float:left; margin: 10px" >
+    <li style="width: 275px; float:left; margin: 5px" >
 
         <a class="animsition-link" href="{{$post->id}}" data-id="{{$post->id}}" data-price="{{$post->price}}" data-largesrc="{{$post->imageUrl}}" data-title="{{$post->name}}" data-description="{{$post->desc}}">
             <div style="position: absolute; top: 0px; left: 0px; padding: 10px; z-index: 999; background: #551313; color: white; opacity: 0.9">SALE</div>
