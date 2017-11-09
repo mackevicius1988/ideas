@@ -160,21 +160,7 @@
             text-align: left;
         }
 
-        div.item {
-            transition: all 2s ease;
-            overflow: hidden;
-        }
 
-        div.item:HOVER {
-            opacity: 1;
-            transform: scale(1.3);
-            -moz-transform: scale(1.3);
-            -webkit-transform: scale(1.3);
-            -o-transform: scale(1.3);
-            -ms-transform: scale(1.3); /* IE 9 */
-            -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand')"; /* IE8 */
-            filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand');
-        }
 
         div.item:hover .details {
             display: none;
@@ -271,11 +257,25 @@
             color: red !important;
         }
 
-        .catalogueItem {
+
+        div.catalogueItem {
+            transition: all 2s ease;
+            overflow: hidden;
             width: 275px;
             float: left;
             margin: 10px;
-            overflow: hidden
+        }
+
+        
+        div.catalogueItem:HOVER {
+            opacity: 1;
+            transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -webkit-transform: scale(1.3);
+            -o-transform: scale(1.3);
+            -ms-transform: scale(1.3); /* IE 9 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand')"; /* IE8 */
+            filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand');
         }
 
         .catalogueItemInner {
