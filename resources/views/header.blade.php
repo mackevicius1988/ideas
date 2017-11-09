@@ -6,9 +6,9 @@
             <div class="hs-content-inner">
                 <div class="init-animation-2 delay0-2s">
                     <div class="page-header-title-left">
-                        <h1 class="hs-text-10 init-animation-4 fadeInLeft" style="opacity: 1;">Fakin good ideas</h1>
+                        <h1 class="hs-text-10 init-animation-4 fadeInLeft" style="opacity: 1;font-size: 60px" >Fakin good ideas</h1>
                         <div class="hs-text-6 init-animation-4 delay0-2s fadeInLeft" style="opacity: 1;">
-                            <h2 style="font-weight: 100">Make yoour Christmass perfect</h2>
+                            <h2 style="font-weight: 100">From amazing gadgets through to unusual Christmas presents, there's a perfect Xmas Gift ideas with discounts</h2>
                         </div>
                     </div>
                 </div>
@@ -19,10 +19,6 @@
                         <span>EXPLORE THE COLLECTION</span></a>
                 </div>
             </div>
-            <span class="scroll-down-arrow in-page-scroll" data-start="display: inline-block"
-                  data-100-start="display: none">
-                    <a href="#about-section" class="ci-icon-uniE930 init-animation-2 delay1-8s"></a>
-                </span>
         </div>
     </div>
 </section>
