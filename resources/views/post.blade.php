@@ -352,33 +352,10 @@
 
                             <div class="row">
                                 <div class="col-xs-12" style="padding: 20px">
-                                    <a style="color: white; background: #000;border: 1px solid black; padding: 10px;" href="{{$post->url}}">Buy now</a>
-                                    <a style="color: white; background: #000;border: 1px solid black; padding: 10px;" href="{{$post->url}}">Vote</a>
+                                    <a style="color: white; background: #000;border: 1px solid black; padding: 10px; margin-left: 15px" href="{{$post->url}}">BUY NOW</a>
+                                    <a style="color: white; background: #000;border: 1px solid black; padding: 10px;" href="{{$post->url}}">LOVE IT</a>
                                 </div>
                             </div>
-
-
-                            <div class="row" style="margin-top:40px">
-                                <div class="col-xs-9">
-                                    <h1 class="blog-page-post-title font-second"> Votes</h1>
-                                </div>
-                                <div class="col-xs-3" >
-                                    <h1 class="blog-page-post-title font-second">  {{$post->votes}}</h1>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-9">
-                                    <h1 class="blog-page-post-title font-second">Rating</h1>
-                                </div>
-                                <div class="col-xs-3" >
-                                    <h1 class="blog-page-post-title font-second"> 4.75</h1>
-                                </div>
-                            </div>
-
-
-
-
-
 
                             <h4 class="widget-title font-second" style="margin-top: 20px">Description</h4>
                             <div class="widget-body">
