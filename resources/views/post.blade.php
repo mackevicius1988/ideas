@@ -366,8 +366,6 @@
                             <div class="widget-body">
                                 <div>
                                     {{$post->description}}
-
-
                                 </div>
                             </div>
 
@@ -379,6 +377,40 @@
                                 </div>
                             </div>
 
+
+                            <section id="gallery" class="simplegallery">
+                                <div class="content">
+                                    <img src="{{$post->imageUrl}}" class="image_1" alt="" />
+                                    <img src="{{$post->imageUrl}}" class="image_2" style="display:none" alt="" />
+                                    <img src="{{$post->imageUrl}}" class="image_3" style="display:none" alt="" />
+                                    <img src="{{$post->imageUrl}}" class="image_4" style="display:none" alt="" />
+                                </div>
+
+                                <div class="clear"></div>
+
+                                <div class="thumbnail">
+                                    <div class="thumb">
+                                        <a href="#" rel="1">
+                                            <img src="{{$post->imageUrl}}" id="thumb_1" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="thumb">
+                                        <a href="#" rel="2">
+                                            <img src="{{$post->imageUrl}}" id="thumb_2" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="thumb">
+                                        <a href="#" rel="3">
+                                            <img src="{{$post->imageUrl}}" id="thumb_3" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="thumb last">
+                                        <a href="#" rel="4">
+                                            <img src="{{$post->imageUrl}}" id="thumb_4" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
 
                         </div>
 
@@ -504,6 +536,20 @@
     <script src="js/nivo-lightbox.min.js"></script>
     <script src="js/contactForm.js"></script>
     <script src="js/scripts.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $('#gallery').simplegallery({
+                galltime : 400,
+                gallcontent: '.content',
+                gallthumbnail: '.thumbnail',
+                gallthumb: '.thumb'
+            });
+
+        });
+    </script>
+
 </div>
 </body>
 </html>
