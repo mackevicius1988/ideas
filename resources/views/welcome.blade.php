@@ -5,7 +5,9 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109033621-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-109033621-1');
@@ -16,14 +18,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="copyright" content="Copyright ©2017">
-    <meta name="description" content="Christmas Gifts for everyone! From amazing gadgets through to unusual Christmas presents, there's a perfect Xmas Gift for everyone at Fakingoodideas!" />
+    <meta name="description"
+          content="Christmas Gifts for everyone! From amazing gadgets through to unusual Christmas presents, there's a perfect Xmas Gift for everyone at Fakingoodideas!"/>
     <meta name="robots" content="index,follow">
 
-    <meta property="og:url"           content="http://fakingoodideas.com" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Fakin good ideas" />
-    <meta property="og:description"   content="Christmas Gifts for everyone! From amazing gadgets through to unusual Christmas presents, there's a perfect Xmas Gift for everyone at Fakingoodideas!" />
-    <meta property="og:image"content="https://images-na.ssl-images-amazon.com/images/I/71EJ6shbuYL._SL1500_.jpg" />
+    <meta property="og:url" content="http://fakingoodideas.com"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Fakin good ideas"/>
+    <meta property="og:description"
+          content="Christmas Gifts for everyone! From amazing gadgets through to unusual Christmas presents, there's a perfect Xmas Gift for everyone at Fakingoodideas!"/>
+    <meta property="og:image" content="https://images-na.ssl-images-amazon.com/images/I/71EJ6shbuYL._SL1500_.jpg"/>
 
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -35,7 +39,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -82,6 +86,7 @@
     <style>
 
         @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+
         body {
             font-family: 'Open Sans', sans-serif;
         }
@@ -151,7 +156,7 @@
             width: 100%;
             padding: 7px;
             color: black;
-            border-bottom:1px solid #ccc;
+            border-bottom: 1px solid #ccc;
             text-align: left;
         }
 
@@ -243,15 +248,17 @@
         }
 
         .categoryItem {
-            font-size : 28px;
-            cursor : pointer;
-            letter-spacing : 4px !important;
+            font-size: 28px;
+            cursor: pointer;
+            letter-spacing: 4px !important;
             background-color: white;
         }
+
         .categorySelected {
-            background-color : #551313;
-            color : #fff !important;
+            background-color: #551313;
+            color: #fff !important;
         }
+
         .fa-bookmark {
             font-size: 32px
         }
@@ -261,7 +268,39 @@
         }
 
         .heartLoved {
-            color:red !important;
+            color: red !important;
+        }
+
+        .catalogueItem {
+            width: 275px;
+            float: left;
+            margin: 10px;
+            overflow: hidden
+        }
+
+        .catalogueItemInner {
+            background-position: center center;
+            background-size: 75% auto;
+            width: 275px;
+            height: 275px;
+            background-repeat: no-repeat;
+        }
+
+        @media only screen and (max-width: 500px) {
+            .catalogueItem {
+                width: 100%;
+                float: left;
+                margin: 10px;
+                overflow: hidden
+            }
+
+            .catalogueItemInner {
+                background-position: center center;
+                background-size: 75% auto;
+                width: 100%;
+                height: 275px;
+                background-repeat: no-repeat;
+            }
         }
 
     </style>
@@ -270,10 +309,11 @@
 <body class="christmas-gift">
 
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script>(function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
+        js = d.createElement(s);
+        js.id = id;
         js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10&appId=341948169308496';
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
@@ -287,14 +327,15 @@
 
     <div id="page-2">
         <section id="about-section" class="about-section section" style="padding: 15px;">
-            <div style="padding-top: 80px">  <div class="row">
+            <div style="padding-top: 80px">
+                <div class="row">
                     <div class="col-xs-12 col-sm-4">
                         <div class="widget" style="margin: 0">
                             <div class="widget-body">
                                 <div class="tags" style="text-align: center">
 
                                     @foreach($tags as $tag)
-                                        <a class="categoryItem" data-id = '{{$tag->id}}'>{{$tag->name}}</a>
+                                        <a class="categoryItem" data-id='{{$tag->id}}'>{{$tag->name}}</a>
                                     @endforeach
                                 </div>
                             </div>
@@ -307,7 +348,7 @@
                                     <button class="search-button" title="Start Search">
                                         <i class="fa fa-search"></i>
                                     </button>
-                                    <input id = 'searchQuery' type="text" class="input-field " placeholder="Search...">
+                                    <input id='searchQuery' type="text" class="input-field " placeholder="Search...">
                                 </div>
                             </form>
                         </div>
@@ -334,9 +375,11 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12"   style="text-align: center">
+                    <div class="col-md-12" style="text-align: center">
 
-                        <button id="btn-find" style="background-color: #551313" type="submit" class="btn btn-animated btn-contact ripple-alone" data-text="FIND MY ITEMS"><span class="btn-icon"><span class="loader-parent"><span class="loader2"></span></span>
+                        <button id="btn-find" style="background-color: #551313" type="submit"
+                                class="btn btn-animated btn-contact ripple-alone" data-text="FIND MY ITEMS"><span
+                                    class="btn-icon"><span class="loader-parent"><span class="loader2"></span></span>
                                                 </span>
                         </button>
                     </div>
