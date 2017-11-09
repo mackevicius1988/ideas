@@ -322,7 +322,7 @@
                                         <i class="fa fa-sort"></i>
                                     </button>
 
-                                    <span>SORT BY</span>
+                                    <span>SORT BY:</span>
                                     <a class="categoryItem">POPULARITY</a>
                                     <a class="categoryItem">NEWEST FIRST</a>
                                     <a class="categoryItem">PRICE HIGH to LOW</a>
