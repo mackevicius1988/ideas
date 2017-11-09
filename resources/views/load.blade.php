@@ -17,7 +17,7 @@
                     <b style="font-size: 12px; color: #333;"> {{$post->price}} </b>
                 </div>
                 <div class="col-sm-2  col-xs-2" style="text-align: center;">
-                    <i style="font-size: 16px; color : #ccc; margin: 0 auto" class="fa fa-heart heart"></i>
+                    <i data-id = '{{$post->id}}' style="font-size: 16px; color : #ccc; margin: 0 auto" class="fa fa-heart heart"></i>
                     <span style="font-size: 9px" >1161</span>
                 </div>
             </div>

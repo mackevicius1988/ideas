@@ -257,9 +257,7 @@
             color: red !important;
         }
 
-
         li.catalogueItem {
-            transition: all 2s ease;
             overflow: hidden;
             width: 275px;
             float: left;
@@ -279,6 +277,7 @@
 
         .catalogueItemInner {
             width: 275px;
+            transition: all 2s ease;
             height: 275px;
         }
 
@@ -396,7 +395,7 @@
         $(document).ready(function () {
             $(function () {
                 $('.heart').click(function (e) {
-                    console.log('Clicked');
+                    console.log($(this).data('id'));
                     localStorage.setItem('ids', $(this).data('id'));
                     $(this).toggleClass('heartLoved');
                 });
