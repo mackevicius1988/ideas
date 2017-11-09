@@ -260,6 +260,10 @@
 
         }
 
+        .heartLoved {
+            color:red;
+        }
+
     </style>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
@@ -342,12 +346,13 @@
 
             <div class="container">
                 <div class="main" style="text-align: center">
-
                     <div class="gridWrapper">
                         @include('load')
-                        </button>
                     </div>
                 </div>
+            </div>
+
+
         </section>
     </div>
     <script src="js/jquery.min.js"></script>
@@ -358,9 +363,9 @@
     <script>
         $(document).ready(function () {
             $(function () {
-                $('.rememberMe').click(function(e) {
+                $('.heart').click(function(e) {
                     localStorage.setItem('ids', $(this).data('id'));
-                    $(this).toggleClass('categorySelected');
+                    $(this).toggleClass('heartLoved');
                 });
             })
 

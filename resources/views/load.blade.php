@@ -15,10 +15,10 @@
                 <div class="col-sm-10 col-xs-10">
                     <p style="margin : 0;     font-weight: 400;font-style: normal; font-size : 14px"   >
                         {{ str_limit($post->name, 25) }}</p>
-                    <b style="font-size: 10px; color: #333;"> {{$post->price}} </b>
+                    <b style="font-size: 12px; color: #333;"> {{$post->price}} </b>
                 </div>
                 <div class="col-sm-2  col-xs-2" style="text-align: center;">
-                    <i style="font-size: 16px; color : #ccc; margin: 0 auto" class="fa fa-heart"></i>
+                    <i class="heart" style="font-size: 16px; color : #ccc; margin: 0 auto" class="fa fa-heart"></i>
                     <span style="font-size: 9px" >1161</span>
                 </div>
             </div>
