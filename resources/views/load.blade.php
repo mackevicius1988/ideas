@@ -4,7 +4,8 @@
 
         <a class="animsition-link" href="{{$post->id}}" data-id="{{$post->id}}" data-price="{{$post->price}}" data-largesrc="{{$post->imageUrl}}" data-title="{{$post->name}}" data-description="{{$post->desc}}">
             <div style="position: absolute; top: 0px; left: 0px; padding: 10px; z-index: 999; background: #551313; color: white; opacity: 0.9">SALE</div>
-            <div class="catalogueItemInner" style="background: url('{{$post->imageUrl}}');">
+            <div class="catalogueItemInner" style="background: url('{{$post->imageUrl}}');background-position: center center;
+                    background-size: 75% auto;   background-repeat: no-repeat;">
             </div>
 
         </a>

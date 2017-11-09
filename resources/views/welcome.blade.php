@@ -279,27 +279,17 @@
         }
 
         .catalogueItemInner {
-            background-position: center center;
-            background-size: 75% auto;
             width: 275px;
             height: 275px;
-            background-repeat: no-repeat;
         }
 
         @media only screen and (max-width: 500px) {
             .catalogueItem {
                 width: 100%;
-                float: left;
-                margin: 10px;
-                overflow: hidden
             }
-
+    
             .catalogueItemInner {
-                background-position: center center;
-                background-size: 75% auto;
                 width: 100%;
-                height: 275px;
-                background-repeat: no-repeat;
             }
         }
 
