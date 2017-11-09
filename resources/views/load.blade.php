@@ -6,11 +6,11 @@
             <div style="position: absolute; top: 0px; left: 0px; padding: 10px; z-index: 999; background: #551313; color: white; opacity: 0.9">SALE</div>
             <div class="item" style="background: url('{{$post->imageUrl}}');
                     background-position: center center;
-                    background-size:65% auto; width: 275px; height: 275px;  background-repeat: no-repeat;">
+                    background-size:75% auto; width: 275px; height: 275px;  background-repeat: no-repeat;">
             </div>
 
         </a>
-        <div class="details">
+        <div class="details" style="border-right:1px solid #ccc ">
             <div class="row">
                 <div class="col-sm-10 col-xs-10">
                     <p style="margin : 0;     font-weight: 400;font-style: normal; font-size : 15px"   >
@@ -19,7 +19,7 @@
                 </div>
                 <div class="col-sm-2  col-xs-2" style="border-left : 1px solid #ccc; text-align: center;">
                     <i style="font-size: 16px" class="fa fa-heart"></i>
-                    <span style="font-size: 9px" >1161 saves</span>
+                    <span style="font-size: 9px" >1161</span>
                 </div>
             </div>
         </div>
