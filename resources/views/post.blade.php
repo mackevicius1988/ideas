@@ -292,9 +292,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand ripple-group" href="index.html#top">
-                                <a class="animsition-link" href="https://fakingoodideas.com">Fakin good ideas</p>
-                            </a>
+                            <a class="animsition-link" href="https://fakingoodideas.com">Fakin good ideas</a>
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="mobile-navbar-collapse">
