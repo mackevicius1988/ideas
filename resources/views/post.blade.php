@@ -352,7 +352,7 @@
 
                             <div class="row">
                                 <div class="col-xs-12" style="padding: 20px">
-                                    <a style="color: white; background: #000;border: 1px solid black; padding: 10px; margin-left: 15px" href="{{$post->url}}">BUY NOW</a>
+                                    <a style="color: white; background: #000;border: 1px solid black; padding: 10px; margin-right: 15px" href="{{$post->url}}">BUY NOW</a>
                                     <a style="color: white; background: #000;border: 1px solid black; padding: 10px;" href="{{$post->url}}">LOVE IT</a>
                                 </div>
                             </div>
