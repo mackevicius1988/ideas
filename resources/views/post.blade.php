@@ -237,9 +237,16 @@
             font-size: 24px;
         }
 
+        .blog-page-media {
+            min-height: 300px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
         @media only screen and (max-width: 500px) {
             .blog-page-media {
-                height: auto;
+                height: auto !important;
+
             }
         }
 
@@ -286,7 +293,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <a class="navbar-brand ripple-group" href="index.html#top">
-                                <a href="https://fakinggoodideas.com">Fakin good ideas</p>
+                                <a class="animisation-link" href="https://fakingoodideas.com">Fakin good ideas</p>
                             </a>
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
