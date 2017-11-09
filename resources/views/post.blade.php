@@ -283,6 +283,7 @@
                         </div>
                     </div>
                     <div class="container in-page-scroll">
+                        <a class="animsition-link" href="https://fakingoodideas.com">Fakin good ideas</a>
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
                             <button type="button" id="animated-navicon" class="navbar-toggle" data-toggle="collapse" data-target="#mobile-navbar-collapse">
@@ -291,7 +292,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="animsition-link" href="https://fakingoodideas.com">Fakin good ideas</a>
+
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="mobile-navbar-collapse">
@@ -318,7 +319,7 @@
         <!-- Do not remove the div below if you want to a sticky navbar! -->
         <div id="about-section"></div>
         <!-- section -->
-        <div class="section" style="padding-top: 150px; padding-left: 10px; padding-right: 10px">
+        <div class="section" style="padding-top: 100px; padding-left: 10px; padding-right: 10px">
             <div class="container">
 
                 <div class="row">
