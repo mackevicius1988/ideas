@@ -29,17 +29,7 @@
 
 </ul>
 {{$posts->links()}}
-<script src="js/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-            $(function () {
-                $('.heart').click(function (e) {
-                    localStorage.setItem('ids', $(this).data('id'));
-                    $(this).toggleClass('heartLoved');
-                });
-            })
-        })
-</script>
+
 
 
 

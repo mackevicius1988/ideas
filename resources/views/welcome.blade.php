@@ -364,6 +364,7 @@
         $(document).ready(function () {
             $(function () {
                 $('.heart').click(function (e) {
+                    console.log('Clicked');
                     localStorage.setItem('ids', $(this).data('id'));
                     $(this).toggleClass('heartLoved');
                 });
