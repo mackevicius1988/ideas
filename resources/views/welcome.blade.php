@@ -261,7 +261,7 @@
         }
 
         .heartLoved {
-            color:red;
+            color:red !important;
         }
 
     </style>
