@@ -310,7 +310,7 @@
                                <img src="{{$post->imageUrl}}" style="max-width:100%; max-height:100%;    ">
                             </div>
                             <div class="shareHolder" style="text-align: center;">
-                                <div style="padding: 20px" class="fb-share-button" data-href="https://fakingoodideas.com/{{$post->id}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffakingoodideas.com%2F1&amp;src=sdkpreparse">Share</a></div>
+                                <div style="padding: 20px" class="fb-share-button" data-href="https://fakingoodideas.com/{{$post->id}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a style="padding: 20px" class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffakingoodideas.com%2F1&amp;src=sdkpreparse">Share</a></div>
                             </div>
                         </section>
 
@@ -323,6 +323,11 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12" style=" border-bottom: 1px solid black;">
                                 <h1 class="blog-page-post-title font-second">{{$post->name}} </h1>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
                                 <span>{{$post->rating}}</span>
                             </div>
 
