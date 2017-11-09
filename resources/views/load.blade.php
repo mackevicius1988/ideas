@@ -7,9 +7,6 @@
             <div class="catalogueItemInner" style="background: url('{{$post->imageUrl}}');background-position: center center;
                     background-size: 75% auto;   background-repeat: no-repeat;">
             </div>
-            <div class="desc">
-                <p>{{$post->description}}</p>
-            </div>
         </a>
         <div class="details" style="border-right:1px solid #ccc ">
             <div class="row">
