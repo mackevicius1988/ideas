@@ -236,6 +236,13 @@
         .fa-star {
             font-size: 24px;
         }
+
+        @media only screen and (max-width: 500px) {
+            .blog-page-media {
+                height: auto;
+            }
+        }
+
     </style>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
@@ -279,7 +286,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <a class="navbar-brand ripple-group" href="index.html#top">
-                                <p class="pull-left font-second">Fakin good ideas</p>
+                                <a href="https://fakinggoodideas.com">Fakin good ideas</p>
                             </a>
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->

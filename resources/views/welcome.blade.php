@@ -287,7 +287,7 @@
             .catalogueItem {
                 width: 100%;
             }
-    
+
             .catalogueItemInner {
                 width: 100%;
             }
