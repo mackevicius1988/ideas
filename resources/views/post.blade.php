@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="/" />
+    <base href="/"/>
     <title>{{$post->name}}</title>
 
-    <meta property="og:url"           content="http://fakingoodideas/{{$post->id}}" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="{{$post->name}} {{$post->price}}"$ />
-    <meta property="og:description"   content="{{$post->desc}}" />
-    <meta property="og:image"         content="{{$post->url}}" />
+    <meta property="og:url" content="http://fakingoodideas/{{$post->id}}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{$post->name}} {{$post->price}}" $/>
+    <meta property="og:description" content="{{$post->desc}}"/>
+    <meta property="og:image" content="{{$post->url}}"/>
 
-    <meta name="description" content="{{$post->desc}}" />
+    <meta name="description" content="{{$post->desc}}"/>
 
-    <link rel="stylesheet" type="text/css" href="css/simplegallery.demo1.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/simplegallery.demo1.min.css"/>
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -55,6 +55,7 @@
     <style>
 
         @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+
         body {
             font-family: 'Open Sans', sans-serif;
         }
@@ -220,14 +221,14 @@
         }
 
         .categoryItem {
-            font-size : 28px;
-            cursor : pointer;
-        }
-        .categorySelected {
-            background-color : #551313;
-            color : #fff !important;
+            font-size: 28px;
+            cursor: pointer;
         }
 
+        .categorySelected {
+            background-color: #551313;
+            color: #fff !important;
+        }
 
         .checked {
             color: orange;
@@ -249,33 +250,59 @@
             }
         }
 
+        .buyNow:HOVER {
+            background: #551313;
+        }
+
+        .buyNow {
+            border-radius: 15px;
+            color: white;
+            background: #000;
+            border: 1px solid black;
+            padding: 10px 50px;
+            margin-right: 15px
+        }
+
+        .padding20 {
+            padding: 20px;
+        }
+
+        .textCenter {
+            text-align: center
+        }
+
     </style>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <body>
 
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script>(function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
+        js = d.createElement(s);
+        js.id = id;
         js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10&appId=341948169308496';
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
 <div id="top"></div>
-<div id="page" class="animsition" data-animsition-in="fade-in" data-animsition-out="fade-out-up-sm" data-loader-type="loader2" data-page-loader-text="Fakin good ideas loading" style="transform-origin: 50% 50vh;">
+<div id="page" class="animsition" data-animsition-in="fade-in" data-animsition-out="fade-out-up-sm"
+     data-loader-type="loader2" data-page-loader-text="Fakin good ideas loading" style="transform-origin: 50% 50vh;">
 
 
     <div id="top"></div>
-    <div id="page" class="animsition" data-animsition-in="fade-in" data-animsition-out="fade-out-up-sm" data-loader-type="loader2" data-page-loader-text="Volar" style="transform-origin: 50% 50vh;">
+    <div id="page" class="animsition" data-animsition-in="fade-in" data-animsition-out="fade-out-up-sm"
+         data-loader-type="loader2" data-page-loader-text="Volar" style="transform-origin: 50% 50vh;">
 
         <!--/ page-header -->
         <!-- Navbar -->
         <div class="position-relative">
             <!-- sticky: 1) add class="sticky-navbar" to #nav-wrapper | 2) remove navbar-fixed-top navbar-transparent class from #nav -->
-            <div id="nav-wrapper" class="transp-nav" >
-                <nav style="background-color: black" id="nav" class="navbar navbar-default navbar-fixed-top navbar-transparent ripple-group-parent init-animation-1" role="navigation">
+            <div id="nav-wrapper" class="transp-nav">
+                <nav style="background-color: black" id="nav"
+                     class="navbar navbar-default navbar-fixed-top navbar-transparent ripple-group-parent init-animation-1"
+                     role="navigation">
                     <!-- progressbar -->
                     <div id="scroll-progressbar" class="scroll-progressbar">
                         <div>
@@ -286,7 +313,8 @@
                         <a class="animsition-link" href="https://fakingoodideas.com">Fakin good ideas</a>
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
-                            <button type="button" id="animated-navicon" class="navbar-toggle" data-toggle="collapse" data-target="#mobile-navbar-collapse">
+                            <button type="button" id="animated-navicon" class="navbar-toggle" data-toggle="collapse"
+                                    data-target="#mobile-navbar-collapse">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -328,10 +356,16 @@
                         <section class="blog-post" style="margin-bottom: 0">
                             <!-- Post Media -->
                             <div class="blog-page-media" style="height: 500px;text-align: center;">
-                               <img src="{{$post->imageUrl}}" style="max-width:100%; max-height:100%;    ">
+                                <img src="{{$post->imageUrl}}" style="max-width:100%; max-height:100%;    ">
                             </div>
                             <div class="shareHolder" style="text-align: center;">
-                                <div style="padding: 20px" class="fb-share-button" data-href="https://fakingoodideas.com/{{$post->id}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a style="padding: 20px" class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffakingoodideas.com%2F1&amp;src=sdkpreparse">Share</a></div>
+                                <div style="padding: 20px" class="fb-share-button"
+                                     data-href="https://fakingoodideas.com/{{$post->id}}" data-layout="button_count"
+                                     data-size="small" data-mobile-iframe="true"><a style="padding: 20px"
+                                                                                    class="fb-xfbml-parse-ignore"
+                                                                                    target="_blank"
+                                                                                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffakingoodideas.com%2F1&amp;src=sdkpreparse">Share</a>
+                                </div>
                             </div>
                         </section>
                         <div id="end-content"></div>
@@ -341,7 +375,8 @@
 
                         <div class="row">
                             <div class="col-xs-12 col-sm-12" style=" border-bottom: 1px solid #ccc; padding: 20px">
-                                <h1 class="blog-page-post-title font-second" style="margin-bottom:10px;font-size: 24px">{{$post->name}} </h1>
+                                <h1 class="blog-page-post-title font-second"
+                                    style="margin-bottom:10px;font-size: 24px">{{$post->name}} </h1>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
@@ -424,7 +459,8 @@
                                         <!--/ End from messages -->
                                         <div class="input col-xs-12 col-sm-6 padding-bottom-xs-50 padding-bottom-40">
                                             <label class="input-label" for="name">
-                                                <span class="input-label-content font-second" data-content="name">name *</span>
+                                                <span class="input-label-content font-second"
+                                                      data-content="name">name *</span>
                                             </label>
                                             <input class="input-field" type="text" name="name" id="name" required="">
                                         </div>
@@ -439,13 +475,16 @@
                                     <div class="row margin-bottom-20 margin-top-xs-10">
                                         <div class="message col-xs-12 ">
                                             <label class="textarea-label font-second" for="message">message *</label>
-                                            <textarea class="input-field textarea" name="message" id="message" required=""></textarea>
+                                            <textarea class="input-field textarea" name="message" id="message"
+                                                      required=""></textarea>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-3 padding-top-sm-20 padding-top-xs-10 text-left">
                                             <input type="hidden" value="{{$post->id}}" id="id"/>
-                                            <button id="commentMe" class="btn btn-animated btn-contact ripple-alone" data-text="send it"><span class="btn-icon"><span class="loader-parent"><span class="loader2"></span></span>
+                                            <button id="commentMe" class="btn btn-animated btn-contact ripple-alone"
+                                                    data-text="send it"><span class="btn-icon"><span
+                                                            class="loader-parent"><span class="loader2"></span></span>
                                                 </span>
                                             </button>
                                         </div>
@@ -470,7 +509,8 @@
         <footer class="footer-section section no-padding-bottom ">
             <div class="footer-bottom">
                 <!-- Copyright -->
-                <a class="footer-bottom-text font-second" href="" target="_blank">Fakin good ideas © 2017. All Right Reserved.</a>
+                <a class="footer-bottom-text font-second" href="" target="_blank">Fakin good ideas © 2017. All Right
+                    Reserved.</a>
                 <!-- End Copyright -->
             </div>
         </footer>
@@ -510,10 +550,10 @@
     <script type="text/javascript" src="js/simplegallery.min.js"></script>
 
     <script type="text/javascript">
-        $(document).ready(function(){
+        $(document).ready(function () {
 
             $('#gallery').simplegallery({
-                galltime : 400,
+                galltime: 400,
                 gallcontent: '.content',
                 gallthumbnail: '.thumbnail',
                 gallthumb: '.thumb'

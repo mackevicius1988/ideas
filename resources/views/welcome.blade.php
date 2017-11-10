@@ -297,26 +297,7 @@
             }
         }
 
-        .buyNow:HOVER {
-            background: #551313;
-        }
 
-        .buyNow {
-            border-radius: 15px;
-            color: white;
-            background: #000;
-            border: 1px solid black;
-            padding: 10px 50px;
-            margin-right: 15px
-        }
-
-        .padding20 {
-            padding: 20px;
-        }
-
-       .textCenter {
-             text-align: center
-        }
 
     </style>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
