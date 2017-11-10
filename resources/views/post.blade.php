@@ -358,7 +358,7 @@
                         <section class="blog-post" style="margin-bottom: 0">
                             <!-- Post Media -->
                             <div class="blog-page-media" style="height: 500px;text-align: center;">
-                                <img src="{{$post->imageUrl}}" style="max-width:100%; max-height:100%;    ">
+                                <img id = "zoom1" src="{{$post->imageUrl}}" style="max-width:100%; max-height:100%;    ">
                             </div>
                             <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a044870d03de004"></script>
                         </section>
@@ -540,22 +540,15 @@
     <script src="js/contactForm.js"></script>
     <script src="js/scripts.min.js"></script>
 
-
-    <script type="text/javascript" src="js/simplegallery.min.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-            $('#gallery').simplegallery({
-                galltime: 400,
-                gallcontent: '.content',
-                gallthumbnail: '.thumbnail',
-                gallthumb: '.thumb'
-            });
-
+    <script src='js/jquery.elevatezoom.js'></script>
+    <script>
+        $('#zoom_01').elevateZoom({
+            zoomType: "inner",
+            cursor: "crosshair",
+            zoomWindowFadeIn: 500,
+            zoomWindowFadeOut: 750
         });
     </script>
-
 </div>
 </body>
 </html>
