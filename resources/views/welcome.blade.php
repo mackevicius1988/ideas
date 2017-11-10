@@ -322,6 +322,15 @@
             .catalogueItemInner {
                 width: 100% !important;
             }
+
+            .listPrice {
+                font-size: 16px;
+            }
+
+            .listName{
+                font-size: 16px;
+            }
+
         }
 
         #btn-find {
