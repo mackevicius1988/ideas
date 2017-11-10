@@ -160,8 +160,6 @@
             text-align: left;
         }
 
-
-
         div.item:hover .details {
             display: none;
         }
@@ -275,12 +273,11 @@
             filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand');
         }
 
-
-         .desc {
+        .desc {
             display: none;
         }
 
-        div.catalogueItemInner:HOVER .desc{
+        div.catalogueItemInner:HOVER .desc {
             display: block;
         }
 
@@ -298,6 +295,27 @@
             .catalogueItemInner {
                 width: 100% !important;
             }
+        }
+
+        .buyNow:HOVER {
+            background: #551313;
+        }
+
+        .buyNow {
+            border-radius: 15px;
+            color: white;
+            background: #000;
+            border: 1px solid black;
+            padding: 10px 50px;
+            margin-right: 15px
+        }
+
+        .padding20 {
+            padding: 20px;
+        }
+
+       .textCenter {
+             text-align: center
         }
 
     </style>

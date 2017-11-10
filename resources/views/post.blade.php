@@ -362,8 +362,8 @@
                         <div class="widget widget-text">
 
                             <div class="row">
-                                <div class="col-xs-12" style="padding: 20px; text-align: center">
-                                    <a style="border-radius: 15px;color: white; background: #000;border: 1px solid black; padding: 10px 50px; margin-right: 15px" href="{{$post->url}}"><b>BUY NOW</b></a>
+                                <div class="col-xs-12 padding20 textCenter">
+                                    <a class="buyNow" href="{{$post->url}}"><b>BUY NOW</b></a>
                                 </div>
                             </div>
 
