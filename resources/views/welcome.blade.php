@@ -231,11 +231,16 @@
             transform-origin: 0 28px;
         }
 
-        .categoryItem {
+        .categoryItem, .sortItem {
             font-size: 28px;
             cursor: pointer;
             letter-spacing: 4px !important;
             background-color: white;
+        }
+
+        .categoryItem:HOVER, .sortItem:HOVER {
+            background-color: #551313;
+            color: #fff !important;
         }
 
         .categorySelected {
@@ -359,11 +364,11 @@
                                         <i class="fa fa-sort"></i>
                                     </button>
 
-                                    <span>SORT BY:</span>
-                                    <a class="categoryItem">POPULARITY</a>
-                                    <a class="categoryItem">NEWEST FIRST</a>
-                                    <a class="categoryItem">PRICE HIGH to LOW</a>
-                                    <a class="categoryItem">PRICE LOW to HIGH</a>
+                                    <h2>SORT BY:</h2>
+                                    <a class="sortItem">POPULARITY</a>
+                                    <a class="sortItem">NEWEST FIRST</a>
+                                    <a class="sortItem">PRICE HIGH to LOW</a>
+                                    <a class="sortItem">PRICE LOW to HIGH</a>
                                 </div>
                             </form>
                         </div>
