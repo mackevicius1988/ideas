@@ -324,7 +324,7 @@
         }
 
         #btn-find {
-            padding: 10px !important;
+       
             border-radius: 15px;
         }
 
