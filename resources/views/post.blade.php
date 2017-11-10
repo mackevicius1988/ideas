@@ -359,8 +359,15 @@
                         <!-- Post -->
                         <section class="blog-post" style="margin-bottom: 0">
                             <!-- Post Media -->
+
+
+
+
+
+
                             <div class="blog-page-media" style="height: 500px;text-align: center;">
-                                <img id = "zoom1" src="{{$post->imageUrl}}" style="max-width:100%; max-height:100%;    ">
+                                <div style="opacity: 0.7;  background: #551313;border-radius: 25px;position:absolute;top:15px;left: 15px;padding: 10px;"><b style="color: white">SALE</b></div>
+                                <img id = "zoom1" src="http://www.drogbaster.it/wp-content/uploads/2017/07/miglior-vino-rosso-da-tavola.jpg" style="max-width:100%; max-height:100%;    ">
                             </div>
                             <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a044870d03de004"></script>
                         </section>
