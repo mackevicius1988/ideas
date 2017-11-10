@@ -253,7 +253,8 @@
             margin: 0 2px 5px 0;
             padding: 5px 7px;
             border: 1px solid #b8b7cb;
-
+            font-size: 10px;
+            color: black;
             font-weight: 400;
             text-transform: uppercase;
         }
@@ -376,12 +377,11 @@
                     </div>
                     <div class="col-xs-12 col-sm-4" style="padding: 10px; text-align: center">
 
-                                    <h2>SORT BY:</h2>
+                                    <h2 style="   font-size: 1.25em; font-weight: 400;">SORT BY:</h2>
                                     <a class="sortItem">POPULARITY</a>
                                     <a class="sortItem">NEWEST FIRST</a>
                                     <a class="sortItem">PRICE HIGH to LOW</a>
                                     <a class="sortItem">PRICE LOW to HIGH</a>
-
                     </div>
                 </div>
                 <div class="row">
