@@ -21,7 +21,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand ripple-group" href="#top">
-                        <p class="pull-left font-second" style="font-weight: 300">Fakin Good Ideas</p>
+                        <p class="pull-left font-second hs-text-6" style="font-weight: 300">Fakin Good Ideas</p>
                     </a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
