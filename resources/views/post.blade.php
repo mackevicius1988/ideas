@@ -231,7 +231,7 @@
         }
 
         .checked {
-            color: #551313;
+            color: orange;
         }
 
         .fa-star {
@@ -301,6 +301,7 @@
         <div class="position-relative">
             <!-- sticky: 1) add class="sticky-navbar" to #nav-wrapper | 2) remove navbar-fixed-top navbar-transparent class from #nav -->
             <div id="nav-wrapper" class="transp-nav">
+                <div id="particles" class="particles"></div>
                 <nav style="    padding: 10px;
     padding-top: 20px;background-color: black" id="nav"
                      class="navbar navbar-default navbar-fixed-top navbar-transparent ripple-group-parent init-animation-1"
@@ -377,7 +378,7 @@
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
                                 <span>{{$post->rating}}</span>
-                                <a class="animsition-link" href="{{$post->rating}}#customerReviews">Read cusmoter reviews</a>
+                                <a class="animsition-link" href="{{$post->url}}#customerReviews">Read cusmoter reviews</a>
                             </div>
 
                         </div>
