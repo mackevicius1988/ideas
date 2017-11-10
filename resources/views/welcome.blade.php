@@ -377,20 +377,17 @@
                                 </div>
                             </form>
 
-                            <form class="" role="form">
-                                <div class="search-wrap">
-                                    <button class="search-button" title="Start Search">
-                                        <i class="fa fa-money"></i>
-                                    </button>
-                                    <input id='searchQuery' type="text" class="input-field " placeholder="FROM">
 
-
-                                    <button class="search-button" title="Start Search">
-                                        <i class="fa fa-money"></i>
-                                    </button>
-                                    <input id='searchQuery' type="text" class="input-field " placeholder="TO">
+                            <div class="row">
+                                <div class="col-xs-6" style="padding: 10px">
+                                    <input class="input-field " placeholder="TO" type="number" min="1" step="any" style="float:left"  /><i style="float:left" class="fa fa-usd"></i>
                                 </div>
-                            </form>
+                                <div class="col-xs-6" style="padding: 10px">
+                                    <input class="input-field " placeholder="TO" type="number" min="1" step="any" /><i class="fa fa-usd"></i>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4" style="padding: 10px; text-align: center">
