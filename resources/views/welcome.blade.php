@@ -323,7 +323,10 @@
             }
         }
 
-
+        #btn-find {
+            padding: 10px !important;
+            border-radius: 15px;
+        }
 
     </style>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -371,6 +374,21 @@
                                         <i class="fa fa-search"></i>
                                     </button>
                                     <input id='searchQuery' type="text" class="input-field " placeholder="Search...">
+                                </div>
+                            </form>
+
+                            <form class="" role="form">
+                                <div class="search-wrap">
+                                    <button class="search-button" title="Start Search">
+                                        <i class="fa fa-money"></i>
+                                    </button>
+                                    <input id='searchQuery' type="text" class="input-field " placeholder="FROM">
+
+
+                                    <button class="search-button" title="Start Search">
+                                        <i class="fa fa-money"></i>
+                                    </button>
+                                    <input id='searchQuery' type="text" class="input-field " placeholder="TO">
                                 </div>
                             </form>
                         </div>
