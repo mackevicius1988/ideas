@@ -379,20 +379,34 @@
 
 
                             <div class="row">
+                                <h2 style="   font-size: 1.25em; font-weight: 400;">Price:</h2>
                                 <div class="col-xs-6" style="padding: 10px">
-                                    <input class="input-field " placeholder="TO" type="number" min="1" step="any" style="float:left"  /><i style="float:left" class="fa fa-usd"></i>
+                                    <div class="search-wrap input--filled">
+                                        <button class="search-button" title="Start Search">
+                                            <i class="fa fa-usd"></i>
+                                        </button>
+                                        <input id="searchQuery" type="number" class="input-field " placeholder="Min" _vkenabled="true" _originaltype="text">
+                                    </div>
+
+
+
                                 </div>
                                 <div class="col-xs-6" style="padding: 10px">
-                                    <input class="input-field " placeholder="TO" type="number" min="1" step="any" /><i class="fa fa-usd"></i>
+                                    <div class="search-wrap input--filled">
+                                        <button class="search-button" title="Start Search">
+                                            <i class="fa fa-usd"></i>
+                                        </button>
+                                        <input id="searchQuery" type="number" class="input-field " placeholder="Max" _vkenabled="true" _originaltype="text">
+                                    </div>
                                 </div>
                             </div>
 
 
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-4" style="padding: 10px; text-align: center">
+                    <div class="col-xs-12 col-sm-4" style="padding: 10px;">
 
-                                    <h2 style="   font-size: 1.25em; font-weight: 400;">SORT BY:</h2>
+                                    <h2 style="   font-size: 1.25em; font-weight: 400;">Sort by:</h2>
                                     <a class="sortItem">POPULARITY</a>
                                     <a class="sortItem">NEWEST FIRST</a>
                                     <a class="sortItem">PRICE HIGH to LOW</a>
