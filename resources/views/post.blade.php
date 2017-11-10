@@ -231,7 +231,7 @@
         }
 
         .checked {
-            color: orange;
+            color: #551313;
         }
 
         .fa-star {
@@ -377,6 +377,7 @@
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
                                 <span>{{$post->rating}}</span>
+                                <a class="animsition-link" href="{{$post->rating}}#customerReviews">Read cusmoter reviews</a>
                             </div>
 
                         </div>
