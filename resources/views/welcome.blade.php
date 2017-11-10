@@ -236,6 +236,13 @@
             cursor: pointer;
             letter-spacing: 4px !important;
             background-color: white;
+            display: inline-block;
+            margin: 0 2px 5px 0;
+            padding: 5px 7px;
+            border: 1px solid #b8b7cb;
+     
+            font-weight: 400;
+            text-transform: uppercase;
         }
 
         .categoryItem:HOVER, .sortItem:HOVER {
@@ -356,22 +363,11 @@
                     </div>
                     <div class="col-xs-12 col-sm-4" style="padding: 10px; text-align: center">
 
-
-                        <div class="widget" style="margin-bottom: 10px">
-                            <form class="" role="form">
-                                <div class="search-wrap">
-                                    <button class="search-button">
-                                        <i class="fa fa-sort"></i>
-                                    </button>
-
                                     <h2>SORT BY:</h2>
                                     <a class="sortItem">POPULARITY</a>
                                     <a class="sortItem">NEWEST FIRST</a>
                                     <a class="sortItem">PRICE HIGH to LOW</a>
                                     <a class="sortItem">PRICE LOW to HIGH</a>
-                                </div>
-                            </form>
-                        </div>
 
                     </div>
                 </div>
