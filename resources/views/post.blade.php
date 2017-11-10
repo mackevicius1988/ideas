@@ -417,10 +417,9 @@
                         <!--/ End widget-categories -->
                     </div>
                     <!--/ End col -->
-                </div>
-                <div class="row">
 
-                    <div class="col-sm-9">
+
+                    <div class="col-sm-6">
                         <section class="blog-comment-section" style="margin-top: 0">
                             <h2 class="blog-page-post-title margin-bottom-60 font-second">Comments</h2>
                             <ul class="media-list text comment-list clearlist">
