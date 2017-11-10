@@ -323,7 +323,7 @@
             <div class="container">
 
                 <div class="row">
-                    <div class="col-sm-9 padding-right-sm-50">
+                    <div class="col-sm-6 padding-right-sm-50">
                         <!-- Post -->
                         <section class="blog-post" style="margin-bottom: 0">
                             <!-- Post Media -->
@@ -332,19 +332,12 @@
                             </div>
                             <div class="shareHolder" style="text-align: center;">
                                 <div style="padding: 20px" class="fb-share-button" data-href="https://fakingoodideas.com/{{$post->id}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a style="padding: 20px" class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffakingoodideas.com%2F1&amp;src=sdkpreparse">Share</a></div>
-
-
-                                <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a044870d03de004"></script>
                             </div>
-
-
                         </section>
-
-
                         <div id="end-content"></div>
                     </div>
 
-                    <div class="col-sm-3">
+                    <div class="col-sm-6">
 
                         <div class="row">
                             <div class="col-xs-12 col-sm-12" style=" border-bottom: 1px solid #ccc; padding: 20px">
@@ -370,7 +363,7 @@
 
                             <div class="row">
                                 <div class="col-xs-12" style="padding: 20px; text-align: center">
-                                    <a style="border-radius: 15px;color: white; background: #000;border: 1px solid black; padding: 10px 5px; margin-right: 15px" href="{{$post->url}}">BUY NOW</a>
+                                    <a style="border-radius: 15px;color: white; background: #000;border: 1px solid black; padding: 10px 50px; margin-right: 15px" href="{{$post->url}}"><b>BUY NOW</b></a>
                                 </div>
                             </div>
 
