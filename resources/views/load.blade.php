@@ -11,8 +11,8 @@
         <div class="details" style="border-right:1px solid #ccc ">
             <div class="row">
                 <div class="col-sm-9 col-xs-10">
-                    <p style="margin : 0;     font-weight: 400;font-style: normal; font-size : 14px"   >
-                        {{ str_limit($post->name, 25) }}</p>
+                    <span style="margin : 0;     font-weight: 400;font-style: normal; font-size : 12px"   >
+                        {{ str_limit($post->name, 25) }}</span><br />
                     <b style="font-size: 12px; color: #333;"> {{$post->price}} </b>
                 </div>
                 <div class="col-sm-3  col-xs-2" style="text-align: center;">
