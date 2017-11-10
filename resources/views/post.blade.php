@@ -542,7 +542,7 @@
 
     <script src='js/jquery.elevatezoom.js'></script>
     <script>
-        $('#zoom_01').elevateZoom({
+        $('#zoom1').elevateZoom({
             zoomType: "inner",
             cursor: "crosshair",
             zoomWindowFadeIn: 500,
