@@ -138,11 +138,11 @@
         var $particlsA = $("#particles");
         if ($particlsA.length) {
             $particlsA.particleground({
-                minSpeedX: 0.6,
-                minSpeedY: 0.6,
+                minSpeedX: 0.8,
+                minSpeedY: 0.8,
                 dotColor: '#ffffff',
                 lineColor: '#ffffff',
-                density: 6000,
+                density: 3000,
                 particleRadius: 2, // curvedLines: true,
                 parallaxMultiplier: 5.2,
                 proximity: 0

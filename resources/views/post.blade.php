@@ -351,7 +351,7 @@
         <div id="about-section"></div>
         <!-- section -->
         <div class="section" style="padding-top: 100px; padding-left: 10px; padding-right: 10px">
-            <div id="particles" class="particles"></div>
+
             <div class="container">
 
                 <div class="row">
