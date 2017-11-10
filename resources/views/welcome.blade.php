@@ -232,7 +232,7 @@
         }
 
         .categoryItem, .sortItem {
-            font-size: 28px;
+
             cursor: pointer;
             letter-spacing: 4px !important;
             background-color: white;
@@ -240,7 +240,20 @@
             margin: 0 2px 5px 0;
             padding: 5px 7px;
             border: 1px solid #b8b7cb;
-     
+
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .sortItem {
+            cursor: pointer;
+            letter-spacing: 2px !important;
+            background-color: white;
+            display: inline-block;
+            margin: 0 2px 5px 0;
+            padding: 5px 7px;
+            border: 1px solid #b8b7cb;
+
             font-weight: 400;
             text-transform: uppercase;
         }
