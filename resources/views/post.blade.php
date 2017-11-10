@@ -398,6 +398,16 @@
                                     <a class="buyNow animsition-link " href="{{$post->url}}"><b>BUY NOW</b></a>
                                 </div>
                             </div>
+                        </div></div><div>
+
+
+
+
+                        <!--/ End widget-categories -->
+                    </div>
+                    <!--/ End col -->
+                    <div class="row">
+                        <div class="col-sm-12">
 
                             <h4 class="widget-title font-second" style="margin-top: 20px">Description</h4>
                             <div class="widget-body">
@@ -413,13 +423,7 @@
                                     {{$post->features}}
                                 </div>
                             </div>
-                        </div>
-                        <!--/ End widget-categories -->
-                    </div>
-                    <!--/ End col -->
 
-
-                    <div class="col-sm-6">
                         <section class="blog-comment-section" style="margin-top: 0">
                             <h2 class="blog-page-post-title margin-bottom-60 font-second">Comments</h2>
                             <ul class="media-list text comment-list clearlist">
@@ -495,7 +499,7 @@
 
 
                     </div>
-                    <div class="col-sm-6"></div>
+
                 </div>
                 <!--/ End row -->
             </div>
