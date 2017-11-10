@@ -366,7 +366,7 @@
 
 
                             <div class="blog-page-media" style="height: 500px;text-align: center;">
-                                <div style="opacity: 0.7;  background: #551313;border-radius: 25px;position:absolute;top:15px;left: 15px;padding: 10px;"><b style="color: white">SALE</b></div>
+                                <div style="background: #551313;border-radius: 25px;position:absolute;top:15px;left: 15px;padding: 10px;"><b style="color: white">SALE</b></div>
                                 <img id = "zoom1" src="{{$post->imageUrl}}" style="max-width:100%; max-height:100%;    ">
                             </div>
                             <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a044870d03de004"></script>
@@ -558,8 +558,8 @@
         $('#zoom1').elevateZoom({
             zoomType: "inner",
             cursor: "crosshair",
-            zoomWindowFadeIn: 500,
-            zoomWindowFadeOut: 750
+            zoomWindowFadeIn: 1000,
+            zoomWindowFadeOut: 1000
         });
     </script>
 </div>
