@@ -323,7 +323,7 @@
             <div class="container">
 
                 <div class="row">
-                    <div class="col-sm-6 padding-right-sm-50">
+                    <div class="col-sm-9 padding-right-sm-50">
                         <!-- Post -->
                         <section class="blog-post" style="margin-bottom: 0">
                             <!-- Post Media -->
@@ -344,11 +344,11 @@
                         <div id="end-content"></div>
                     </div>
 
-                    <div class="col-sm-6">
+                    <div class="col-sm-3">
 
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12" style=" border-bottom: 1px solid #ccc; padding: 10px">
-                                <h1 class="blog-page-post-title font-second" style="font-size: 24px">{{$post->name}} </h1>
+                            <div class="col-xs-12 col-sm-12" style=" border-bottom: 1px solid #ccc; padding: 20px">
+                                <h1 class="blog-page-post-title font-second" style="margin-bottom:10px;font-size: 24px">{{$post->name}} </h1>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
@@ -362,15 +362,15 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-6" style="text-align: left">
                                 <h1 class="blog-page-post-title font-second">{{$post->price}} </h1>
+                                <span>{{$price->priceIndex}}</span>
                             </div>
                         </div>
                         <!--/ End widget search -->
                         <div class="widget widget-text">
 
                             <div class="row">
-                                <div class="col-xs-12" style="padding: 20px">
-                                    <a style="border-radius: 15px;color: white; background: #000;border: 1px solid black; padding: 10px; margin-right: 15px" href="{{$post->url}}">BUY NOW</a>
-                                    <a style="border-radius: 15px;color: white; background: #000;border: 1px solid black; padding: 10px;" href="{{$post->url}}">LOVE IT</a>
+                                <div class="col-xs-12" style="padding: 20px; text-align: center">
+                                    <a style="border-radius: 15px;color: white; background: #000;border: 1px solid black; padding: 10px 5px; margin-right: 15px" href="{{$post->url}}">BUY NOW</a>
                                 </div>
                             </div>
 

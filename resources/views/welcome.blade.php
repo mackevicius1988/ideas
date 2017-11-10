@@ -292,11 +292,11 @@
 
         @media only screen and (max-width: 500px) {
             .catalogueItem {
-                width: 40% !important;
+                width: 41% !important;
             }
 
             .catalogueItemInner {
-                width: 40% !important;
+                width: 100% !important;
             }
         }
 
