@@ -328,6 +328,28 @@
             border-radius: 15px;
         }
 
+        .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+            z-index: 3;
+            font-size: 28px;
+            border: none;
+            background: transparent;
+            background-color: transparent;
+            color: black;
+        }
+
+
+        .pagination>li>a, .pagination>li>span {
+            position: relative;
+            float: left;
+            padding: 6px 12px;
+            margin-left: -1px;
+            line-height: 1.42857143;
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            border: none;
+        }
+
     </style>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
@@ -378,8 +400,8 @@
                             </form>
 
 
-                            <div class="row">
-                                <h2 style="   font-size: 1.25em; font-weight: 400;">Price:</h2>
+                            <div class="row" style="text-align: left">
+                                <h2 style="   font-size: 0.75em; font-weight: 400;">Price:</h2>
                                 <div class="col-xs-6" style="padding: 10px">
                                     <div class="search-wrap input--filled">
                                         <button class="search-button" title="Start Search">
