@@ -158,6 +158,7 @@
             color: black;
             border-bottom: 1px solid #ccc;
             text-align: left;
+            height: 80px;
         }
 
         div.item:hover .details {
@@ -324,7 +325,7 @@
         }
 
         #btn-find {
-       
+
             border-radius: 15px;
         }
 
