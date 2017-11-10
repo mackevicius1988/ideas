@@ -392,7 +392,7 @@
 
                             <div class="row">
                                 <div class="col-xs-12 padding20 textCenter">
-                                    <a class="buyNow" href="{{$post->url}}"><b>BUY NOW</b></a>
+                                    <a class="buyNow animsition-link " href="{{$post->url}}"><b>BUY NOW</b></a>
                                 </div>
                             </div>
 
