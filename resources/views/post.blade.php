@@ -310,7 +310,7 @@
                         </div>
                     </div>
                     <div class="container in-page-scroll">
-                        <a class="animsition-link" href="https://fakingoodideas.com">Fakin good ideas</a>
+                        <a class="animsition-link" href="https://fakingoodideas.com" class="hs-text-10" style="color :white;">Fakin good ideas</a>
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
                             <button type="button" id="animated-navicon" class="navbar-toggle" data-toggle="collapse"
@@ -358,15 +358,7 @@
                             <div class="blog-page-media" style="height: 500px;text-align: center;">
                                 <img src="{{$post->imageUrl}}" style="max-width:100%; max-height:100%;    ">
                             </div>
-                            <div class="shareHolder" style="text-align: center;">
-                                <div style="padding: 20px" class="fb-share-button"
-                                     data-href="https://fakingoodideas.com/{{$post->id}}" data-layout="button_count"
-                                     data-size="small" data-mobile-iframe="true"><a style="padding: 20px"
-                                                                                    class="fb-xfbml-parse-ignore"
-                                                                                    target="_blank"
-                                                                                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffakingoodideas.com%2F1&amp;src=sdkpreparse">Share</a>
-                                </div>
-                            </div>
+                            <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a044870d03de004"></script>
                         </section>
                         <div id="end-content"></div>
                     </div>
@@ -376,7 +368,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12" style=" border-bottom: 1px solid #ccc; padding: 20px">
                                 <h1 class="blog-page-post-title font-second"
-                                    style="margin-bottom:10px;font-size: 24px">{{$post->name}} </h1>
+                                    style="margin-bottom:10px;font-size: 20px">{{$post->name}} </h1>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
