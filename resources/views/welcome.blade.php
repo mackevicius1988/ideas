@@ -367,7 +367,7 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4" style="text-align: center">
-                        <div class="widget">
+                        <div class="widget" style="margin-bottom: 10px">
                             <form class="" role="form">
                                 <div class="search-wrap">
                                     <button class="search-button" title="Start Search">
@@ -404,7 +404,7 @@
 
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-4" style="padding: 10px;">
+                    <div class="col-xs-12 col-sm-4" style="padding: 10px;text-align: center">
 
                                     <h2 style="   font-size: 1.25em; font-weight: 400;">Sort by:</h2>
                                     <a class="sortItem">POPULARITY</a>
