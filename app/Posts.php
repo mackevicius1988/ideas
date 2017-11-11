@@ -9,7 +9,7 @@ class Posts extends Model
 
     protected $table = 'post';
 
-    protected $fillable = array('id', 'url', 'votes' , 'price','priceIndex','name','description', 'rating', 'categoryId', 'imageUrl');
+    protected $fillable = array('id', 'url', 'saves' , 'price','priceIndex','name','description', 'rating', 'categoryId', 'imageUrl');
 
 
     public function category(){
