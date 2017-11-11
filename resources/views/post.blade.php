@@ -403,7 +403,7 @@
 
                             <h4 class="widget-title font-second" style="margin-top: 20px">Shipping</h4>
                             <div class="widget-body">
-                                <a class="animsition-link" href="{{$post->url}}#customerReviews">See shipping information</a>
+                                <a class="animsition-link" href="{{$post->url}}">See shipping information</a>
                             </div>
                         </div>
 

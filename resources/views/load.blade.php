@@ -17,7 +17,7 @@
                 </div>
                 <div  class="col-sm-3  col-xs-2" style="text-align: center;">
                     <i data-id = '{{$post->id}}' style="font-size: 24px; color : #ccc; margin: 0 auto; cursor: pointer" class="fa fa-heart heart"></i>
-                    <span  style="font-size: 9px" >1161</span>
+                    <span  style="font-size: 9px" > {{$post->votes}}</span>
                 </div>
             </div>
         </div>
