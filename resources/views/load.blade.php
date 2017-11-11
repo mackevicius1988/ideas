@@ -15,9 +15,9 @@
                         {{ str_limit($post->name, 35) }}</span><br/>
                     <b class="listPrice" style="color: #333;"> {{$post->price}} </b>
                 </div>
-                <div class="col-sm-3  col-xs-2" style="text-align: center;">
+                <div  class="col-sm-3  col-xs-2" style="text-align: center;">
                     <i data-id = '{{$post->id}}' style="font-size: 24px; color : #ccc; margin: 0 auto; cursor: pointer" class="fa fa-heart heart"></i>
-                    <span style="font-size: 9px" >1161</span>
+                    <span  style="font-size: 9px" >1161</span>
                 </div>
             </div>
         </div>

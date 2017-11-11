@@ -14,7 +14,7 @@ class PostsController extends Controller
 
     public function index(Request $request)
     {
-        $posts = Posts::paginate(16);
+        $posts = Posts::orderBy('id', 'DESC')->paginate(16);
         $tags = Category::all();
 
         if ($request->ajax()) {

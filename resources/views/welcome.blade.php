@@ -478,9 +478,23 @@
         $(document).ready(function () {
             $(function () {
                 $('.heart').click(function (e) {
-                    console.log($(this).data('id'));
-                    localStorage.setItem('ids', $(this).data('id'));
+
+                    var memories = JSON.parse(localStorage.getItem('idsArr'));
+                    console.log(memories);
+                    if (memories == null) {
+                        memories = [];
+                        console.log('Initiation')
+                    }
+
+                    console.log(memories);
+                    memories.push($(this).data('id'));
+                    console.log(memories);
+                    localStorage.setItem('idsArr', JSON.stringify(memories));
                     $(this).toggleClass('heartLoved');
+
+
+
+                    console.log($(this).parent());
                 });
             })
 
