@@ -359,12 +359,6 @@
                         <!-- Post -->
                         <section class="blog-post" style="margin-bottom: 0">
                             <!-- Post Media -->
-
-
-
-
-
-
                             <div class="blog-page-media" style="height: 500px;text-align: center;">
                                 <div style="background: #551313;border-radius: 25px;position:absolute;top:15px;left: 15px;padding: 10px;"><b style="color: white">SALE</b></div>
                                 <img id = "zoom1" src="{{$post->imageUrl}}" style="max-width:100%; max-height:100%;    ">
@@ -405,7 +399,19 @@
                                     <a class="buyNow animsition-link " href="{{$post->url}}"><b>BUY NOW</b></a>
                                 </div>
                             </div>
-                        </div></div><div>
+
+
+                            <h4 class="widget-title font-second" style="margin-top: 20px">Shipping</h4>
+                            <div class="widget-body">
+                                <a class="animsition-link" href="{{$post->url}}#customerReviews">See shipping information</a>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div><div>
 
 
 

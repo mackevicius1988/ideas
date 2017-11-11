@@ -493,8 +493,12 @@
                     $(this).toggleClass('heartLoved');
 
 
-
-                    console.log($(this).parent());
+                    var saves = $(this).parent().find( "span" ).text();
+                    if (saves) {
+                        saves = parseInt(saves) + 1;
+                    }
+                    $(this).parent().find( "span" ).text(saves);
+                    console.log(saves);
                 });
             })
 
