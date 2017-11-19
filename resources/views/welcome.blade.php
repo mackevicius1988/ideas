@@ -331,6 +331,13 @@
                 font-size: 16px;
             }
 
+
+            #mySidebar {
+                z-index: 99999;
+                position: fixed;
+                width: 100% !important;
+            }
+
         }
 
         #btn-find {
@@ -438,7 +445,7 @@
 
             $(function () {
                 $('#searchOpener').click(function (e) {
-                    $('#mySidebar').toggle( "slide" );
+                    $('#mySidebar').show(400);
                   //  document.getElementById("mySidebar").style.display = "block";
                 })
             })
@@ -446,7 +453,7 @@
 
             $(function () {
                 $('#searchCloser').click(function (e) {
-                    $('#mySidebar').toggle( "slide" );
+                    $('#mySidebar').hide(400);
                     //document.getElementById("mySidebar").style.display = "none";
                 })
             })
@@ -462,9 +469,9 @@
                         console.log('Initiation')
                     }
 
-                    console.log(memories);
+
                     memories.push($(this).data('id'));
-                    console.log(memories);
+
                     localStorage.setItem('idsArr', JSON.stringify(memories));
                     $(this).toggleClass('heartLoved');
 
@@ -479,91 +486,11 @@
             })
 
             $(function () {
-                $('#btn-find').click(function (e) {
-                    console.log('Click');
-                    var categoryIds = [];
-                    $(".categoryItem").each(function (index) {
-                        if ($(this).attr('class') == 'categoryItem categorySelected')
-                            categoryIds.push($(this).data("id"));
-                    });
-
-                    console.log(categoryIds);
-
-                    $('.gridWrapper').css('opacity', '0.6');
-                    $('#spinner').show();
-                    categoryIds = categoryIds.length === 0 ? [0] : categoryIds
-                    var priceFrom = 0;
-                    //$( "#slider-range" ).slider( "values", 0 );
-                    var priceTo = 1500;
-                    //$( "#slider-range" ).slider( "values", 1 );
-                    var query = $("#searchQuery").val() === '' ? '0' : $("#searchQuery").val();
-                    var order = $('#orderBy').val();
-                    console.log(query);
-
-                    $.ajax({
-                        type: 'GET',
-                        url: '/find/' + categoryIds + '/' + priceFrom + '/' + priceTo + '/' + query + '/' + order,
-                        before: function () {
-                            console.log('Before in');
-                        },
-                        success: function (data) {
-                            console.log('in' + data);
-                            $('.gridWrapper').html(data);
-                            $('.gridWrapper').css('opacity', '1');
-                            $('#spinner').hide();
-                        },
-                        error: function (error) {
-                            console.log('Error');
-                            console.log(error);
-                        }
-                    });
-
-
-                });
-                // $('html, body').animate({
-                //   scrollTop: $("#about-section").offset().top + offset
-                //   }, 1000);
-            })
-
-
-            $(function () {
                 $('.categoryItem').click(function (e) {
                     $(this).toggleClass('categorySelected');
                 });
             })
 
-            $(document).ready(function () {
-                function ajax() {
-                    $('.gridWrapper').css('opacity', '0.6');
-
-                    $.ajax({
-                        url: "/find",
-                        type: "GET",
-                        before: function () {
-
-                        },
-                        success: function (data) {
-                            console.log(data)
-                            $('.gridWrapper').html(data);
-                            $('.gridWrapper').css('opacity', '1');
-                            $(function () {
-                                $(".item").hover(
-                                    function () {
-                                        $(this).parent().find('.details').addClass("active");
-                                    }, function () {
-                                        $(this).parent().find('.details').removeClass("active");
-                                    }
-                                );
-                            })
-                        }
-                    });
-                }
-
-
-                $("#search").click(function () {
-                    ajax();
-                });
-            })
         })
     </script>
 

@@ -4,7 +4,7 @@
 
 
 <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-    
+
     <button id="searchCloser" class="w3-bar-item w3-large">Close &times;</button>
 
     <div style="padding: 10px;">
