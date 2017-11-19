@@ -32,7 +32,7 @@
                 <a class="categoryItem" data-id='{{$tag->id}}'>#{{$tag->name}}</a>
             @endforeach
 
-                {{ Form::hidden('categoryIds', 'secret', array('id' => 'invisible_id')) }}
+                {{ Form::hidden('categoryIds', null, array('id' => 'categoryIds')) }}
         </div>
 
 
@@ -86,7 +86,7 @@
             <a class="sortItem">$ HIGH to LOW</a>
             <a class="sortItem">$ LOW to HIGH</a>
 
-            {{ Form::hidden('sort', 'votes', array('id' => 'sort_id')) }}
+            {{ Form::hidden('order', 'saves', array('id' => 'sort_id')) }}
         </div>
         <div class="row">
             <div class="col-xs-12" style="text-align: center">

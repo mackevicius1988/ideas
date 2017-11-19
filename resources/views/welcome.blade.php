@@ -84,13 +84,8 @@
     <link href="css/animsition.min.css" rel="stylesheet">
     <!-- Styles -->
     <style>
-
         @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
 
-
-        html {
-
-        }
         body {
             font-family: 'Open Sans', sans-serif;
             overflow-y: hidden !important;
@@ -493,6 +488,20 @@
             $(function () {
                 $('.categoryItem').click(function (e) {
                     $(this).toggleClass('categorySelected');
+
+                    var categoryId = $(this).attr("data-id");
+
+                    console.log(categoryId);
+
+                    var selectedIds = $('#categoryIds').val();
+
+                    if (selectedIds)
+                        selectedIds = selectedIds + ',' + categoryId;
+                    else
+                        selectedIds =  categoryId;
+
+
+                    $('#categoryIds').val(selectedIds);
                 });
             })
 

@@ -31,18 +31,44 @@ class PostsController extends Controller
 
     public function find(Request $request)
     {
+
+        DB::connection()->enableQueryLog();
         $query = $request->get('query');
         $priceFrom = $request->get('priceMin');
         $priceTo = $request->get('priceMax');
         $order = $request->get('sort');
+        $categoryIds = $request->get('categoryIds');
 
+        Log::info($categoryIds);
 
         $builder = new Posts();
         if ($query != '') {
             $builder = $builder->where('name', 'LIKE', '%' . $query . '%');
         }
 
-        $posts = Posts::orderBy('id', 'DESC')->paginate(3);
+        if ($priceFrom) {
+            $builder = $builder->where('price', '>',  '$'.$priceFrom);
+        }
+
+        if ($priceTo) {
+            $builder = $builder->where('price', '<',  '$'.$priceTo);
+        }
+
+        if ($order) {
+            $direction = $order === 'priceLow' ? 'ASC' : 'DESC';
+            $builder = $builder->orderBy($order, $direction);
+        }
+
+        if ($categoryIds) {
+            $categoryIdsArray = explode(',', $categoryIds);
+            $builder = $builder->findByCategories($categoryIdsArray);
+        }
+
+        $posts = $builder->paginate(32);
+        $queries = DB::getQueryLog();
+        Log::info($queries);
+
+
         /**
         DB::connection()->enableQueryLog();
         $builder = new Posts();
@@ -52,9 +78,7 @@ class PostsController extends Controller
             $builder = $builder->findByCategories($categoryIdsArray);
         }
 
-        if ($query != '0') {
-            $builder = $builder->where('name', 'LIKE', '%' . $query . '%');
-        }
+
 
         Log::info($priceFrom);
         Log::info($priceTo);
@@ -72,7 +96,7 @@ class PostsController extends Controller
 **/
         $tags = Category::all();
         return view('welcome', [
-            'posts' => $builder->paginate(32),
+            'posts' => $posts,
             'tags' => $tags,
         ]);
     }
