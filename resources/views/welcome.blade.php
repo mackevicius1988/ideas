@@ -232,7 +232,7 @@
             transform-origin: 0 28px;
         }
 
-        .categoryItem, .sortItem {
+        .categoryItem {
 
             cursor: pointer;
             letter-spacing: 4px !important;
@@ -248,11 +248,11 @@
 
         .sortItem {
             cursor: pointer;
-            letter-spacing: 2px !important;
+            letter-spacing: 1px !important;
             background-color: white;
             display: inline-block;
             margin: 0 2px 5px 0;
-            padding: 5px 7px;
+            padding: 3px 3px;
             border: 1px solid #b8b7cb;
             font-size: 10px;
             color: black;
@@ -360,8 +360,38 @@
             border: none;
         }
 
+        .genderItem {
+            border: 1px solid #b8b7cb;
+            cursor: pointer;
+            letter-spacing: 4px !important;
+            background-color: white;
+            display: inline-block;
+            margin: 0 2px 5px 0;
+            padding: 7px 7px;
+            border: 1px solid #ccc;
+            font-size: 10px;
+            color: black;
+            font-weight: 400;
+            text-transform: uppercase;
+            border-color: #b8b7cb;
+            margin-left: 15px;
+        }
+
+        #searchOpener {
+            z-index: 99999;
+            position: fixed;
+        }
+
+        #mySidebar {
+            z-index: 99999;
+            position: fixed;
+            width: 400px;
+        }
+
+
     </style>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body class="christmas-gift">
 
@@ -379,85 +409,13 @@
 <div id="page" class="animsition equal" data-loader-type="loader2" data-page-loader-text="Fakin good ideas loading"
      data-animsition-in="fade-in" data-animsition-out="fade-out-up-sm" style="transform-origin: 50% 50vh;">
 
+    <!-- Sidebar -->
+    @include('search')
     @include('header')
     @include('navigation')
 
     <div id="page-2">
-        <section id="about-section" class="about-section section" style="padding: 15px;">
-            <div style="padding-top: 80px">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="widget" style="margin: 0">
-                            <div class="widget-body">
-                                <div class="tags" style="text-align: center">
-
-                                    @foreach($tags as $tag)
-                                        <a class="categoryItem" data-id='{{$tag->id}}'>{{$tag->name}}</a>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4" style="text-align: center">
-                        <div class="widget" style="margin-bottom: 10px">
-                            <form class="" role="form">
-                                <div class="search-wrap">
-                                    <button class="search-button" title="Start Search">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                    <input id='searchQuery' type="text" class="input-field " placeholder="Search...">
-                                </div>
-                            </form>
-
-
-                            <div class="row" style="text-align: left">
-                                <h2 style="   font-size: 0.75em; font-weight: 400;">Price:</h2>
-                                <div class="col-xs-6" style="padding: 10px">
-                                    <div class="search-wrap input--filled">
-                                        <button class="search-button" title="Start Search">
-                                            <i class="fa fa-usd"></i>
-                                        </button>
-                                        <input id="searchQuery" type="number" class="input-field " placeholder="Min" _vkenabled="true" _originaltype="text">
-                                    </div>
-
-
-
-                                </div>
-                                <div class="col-xs-6" style="padding: 10px">
-                                    <div class="search-wrap input--filled">
-                                        <button class="search-button" title="Start Search">
-                                            <i class="fa fa-usd"></i>
-                                        </button>
-                                        <input id="searchQuery" type="number" class="input-field " placeholder="Max" _vkenabled="true" _originaltype="text">
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4" style="padding: 10px;text-align: center">
-
-                                    <h2 style="   font-size: 1.25em; font-weight: 400;">Sort by:</h2>
-                                    <a class="sortItem">POPULARITY</a>
-                                    <a class="sortItem">NEWEST FIRST</a>
-                                    <a class="sortItem">PRICE HIGH to LOW</a>
-                                    <a class="sortItem">PRICE LOW to HIGH</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12" style="text-align: center">
-
-                        <button id="btn-find" style="background-color: #551313" type="submit"
-                                class="btn btn-animated btn-contact ripple-alone" data-text="FIND MY ITEMS"><span
-                                    class="btn-icon"><span class="loader-parent"><span class="loader2"></span></span>
-                                                </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-
+        <section id="about-section" class="about-section section" style="padding: 15px;padding-top: 80px">
             <div class="container">
                 <div class="main" style="text-align: center">
                     <div class="gridWrapper">
@@ -474,8 +432,26 @@
     <script src="js/modernizr.custom.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.jscroll.js"></script>
+
     <script>
         $(document).ready(function () {
+
+            $(function () {
+                $('#searchOpener').click(function (e) {
+                    $('#mySidebar').toggle( "slide" );
+                  //  document.getElementById("mySidebar").style.display = "block";
+                })
+            })
+
+
+            $(function () {
+                $('#searchCloser').click(function (e) {
+                    $('#mySidebar').toggle( "slide" );
+                    //document.getElementById("mySidebar").style.display = "none";
+                })
+            })
+
+
             $(function () {
                 $('.heart').click(function (e) {
 
