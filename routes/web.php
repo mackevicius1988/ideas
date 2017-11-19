@@ -12,7 +12,7 @@
 */
 
 Route::get('', 'PostsController@index');
-Route::get('/find/{categoryIds}/{priceFrom}/{priceTo}/{query}/{order}', 'PostsController@find');
+Route::get('/find', 'PostsController@find');
 Route::get('/{postId}', 'PostsController@post');
 Route::get('get/memory', 'PostsController@memory');
 Route::get('memories/{postIds}', 'PostsController@memories');

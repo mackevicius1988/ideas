@@ -5,15 +5,25 @@
 
 <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
 
+
+
     <button id="searchCloser" class="w3-bar-item w3-large">Close &times;</button>
 
-    <div style="padding: 10px;">
+    {!! Form::open(array('url' => 'find', 'method' => 'get' ,'class' => 'form')) !!}
+
+    <div style="padding: 20px;">
 
         <div class="search-wrap">
             <button class="search-button" title="Start Search">
                 <i class="fa fa-search"></i>
             </button>
-            <input id='searchQuery' type="text" class="input-field " placeholder="Search...">
+
+            {!! Form::text('query', null,
+                array(
+                    'class'=>'input-field',
+                    'id' => 'searchField',
+                    'placeholder'=>'Search...')) !!}
+
         </div>
 
         <h2 class="hs-text-6"; style="margin-top: 15px">Tags:</h2>
@@ -21,6 +31,8 @@
             @foreach($tags as $tag)
                 <a class="categoryItem" data-id='{{$tag->id}}'>#{{$tag->name}}</a>
             @endforeach
+
+                {{ Form::hidden('categoryIds', 'secret', array('id' => 'invisible_id')) }}
         </div>
 
 
@@ -31,8 +43,13 @@
                     <button class="search-button" title="Start Search">
                         <i class="fa fa-usd"></i>
                     </button>
-                    <input id="searchQuery" type="number" class="input-field " placeholder="Min" _vkenabled="true"
-                           _originaltype="text">
+
+                    {!! Form::number('priceMin', null,
+                        array(
+                            'class'=>'input-field',
+                            'id' => 'priceMin',
+                               'placeholder'=>'Min')) !!}
+
                 </div>
             </div>
             <div class="col-xs-6" style="padding: 10px">
@@ -40,8 +57,13 @@
                     <button class="search-button" title="Start Search">
                         <i class="fa fa-usd"></i>
                     </button>
-                    <input id="searchQuery" type="number" class="input-field " placeholder="Max" _vkenabled="true"
-                           _originaltype="text">
+
+
+                    {!! Form::number('priceMax', null,
+                        array(
+                            'class'=>'input-field',
+                            'id' => 'priceMax',
+                               'placeholder'=>'Max')) !!}
                 </div>
             </div>
         </div>
@@ -63,6 +85,8 @@
             <a class="sortItem">NEWEST FIRST</a>
             <a class="sortItem">$ HIGH to LOW</a>
             <a class="sortItem">$ LOW to HIGH</a>
+
+            {{ Form::hidden('sort', 'votes', array('id' => 'sort_id')) }}
         </div>
         <div class="row">
             <div class="col-xs-12" style="text-align: center">
@@ -75,5 +99,7 @@
             </div>
         </div>
     </div>
+
+    {!! Form::close() !!}
 
 </div>

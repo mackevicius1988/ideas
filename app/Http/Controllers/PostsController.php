@@ -14,7 +14,7 @@ class PostsController extends Controller
 
     public function index(Request $request)
     {
-        $posts = Posts::orderBy('id', 'DESC')->paginate(16);
+        $posts = Posts::orderBy('id', 'DESC')->paginate(32);
         $tags = Category::all();
 
         if ($request->ajax()) {
@@ -29,8 +29,21 @@ class PostsController extends Controller
 
     }
 
-    public function find($categoryIds, $priceFrom, $priceTo, $query, $order)
+    public function find(Request $request)
     {
+        $query = $request->get('query');
+        $priceFrom = $request->get('priceMin');
+        $priceTo = $request->get('priceMax');
+        $order = $request->get('sort');
+
+
+        $builder = new Posts();
+        if ($query != '') {
+            $builder = $builder->where('name', 'LIKE', '%' . $query . '%');
+        }
+
+        $posts = Posts::orderBy('id', 'DESC')->paginate(3);
+        /**
         DB::connection()->enableQueryLog();
         $builder = new Posts();
 
@@ -56,10 +69,10 @@ class PostsController extends Controller
         $queries = DB::getQueryLog();
         Log::info($queries);
 
-
+**/
         $tags = Category::all();
-        return view('load', [
-            'posts' => $posts,
+        return view('welcome', [
+            'posts' => $builder->paginate(32),
             'tags' => $tags,
         ]);
     }

@@ -87,8 +87,13 @@
 
         @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
 
+
+        html {
+
+        }
         body {
             font-family: 'Open Sans', sans-serif;
+            overflow-y: hidden !important;
         }
 
         body p {
