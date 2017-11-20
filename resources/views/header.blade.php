@@ -6,7 +6,8 @@
             <div class="hs-content-inner">
                 <div class="init-animation-2 delay0-2s">
                     <div class="page-header-title-left">
-                        <h1 class="hs-text-10 init-animation-4 fadeInLeft headerTitle">Fakin good ideas</h1>
+
+                        <img  class="init-animation-4" src="img/logo.png" width="80%"/>
                         <div class="hs-text-6 init-animation-4 delay0-2s fadeInLeft" style="opacity: 1;">
                             <h2  class = "headerDesc">Crazy gift ideas for your friends, partners, lovers or brothers....</h2>
                         </div>

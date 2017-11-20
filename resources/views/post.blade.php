@@ -313,34 +313,11 @@
                         </div>
                     </div>
                     <div class="container in-page-scroll">
-                        <a class="animsition-link hs-text-6" href="https://fakingoodideas.com" style="color :white;">Fakin good ideas</a>
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" id="animated-navicon" class="navbar-toggle" data-toggle="collapse"
-                                    data-target="#mobile-navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
 
-                        </div>
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="mobile-navbar-collapse">
-                            <ul class="nav navbar-nav navbar-right cl-effect-5">
-                                <li>
-                                    <a class="ripple-group" href="/">
-                                        <span data-hover="home">home</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="ripple-group" href="/get/memorry">
-                                        <span data-hover="LOVERS">My lovers</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- /.navbar-collapse -->
+                        <a class="animsition-link hs-text-6" href="https://fakingoodideas.com" style="color :white;">   <img  class="init-animation-4" src="img/logo.png" width="200px"/></a>
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <i  onclick="goBack()" class="fa fa-arrow-left" style="font-size: 20px; color: white; float :right" aria-hidden="true"></i>
+                        <!--   onclick="goBack()" /.navbar-collapse -->
                     </div>
                     <!-- /.container -->
                 </nav>
@@ -360,7 +337,7 @@
                         <section class="blog-post" style="margin-bottom: 0">
                             <!-- Post Media -->
                             <div class="blog-page-media" style="height: 500px;text-align: center;">
-                                <div style="background: #551313;border-radius: 25px;position:absolute;top:15px;left: 15px;padding: 10px;"><b style="color: white">SALE</b></div>
+
                                 <img id = "zoom1" src="{{$post->imageUrl}}" style="max-width:100%; max-height:100%;    ">
                             </div>
                             <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a044870d03de004"></script>
@@ -553,6 +530,12 @@
     <script src="js/scripts.min.js"></script>
 
     <script src='js/jquery.elevatezoom.js'></script>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
     <script>
         $('#zoom1').elevateZoom({
             zoomType: "inner",
