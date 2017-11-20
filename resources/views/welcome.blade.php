@@ -156,7 +156,7 @@
             width: 100%;
             padding: 7px;
             color: black;
-         
+
             text-align: left;
             height: 80px;
         }
