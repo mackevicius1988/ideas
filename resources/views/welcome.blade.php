@@ -426,6 +426,10 @@
     </style>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+    <link rel="stylesheet" href="css/newsletter/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/newsletter/style.css"> <!-- Resource style -->
 </head>
 <body class="christmas-gift">
 
@@ -461,11 +465,34 @@
 
 
         </section>
+        <footer class="footer-section section no-padding-bottom ">
+
+            <div class="cd-form-wrapper cd-container" style="margin: 10px auto 50px auto;">
+                <form class="cd-form">
+                    <label class="cd-label" for="cd-email">Sign up for Newsletter</label>
+                    <input type="email" id="cd-email" class="cd-email" name="cd-email" placeholder="Enter your email address">
+                    <input type="submit" class="cd-submit" value="Submit" style="background-color: #551313">
+                    <div class="cd-loading"></div>
+                </form>
+
+                <div data-type="message" class="cd-response cd-response-error">Ops! Error message here</div>
+                <div data-type="message" class="cd-response-success"><p>Great! Success message here</p></div>
+                <div data-type="message" class="cd-response cd-response-notification">Hey! Notification message here</div>
+            </div>
+
+            <div class="footer-bottom">
+                <!-- Copyright -->
+                <a class="footer-bottom-text font-second" href="" target="_blank">Fakin good ideas © 2017. All Right
+                    Reserved.</a>
+                <!-- End Copyright -->
+            </div>
+        </footer>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/newsletter/main.js"></script>
     <script>
 
         $(document).ready(function () {
