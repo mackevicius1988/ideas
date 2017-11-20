@@ -1,4 +1,4 @@
-<button id="searchOpener" class="w3-button w3-teal w3-xlarge" style="top: 60px; background-color: white !important; color : black !important;">
+<button id="searchOpener" class="w3-button w3-teal w3-xlarge">
     <i class="fa fa-search"></i>
 </button>
 
@@ -7,7 +7,7 @@
 
 
 
-    <button id="searchCloser" class="w3-bar-item w3-large">Close &times;</button>
+    <button id="searchCloser" class="w3-bar-item w3-large" style="text-align: right; background: #551313; color: white">Close &times;</button>
 
     {!! Form::open(array('url' => 'find', 'method' => 'get' ,'class' => 'form')) !!}
 

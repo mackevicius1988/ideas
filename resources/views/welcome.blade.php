@@ -394,6 +394,14 @@
         #searchOpener {
             z-index: 99999;
             position: fixed;
+            background: black !important;
+            color: white !important;
+            top: 60px;
+            opacity: 0.7;
+        }
+
+        #searchOpener:HOVER{
+            opacity: 1
         }
 
         #mySidebar {
@@ -441,6 +449,7 @@
 
     <div id="page-2">
         <section id="about-section" class="about-section section" style="padding: 15px;padding-top: 80px">
+
             <div class="container">
                 <div class="main" style="text-align: center">
                     <div class="gridWrapper">

@@ -21,7 +21,8 @@ class PostsController extends Controller
     {
         $posts = Posts::orderBy('saves', 'DESC')->paginate(16);
         $tags = Category::all();
-        $scroll = true;
+        $scroll = $request->get('page');
+
         return view('welcome', [
             'posts' => $posts,
             'tags' => $tags,
