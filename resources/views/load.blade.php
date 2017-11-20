@@ -3,7 +3,7 @@
     <li class = 'catalogueItem' >
 
         <a class="animsition-link" href="{{$post->id}}" data-id="{{$post->id}}" data-price="{{$post->price}}" data-largesrc="{{$post->imageUrl}}" data-title="{{$post->name}}" data-description="{{$post->desc}}">
-           
+
             <div class="catalogueItemInner" style="background: url('{{$post->imageUrl}}');background-position: center center;
                     background-size: 75% auto;   background-repeat: no-repeat;">
             </div>

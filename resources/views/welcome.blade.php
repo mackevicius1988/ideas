@@ -454,7 +454,7 @@
 
     <div id="page-2">
         <section id="about-section" class="about-section section" style="padding: 15px;padding-top: 80px">
-            <img src="img/logo.png">
+           
             <div class="container">
                 <div class="main" style="text-align: center">
                     <div class="gridWrapper">
