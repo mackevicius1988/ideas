@@ -327,15 +327,23 @@
                 font-size: 16px;
             }
 
-            .listName{
+            .listName {
                 font-size: 16px;
             }
-
 
             #mySidebar {
                 z-index: 99999;
                 position: fixed;
                 width: 100% !important;
+            }
+
+            .headerTitle {
+                font-size: 6vh !important;
+                letter-spacing: 0em;
+            }
+
+            .headerDesc {
+                font-size: 2vh !important;
             }
 
         }
@@ -345,7 +353,7 @@
             border-radius: 15px;
         }
 
-        .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+        .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
             z-index: 3;
             font-size: 28px;
             border: none;
@@ -354,8 +362,7 @@
             color: black;
         }
 
-
-        .pagination>li>a, .pagination>li>span {
+        .pagination > li > a, .pagination > li > span {
             position: relative;
             float: left;
             padding: 6px 12px;
@@ -393,6 +400,17 @@
             z-index: 99999;
             position: fixed;
             width: 400px;
+        }
+
+        .headerTitle {
+            opacity: 1;
+            font-size: 8vh;
+
+        }
+
+        .headerDesc {
+            font-weight: 100;
+            font-size: 4vh
         }
 
 
@@ -438,15 +456,20 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
     <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.jscroll.js"></script>
-
     <script>
+
         $(document).ready(function () {
+
+                    @if ($scroll)
+            var offset = 20;
+            $('html, body').animate({
+                scrollTop: $("#about-section").offset().top + offset
+            }, 1000);
+            @endif
 
             $(function () {
                 $('#searchOpener').click(function (e) {
                     $('#mySidebar').show(400);
-                  //  document.getElementById("mySidebar").style.display = "block";
                 })
             })
 
@@ -454,7 +477,6 @@
             $(function () {
                 $('#searchCloser').click(function (e) {
                     $('#mySidebar').hide(400);
-                    //document.getElementById("mySidebar").style.display = "none";
                 })
             })
 
@@ -476,11 +498,11 @@
                     $(this).toggleClass('heartLoved');
 
 
-                    var saves = $(this).parent().find( "span" ).text();
+                    var saves = $(this).parent().find("span").text();
                     if (saves) {
                         saves = parseInt(saves) + 1;
                     }
-                    $(this).parent().find( "span" ).text(saves);
+                    $(this).parent().find("span").text(saves);
                     console.log(saves);
                 });
             })
@@ -498,8 +520,7 @@
                     if (selectedIds)
                         selectedIds = selectedIds + ',' + categoryId;
                     else
-                        selectedIds =  categoryId;
-
+                        selectedIds = categoryId;
 
                     $('#categoryIds').val(selectedIds);
                 });

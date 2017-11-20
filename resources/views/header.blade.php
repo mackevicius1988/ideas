@@ -6,9 +6,9 @@
             <div class="hs-content-inner">
                 <div class="init-animation-2 delay0-2s">
                     <div class="page-header-title-left">
-                        <h1 class="hs-text-10 init-animation-4 fadeInLeft" style="opacity: 1;font-size: 48px" >Fakin good ideas</h1>
+                        <h1 class="hs-text-10 init-animation-4 fadeInLeft headerTitle">Fakin good ideas</h1>
                         <div class="hs-text-6 init-animation-4 delay0-2s fadeInLeft" style="opacity: 1;">
-                            <h2 style="font-weight: 100; font-size: 24px">Instead of the usual twee festive rubbish, our Christmas range is full of exciting present ideas </h2>
+                            <h2  class = "headerDesc">Crazy gift ideas for your friends, partners, lovers or brothers....</h2>
                         </div>
                     </div>
                 </div>

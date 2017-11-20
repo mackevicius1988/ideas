@@ -9,37 +9,35 @@ use DB;
 use Illuminate\Http\Request;
 use Log;
 
+/**
+ * Class PostsController
+ * @package App\Http\Controllers
+ *
+ */
 class PostsController extends Controller
 {
 
     public function index(Request $request)
     {
-        $posts = Posts::orderBy('id', 'DESC')->paginate(32);
+        $posts = Posts::orderBy('saves', 'DESC')->paginate(16);
         $tags = Category::all();
-
-        if ($request->ajax()) {
-            return response()->json(view('load', array('posts' => $posts))->render());
-        }
-
-
+        $scroll = true;
         return view('welcome', [
             'posts' => $posts,
             'tags' => $tags,
+            'scroll' => $scroll,
         ]);
-
     }
 
     public function find(Request $request)
     {
-
+        $scroll = true;
         DB::connection()->enableQueryLog();
         $query = $request->get('query');
         $priceFrom = $request->get('priceMin');
         $priceTo = $request->get('priceMax');
         $order = $request->get('sort');
         $categoryIds = $request->get('categoryIds');
-
-        Log::info($categoryIds);
 
         $builder = new Posts();
         if ($query != '') {
@@ -68,36 +66,11 @@ class PostsController extends Controller
         $queries = DB::getQueryLog();
         Log::info($queries);
 
-
-        /**
-        DB::connection()->enableQueryLog();
-        $builder = new Posts();
-
-        if ($categoryIds != '0') {
-            $categoryIdsArray = explode(',', $categoryIds);
-            $builder = $builder->findByCategories($categoryIdsArray);
-        }
-
-
-
-        Log::info($priceFrom);
-        Log::info($priceTo);
-
-     //  $builder = $builder->whereBetween('price', [$priceFrom, $priceTo]);
-
-
-        $direction = $order === 'priceDesc' ? 'DESC' : 'ASC';
-        $order = $order === 'priceDesc' ? 'price' : $order;
-        $posts = $builder->orderBy($order, $direction)->paginate(16);
-
-        $queries = DB::getQueryLog();
-        Log::info($queries);
-
-**/
         $tags = Category::all();
         return view('welcome', [
             'posts' => $posts,
             'tags' => $tags,
+            'scroll' => $scroll,
         ]);
     }
 
@@ -144,7 +117,6 @@ class PostsController extends Controller
         $comment->message = $message;
         $comment->postId = $id;
         $comment->save();
-
 
         return $comment->id;
     }

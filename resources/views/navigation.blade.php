@@ -33,13 +33,8 @@
                             </a>
                         </li>
                         <li>
-                            <a class="ripple-group" href="#about-section">
+                            <a class="ripple-group" href="#us-section">
                                 <span data-hover="about">about</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="ripple-group" href="get/memory">
-                                <span data-hover="memory">MY MEMORY</span>
                             </a>
                         </li>
                     </ul>
