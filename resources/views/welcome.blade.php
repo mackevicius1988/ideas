@@ -344,6 +344,7 @@
 
             .headerDesc {
                 font-size: 2vh !important;
+                font-weight: 300;
             }
 
         }
