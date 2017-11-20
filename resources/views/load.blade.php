@@ -11,7 +11,7 @@
         <div class="details" style="border-right:1px solid #ccc ">
             <div class="row">
                 <div class="col-sm-12 col-xs-12">
-                    <span class="listName" style="margin : 0;font-weight: 300;font-style: normal;"   >
+                    <span class="listName" style="margin : 0;font-weight: 300;font-style: normal; text-align: center"   >
                         {{ str_limit($post->name, 30) }}</span><br/>
                     <b class="listPrice" style="color: #333;"> {{$post->price}} </b>
                 </div>

@@ -407,14 +407,7 @@
                             </div>
                         </div>
 
-
-
-
-
                     </div><div>
-
-
-
 
                         <!--/ End widget-categories -->
                     </div>

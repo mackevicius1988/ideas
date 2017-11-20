@@ -469,14 +469,14 @@
 
             $(function () {
                 $('#searchOpener').click(function (e) {
-                    $('#mySidebar').show(400);
+                    $('#mySidebar').show(100);
                 })
             })
 
 
             $(function () {
                 $('#searchCloser').click(function (e) {
-                    $('#mySidebar').hide(400);
+                    $('#mySidebar').hide(100);
                 })
             })
 
