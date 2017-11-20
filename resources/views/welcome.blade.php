@@ -506,6 +506,7 @@
 
             $(function () {
                 $('#searchOpener').click(function (e) {
+                    console.log('dasda');
                     $('#mySidebar').show(100);
                 })
             })
