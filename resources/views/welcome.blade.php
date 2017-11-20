@@ -480,7 +480,7 @@
                 <div data-type="message" class="cd-response cd-response-notification">Hey! Notification message here</div>
             </div>
 
-            <div class="footer-bottom">
+            <div class="footer-bottom" style="padding: 5px">
                 <!-- Copyright -->
                 <a class="footer-bottom-text font-second" href="" target="_blank">Fakin good ideas © 2017. All Right
                     Reserved.</a>
