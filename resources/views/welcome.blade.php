@@ -323,9 +323,7 @@
                 width: 100% !important;
             }
 
-            .listPrice {
-                font-size: 16px;
-            }
+
 
             .listName {
                 font-size: 16px;
@@ -346,7 +344,16 @@
                 font-size: 2vh !important;
                 font-weight: 300;
             }
+            .listPrice {
+                margin-top: 10px !important;;
+                font-size: 24px !important;
+            }
 
+        }
+
+        .listPrice {
+            margin-top: 10px !important;
+            color: #551313;
         }
 
         #btn-find {
@@ -454,7 +461,7 @@
 
     <div id="page-2">
         <section id="about-section" class="about-section section" style="padding: 15px;padding-top: 80px">
-           
+
             <div class="container">
                 <div class="main" style="text-align: center">
                     <div class="gridWrapper">
