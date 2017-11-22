@@ -429,6 +429,18 @@
             font-size: 4vh
         }
 
+        .priceInput {
+            border: none;
+            border-bottom: 1px solid grey;
+            color:black
+        }
+
+        .priceInput:focus {
+            border: none;
+            border-bottom: 1px solid  #551313;
+        }
+
+
 
     </style>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -562,10 +574,29 @@
 
                     var selectedIds = $('#categoryIds').val();
 
-                    if (selectedIds)
-                        selectedIds = selectedIds + ',' + categoryId;
-                    else
-                        selectedIds = categoryId;
+                    if (selectedIds) {
+                        console.log(selectedIds);
+                        if ($(this).attr('class').indexOf('categorySelected') > -1) {
+                            selectedIds = selectedIds + ',' + categoryId;
+                        } else {
+                            var array = selectedIds.split(',');
+                            if (array.length == 0) {
+                                selectedIds = '';
+                            }
+                            if (array && array.indexOf(categoryId) > -1) {
+
+                                array.splice((array.length - array.indexOf(categoryId)), array.indexOf(categoryId));
+                                selectedIds = array;
+                            } else {
+
+                                selectedIds = '';
+                            }
+                        }
+                    }
+                    else {
+                        selectedIds = '';
+                    }
+
 
                     $('#categoryIds').val(selectedIds);
                 });

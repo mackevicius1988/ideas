@@ -20,6 +20,8 @@ class CreateTagsMapTable extends Migration
 
             $table->integer('postId')->unsigned();
             $table->foreign('postId')->references('id')->on('post');
+
+            $table->integer('itemsCount')->unsigned();
         });
     }
 

@@ -29,7 +29,7 @@
         <h2 class="hs-text-6"; style="margin-top: 15px">Tags:</h2>
         <div class="tags" style="text-align: center">
             @foreach($tags as $tag)
-                <a class="categoryItem" data-id='{{$tag->id}}'>#{{$tag->name}}</a>
+                <a style="padding: 10px; border-radius: 15px;"  class="categoryItem {{$tag->class}}" data-id='{{$tag->id}}'>#{{$tag->name}}</a>
             @endforeach
 
                 {{ Form::hidden('categoryIds', null, array('id' => 'categoryIds')) }}
@@ -46,7 +46,7 @@
 
                     {!! Form::number('priceMin', null,
                         array(
-                            'class'=>'input-field',
+                            'class'=>'input-field priceInput',
                             'id' => 'priceMin',
                                'placeholder'=>'Min')) !!}
 
@@ -61,7 +61,7 @@
 
                     {!! Form::number('priceMax', null,
                         array(
-                            'class'=>'input-field',
+                            'class'=>'input-field priceInput',
                             'id' => 'priceMax',
                                'placeholder'=>'Max')) !!}
                 </div>

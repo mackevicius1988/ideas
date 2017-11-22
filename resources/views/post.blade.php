@@ -339,6 +339,7 @@
                             <div class="blog-page-media" style="height: 500px;text-align: center;">
 
                                 <img id = "zoom1" src="{{$post->imageUrl}}" style="max-width:100%; max-height:100%;    ">
+
                             </div>
                             <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a044870d03de004"></script>
                         </section>
@@ -349,6 +350,7 @@
 
                         <div class="row">
                             <div class="col-xs-12 col-sm-12" style=" border-bottom: 1px solid #ccc; padding: 20px">
+                                <i>{{$post->tags}}</i>
                                 <h1 class="blog-page-post-title font-second"
                                     style="margin-bottom:10px;font-size: 20px">{{$post->name}} </h1>
                                 <span class="fa fa-star checked"></span>
@@ -365,7 +367,10 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-6" style="text-align: left">
                                 <h1 class="blog-page-post-title font-second">{{$post->price}} </h1>
-                                <span>{{$post->priceIndex}}</span>
+                                <span>{{$post->savings}}</span>
+
+                                <span>{{$post->availability}}</span>
+
                             </div>
                         </div>
                         <!--/ End widget search -->
@@ -376,29 +381,12 @@
                                     <a class="buyNow animsition-link " href="{{$post->url}}"><b>BUY ON AMAZON</b></a>
                                 </div>
                             </div>
-
-
-                            <h4 class="widget-title font-second" style="margin-top: 20px">Shipping</h4>
-                            <div class="widget-body">
-                                <a class="animsition-link" href="{{$post->url}}">See shipping information</a>
-                            </div>
-                        </div>
-
-                    </div><div>
-
-                        <!--/ End widget-categories -->
-                    </div>
-                    <!--/ End col -->
-                    <div class="row">
-                        <div class="col-sm-12">
-
                             <h4 class="widget-title font-second" style="margin-top: 20px">Description</h4>
                             <div class="widget-body">
                                 <div>
                                     {{$post->description}}
                                 </div>
                             </div>
-
 
                             <h4 class="widget-title font-second">Item specification</h4>
                             <div class="widget-body">
@@ -407,6 +395,14 @@
                                 </div>
                             </div>
 
+                        </div>
+
+                    </div><div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
                         <section class="blog-comment-section" style="margin-top: 0">
                             <h2 class="blog-page-post-title margin-bottom-60 font-second">Comments</h2>
                             <ul class="media-list text comment-list clearlist">

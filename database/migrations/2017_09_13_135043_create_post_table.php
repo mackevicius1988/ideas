@@ -18,12 +18,17 @@ class CreatePostTable extends Migration
             $table->string('url');
             $table->integer('saves');
             $table->string('price');
-            $table->string('priceIndex');
+            $table->string('savings');
+            $table->float('priceIndex');
             $table->string('name');
             $table->string('description');
             $table->string('rating');
+            $table->float('ratingIndex');
             $table->string('features');
+            $table->string('tags');
             $table->string('imageUrl');
+            $table->string('availability');
+            $table->string('category');
             $table->integer('categoryId')->unsigned();
             $table->foreign('categoryId')->references('id')->on('category');
             $table->timestamps();

@@ -33,7 +33,7 @@ class PostsController extends Controller
     public function find(Request $request)
     {
         $scroll = true;
-        DB::connection()->enableQueryLog();
+
         $query = $request->get('query');
         $priceFrom = $request->get('priceMin');
         $priceTo = $request->get('priceMax');
@@ -46,11 +46,11 @@ class PostsController extends Controller
         }
 
         if ($priceFrom) {
-            $builder = $builder->where('price', '>',  '$'.$priceFrom);
+            $builder = $builder->where('priceIndex', '>',  '$'.$priceFrom);
         }
 
         if ($priceTo) {
-            $builder = $builder->where('price', '<',  '$'.$priceTo);
+            $builder = $builder->where('priceIndex', '<',  '$'.$priceTo);
         }
 
         if ($order) {
@@ -68,6 +68,15 @@ class PostsController extends Controller
         Log::info($queries);
 
         $tags = Category::all();
+
+        foreach ($tags as $tag) {
+            if ($categoryIds) {
+                $categoryIdsArray = explode(',', $categoryIds);
+                if (in_array($tag->id, $categoryIdsArray))
+                    $tag['class'] = 'categorySelected';
+            }
+        }
+        Log::info($tags);
         return view('welcome', [
             'posts' => $posts,
             'tags' => $tags,
