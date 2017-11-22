@@ -68,7 +68,7 @@ class PostsController extends Controller
             $builder = $builder->findByCategories($categoryIdsArray);
         }
 
-        $posts = $builder->paginate(32);
+        $posts = $builder->paginate(16);
         $queries = DB::getQueryLog();
         Log::info($queries);
 
