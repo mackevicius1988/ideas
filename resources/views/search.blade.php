@@ -69,10 +69,10 @@
         </div>
         <div class="row">
             <div class="col-xs-6" style="padding: 10px">
-                <button style="width: 100%; " class="sortItem">UNDER 20$</button>
+                <button style="width: 100%;border-radius: 10px " class="sortItem" id = "price20">UNDER 20$</button>
             </div>
             <div class="col-xs-6" style="padding: 10px">
-                <button style="width: 100%; " class="sortItem">MORE 50$</button>
+                <button style="width: 100%; border-radius: 10px" class="sortItem" id = "price50">MORE 50$</button>
             </div>
         </div>
 
@@ -80,11 +80,11 @@
 
 
         <h2 class="hs-text-6"; style="margin-top: 15px">Sort by:</h2>
-        <div>
-            <a class="sortItem">POPULARITY</a>
-            <a class="sortItem">NEWEST FIRST</a>
-            <a class="sortItem">$ HIGH to LOW</a>
-            <a class="sortItem">$ LOW to HIGH</a>
+        <div style="margin-bottom: 20px">
+            <a class="sortItem" style="border-radius: 10px">POPULARITY</a>
+            <a class="sortItem" style="border-radius: 10px">NEWEST FIRST</a>
+            <a class="sortItem" style="border-radius: 10px">$ HIGH to LOW</a>
+            <a class="sortItem" style="border-radius: 10px">$ LOW to HIGH</a>
 
             {{ Form::hidden('order', 'saves', array('id' => 'sort_id')) }}
         </div>

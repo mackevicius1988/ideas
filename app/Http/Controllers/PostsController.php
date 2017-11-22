@@ -32,6 +32,7 @@ class PostsController extends Controller
 
     public function find(Request $request)
     {
+        DB::enableQueryLog();
         $scroll = true;
 
         $query = $request->get('query');
@@ -40,17 +41,21 @@ class PostsController extends Controller
         $order = $request->get('sort');
         $categoryIds = $request->get('categoryIds');
 
+
+        Log::info($priceFrom);
+        Log::info($priceTo);
+
         $builder = new Posts();
         if ($query != '') {
             $builder = $builder->where('name', 'LIKE', '%' . $query . '%');
         }
 
         if ($priceFrom) {
-            $builder = $builder->where('priceIndex', '>',  '$'.$priceFrom);
+            $builder = $builder->where('priceIndex', '>', $priceFrom);
         }
 
         if ($priceTo) {
-            $builder = $builder->where('priceIndex', '<',  '$'.$priceTo);
+            $builder = $builder->where('priceIndex', '<', $priceTo);
         }
 
         if ($order) {

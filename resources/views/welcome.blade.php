@@ -248,11 +248,10 @@
 
         .sortItem {
             cursor: pointer;
-            letter-spacing: 1px !important;
             background-color: white;
             display: inline-block;
-            margin: 0 2px 5px 0;
-            padding: 3px 3px;
+            margin: 0 2px 3px 0;
+            padding: 5px;
             border: 1px solid #b8b7cb;
             font-size: 10px;
             color: black;
@@ -432,7 +431,8 @@
         .priceInput {
             border: none;
             border-bottom: 1px solid grey;
-            color:black
+            color:black;
+            text-align: right;
         }
 
         .priceInput:focus {
@@ -537,6 +537,20 @@
                 })
             })
 
+            $(function () {
+                $('#price20').click(function (e) {
+                    $('#priceMin').val(0);
+                    $('#priceMax').val(20);
+                })
+            })
+
+
+            $(function () {
+                $('#price50').click(function (e) {
+                    $('#priceMin').val(50);
+                    $('#priceMax').val('');
+                })
+            })
 
             $(function () {
                 $('.heart').click(function (e) {
