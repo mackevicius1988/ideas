@@ -76,12 +76,12 @@ class PostsController extends Controller
             $builder = $builder->orderBy($order, $direction);
         }
 
-        Log::info($categoryIds);
+        Log::info($categoryIdsArray);
         if ($addTag) {
             $categoryIdsArray = explode(',', $categoryIds);
-            Log::info($categoryIdsArray);
+            Log::info(array_filter($categoryIdsArray));
 
-            $builder = $builder->whereIn('categoryId', $categoryIdsArray);
+            $builder = $builder->whereIn('categoryId', array_filter($categoryIdsArray));
         }
 
         $posts = $builder->paginate(16);
