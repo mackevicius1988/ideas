@@ -116,9 +116,23 @@ class PostsController extends Controller
     {
         $post = Posts::findOrFail($postId);
         $comments = $post->comments;
+
+        $stars = [];
+        if ($post->ratingIndex)
+            $ratingIndex = round($post->ratingIndex);
+            for($i = 0; $i < $ratingIndex; $i++) {
+                array_push($stars, 'checked');
+            }
+
+        for($i = 0; $i < 5 - $ratingIndex; $i++) {
+            array_push($stars, '');
+        }
+        Log::info($stars);
+
         return view('post', [
             'post' => $post,
-            'comments' => $comments
+            'comments' => $comments,
+            'stars' => $stars
         ]);
 
     }

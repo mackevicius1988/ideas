@@ -353,11 +353,12 @@
                                 <i>{{$post->tags}}</i>
                                 <h1 class="blog-page-post-title font-second"
                                     style="margin-bottom:10px;font-size: 20px">{{$post->name}} </h1>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
+
+
+                                @foreach($stars as $star)
+                                    <span class="fa fa-star {{$star}}"></span>
+                                @endforeach
+
                                 <span>{{$post->rating}}</span>
                                 <a class="animsition-link" href="{{$post->url}}#customerReviews">Read cusmoter reviews</a>
                             </div>
