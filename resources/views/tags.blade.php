@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="col-sm-4">
-            <h2 class="hs-text-6" ; style="margin-top: 15px">Sort by:</h2>
+            <h2 class="hs-text-6" ; style="margin-top: 15px ;text-align:right">Sort by:</h2>
             <div style="margin-bottom: 20px">
                 <a data-id="saves" class="sortItem {{$savesClass}}" style="border-radius: 10px">POPULARITY</a>
                 <a data-id="priceDesc" class="sortItem {{$priceDescClass}}" style="border-radius: 10px">$ HIGH to LOW</a>
