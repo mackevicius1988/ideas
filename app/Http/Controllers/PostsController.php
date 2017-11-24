@@ -71,7 +71,7 @@ class PostsController extends Controller
         Log::info($priceDescClass);
 
         if ($order) {
-            $direction = $order === 'priceAsc' ? 'ASC' : 'DESC';
+            $direction = $order == 'priceAsc' ? 'ASC' : 'DESC';
             $order = $order == 'priceAsc' || $order == 'priceDesc' ? 'priceIndex' : $order;
             $builder = $builder->orderBy($order, $direction);
         }
