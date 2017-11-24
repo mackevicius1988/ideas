@@ -77,7 +77,7 @@ class PostsController extends Controller
         }
 
         Log::info($categoryIdsArray);
-        if ($addTag) {
+        if ($categoryIds) {
             $categoryIdsArray = explode(',', $categoryIds);
             Log::info(array_filter($categoryIdsArray));
 
