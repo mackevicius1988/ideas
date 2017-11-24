@@ -231,7 +231,7 @@
         }
 
         .checked {
-            color: orange;
+            color: #c59d5f;
         }
 
         .fa-star {

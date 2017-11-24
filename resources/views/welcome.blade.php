@@ -453,6 +453,10 @@
             border-bottom: 1px solid  #551313;
         }
 
+        .checked {
+            color: #c59d5f;
+        }
+
 
 
     </style>
