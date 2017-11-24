@@ -14,7 +14,8 @@
                         {{ str_limit($post->name, 30) }}</p>
 
                     <b class="listPrice"> {{$post->price}} </b>
-                    <span class="listPrice"> {{$post->savings}} </span>
+                    <span style="color: #ccc;
+    font-size: 0.75em;" > {{$post->savings}} </span>
                 </div>
             </div>
         </div>
