@@ -246,6 +246,19 @@
             text-transform: uppercase;
         }
 
+        .priceItem {
+            cursor: pointer;
+            letter-spacing: 4px !important;
+            background-color: white;
+            display: inline-block;
+            margin: 0 2px 5px 0;
+            padding: 5px 7px;
+            border: 1px solid #b8b7cb;
+
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
         .sortItem {
             cursor: pointer;
             background-color: white;
@@ -467,13 +480,12 @@
      data-animsition-in="fade-in" data-animsition-out="fade-out-up-sm" style="transform-origin: 50% 50vh;">
 
     <!-- Sidebar -->
-    @include('search')
     @include('header')
     @include('navigation')
 
     <div id="page-2">
         <section id="about-section" class="about-section section" style="padding: 15px;padding-top: 80px">
-
+            @include('tags')
             <div class="container">
                 <div class="main" style="text-align: center">
                     <div class="gridWrapper">
@@ -539,16 +551,29 @@
 
             $(function () {
                 $('#price20').click(function (e) {
+                    console.log("click");
                     $('#priceMin').val(0);
                     $('#priceMax').val(20);
+                    $('#searchForm').submit();
                 })
             })
 
 
             $(function () {
                 $('#price50').click(function (e) {
+                    console.log("click");
                     $('#priceMin').val(50);
                     $('#priceMax').val('');
+                    $('#searchForm').submit();
+                })
+            })
+
+
+            $(function () {
+                $('.sortItem').click(function (e) {
+                    var sortId = $(this).attr("data-id");
+                    $('#sort_id').val(sortId);
+                    $('#searchForm').submit();
                 })
             })
 
@@ -581,38 +606,17 @@
             $(function () {
                 $('.categoryItem').click(function (e) {
                     $(this).toggleClass('categorySelected');
+                    var tagId = $(this).attr("data-id");
+                    $('#addTag').val(tagId);
+                    var alreadySelected = $('#tagIds').val();
 
-                    var categoryId = $(this).attr("data-id");
+                    if ($(this).hasClass('categorySelected'))
+                        $('#tagIds').val(alreadySelected + ',' + tagId);
+                    else
+                        $('#tagIds').val(alreadySelected.replace(',' + tagId, ''));
 
-                    console.log(categoryId);
+                 $('#searchForm').submit();
 
-                    var selectedIds = $('#categoryIds').val();
-
-                    if (selectedIds) {
-                        console.log(selectedIds);
-                        if ($(this).attr('class').indexOf('categorySelected') > -1) {
-                            selectedIds = selectedIds + ',' + categoryId;
-                        } else {
-                            var array = selectedIds.split(',');
-                            if (array.length == 0) {
-                                selectedIds = '';
-                            }
-                            if (array && array.indexOf(categoryId) > -1) {
-
-                                array.splice((array.length - array.indexOf(categoryId)), array.indexOf(categoryId));
-                                selectedIds = array;
-                            } else {
-
-                                selectedIds = '';
-                            }
-                        }
-                    }
-                    else {
-                        selectedIds = '';
-                    }
-
-
-                    $('#categoryIds').val(selectedIds);
                 });
             })
 

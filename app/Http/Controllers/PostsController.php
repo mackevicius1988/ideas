@@ -27,24 +27,27 @@ class PostsController extends Controller
             'posts' => $posts,
             'tags' => $tags,
             'scroll' => $scroll,
+            'price20' => '',
+            'price50' => '',
+            'savesClass' => 'categorySelected',
+            'priceAscClass' => '',
+            'priceDescClass' => ''
         ]);
     }
 
     public function find(Request $request)
     {
-        DB::enableQueryLog();
+
         $scroll = true;
 
         $query = $request->get('query');
         $priceFrom = $request->get('priceMin');
         $priceTo = $request->get('priceMax');
-        $order = $request->get('sort');
-        $categoryIds = $request->get('categoryIds');
+        $order = $request->get('order');
+        $categoryIds = $request->get('tagsIds');
+        $addTag = $request->get('addTag');
 
-
-        Log::info($priceFrom);
-        Log::info($priceTo);
-
+        $categoryIdsArray = [];
         $builder = new Posts();
         if ($query != '') {
             $builder = $builder->where('name', 'LIKE', '%' . $query . '%');
@@ -58,34 +61,53 @@ class PostsController extends Controller
             $builder = $builder->where('priceIndex', '<', $priceTo);
         }
 
+        Log::info($order);
+        $savesClass = $order == 'saves' ? 'categorySelected' : '';
+        $priceAscClass = $order == 'priceAsc' ? 'categorySelected' : '';
+        $priceDescClass  = $order == 'priceDesc' ? 'categorySelected' : '';
+
+        Log::info($savesClass);
+        Log::info($priceAscClass);
+        Log::info($priceDescClass);
+
         if ($order) {
-            $direction = $order === 'priceLow' ? 'ASC' : 'DESC';
+            $direction = $order === 'priceAsc' ? 'ASC' : 'DESC';
+            $order = $order == 'priceAsc' || $order == 'priceDesc' ? 'priceIndex' : $order;
             $builder = $builder->orderBy($order, $direction);
         }
 
-        if ($categoryIds) {
+        Log::info($categoryIds);
+        if ($addTag) {
             $categoryIdsArray = explode(',', $categoryIds);
-            $builder = $builder->findByCategories($categoryIdsArray);
+            Log::info($categoryIdsArray);
+
+            $builder = $builder->whereIn('categoryId', $categoryIdsArray);
         }
 
         $posts = $builder->paginate(16);
-        $queries = DB::getQueryLog();
-        Log::info($queries);
 
         $tags = Category::all();
 
         foreach ($tags as $tag) {
-            if ($categoryIds) {
-                $categoryIdsArray = explode(',', $categoryIds);
                 if (in_array($tag->id, $categoryIdsArray))
                     $tag['class'] = 'categorySelected';
-            }
         }
-        Log::info($tags);
+
+
+        $price20 = $priceTo == 20 ?  'categorySelected' : '';
+        $price50 = $priceFrom == 50 ?  'categorySelected' : '';
+
+
+
         return view('welcome', [
             'posts' => $posts,
             'tags' => $tags,
             'scroll' => $scroll,
+            'price20' => $price20,
+            'price50' => $price50,
+            'savesClass' => $savesClass,
+            'priceAscClass' => $priceAscClass,
+            'priceDescClass' => $priceDescClass
         ]);
     }
 

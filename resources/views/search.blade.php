@@ -4,9 +4,6 @@
 
 
 <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-
-
-
     <button id="searchCloser" class="w3-bar-item w3-large" style="text-align: right; background: #551313; color: white">Close &times;</button>
 
     {!! Form::open(array('url' => 'find', 'method' => 'get' ,'class' => 'form')) !!}
@@ -32,7 +29,7 @@
                 <a style="padding: 10px; border-radius: 15px;"  class="categoryItem {{$tag->class}}" data-id='{{$tag->id}}'>#{{$tag->name}}</a>
             @endforeach
 
-                {{ Form::hidden('categoryIds', null, array('id' => 'categoryIds')) }}
+
         </div>
 
 
