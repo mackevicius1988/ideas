@@ -24,7 +24,8 @@
 @endforeach
 
 </ul>
-{{$posts->links()}}
+{{ $posts->appends(request()->query())->links() }}
+
 
 
 
