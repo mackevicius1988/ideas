@@ -81,7 +81,10 @@ class PostsController extends Controller
             $categoryIdsArray = explode(',', $categoryIds);
             Log::info(array_filter($categoryIdsArray));
 
-            $builder = $builder->whereIn('categoryId', array_filter($categoryIdsArray));
+            $builder = $builder->whereHas('tags', function($query) use($categoryIdsArray) {
+                $query->whereIn('tagId', $categoryIdsArray);
+            });
+
         }
 
         $posts = $builder->paginate(16);

@@ -32,8 +32,10 @@ class Posts extends Model
 
     public function tags()
     {
-        return $this->belongsToMany('App\Tags', 'tagsmap', 'postId', 'tagId');
+        return $this->belongsToMany('App\Category', 'tagsMap', 'postId', 'tagId');
     }
+
+
 
     public function findByCategories($categoryIds)
     {
