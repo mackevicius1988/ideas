@@ -120,6 +120,7 @@ class PostsController extends Controller
         $comments = $post->comments;
 
         $stars = [];
+        $ratingIndex = 0;
         if ($post->ratingIndex != 0)
             $ratingIndex = round($post->ratingIndex);
                 if ($ratingIndex != 0) {
