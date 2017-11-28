@@ -120,9 +120,9 @@ class PostsController extends Controller
         $comments = $post->comments;
 
         $stars = [];
-        if ($post->ratingIndex)
+        if ($post->ratingIndex != 0)
             $ratingIndex = round($post->ratingIndex);
-                if ($ratingIndex) {
+                if ($ratingIndex != 0) {
                     for($i = 0; $i <= $ratingIndex; $i++) {
                         array_push($stars, 'checked');
                     }
