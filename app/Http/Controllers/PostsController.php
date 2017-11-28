@@ -84,7 +84,6 @@ class PostsController extends Controller
             $builder = $builder->whereHas('tags', function($query) use($categoryIdsArray) {
                 $query->whereIn('tagId', $categoryIdsArray);
             });
-
         }
 
         $posts = $builder->paginate(16);
@@ -123,10 +122,11 @@ class PostsController extends Controller
         $stars = [];
         if ($post->ratingIndex)
             $ratingIndex = round($post->ratingIndex);
-            for($i = 0; $i < $ratingIndex; $i++) {
-                array_push($stars, 'checked');
-            }
-
+                if ($ratingIndex) {
+                    for($i = 0; $i <= $ratingIndex; $i++) {
+                        array_push($stars, 'checked');
+                    }
+                }
         for($i = 0; $i < 5 - $ratingIndex; $i++) {
             array_push($stars, '');
         }
