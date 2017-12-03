@@ -388,14 +388,6 @@
                                     {{$post->description}}
                                 </div>
                             </div>
-
-                            <h4 class="widget-title font-second">Item specification</h4>
-                            <div class="widget-body">
-                                <div>
-                                    {{$post->features}}
-                                </div>
-                            </div>
-
                         </div>
 
                     </div><div>

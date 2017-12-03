@@ -19,7 +19,7 @@ class PostsController extends Controller
 
     public function index(Request $request)
     {
-        $posts = Posts::orderBy('saves', 'DESC')->paginate(16);
+        $posts = Posts::select('id', 'name', 'price', 'imageUrl')->orderBy('saves', 'DESC')->paginate(16);
         $tags = Category::all();
         $scroll = $request->get('page');
 
@@ -48,7 +48,7 @@ class PostsController extends Controller
         $addTag = $request->get('addTag');
 
         $categoryIdsArray = [];
-        $builder = new Posts();
+        $builder = Posts::select('id', 'name', 'price', 'imageUrl');
         if ($query != '') {
             $builder = $builder->where('name', 'LIKE', '%' . $query . '%');
         }
@@ -61,14 +61,11 @@ class PostsController extends Controller
             $builder = $builder->where('priceIndex', '<', $priceTo);
         }
 
-        Log::info($order);
+
         $savesClass = $order == 'saves' ? 'categorySelected' : '';
         $priceAscClass = $order == 'priceAsc' ? 'categorySelected' : '';
         $priceDescClass  = $order == 'priceDesc' ? 'categorySelected' : '';
 
-        Log::info($savesClass);
-        Log::info($priceAscClass);
-        Log::info($priceDescClass);
 
         if ($order) {
             $direction = $order == 'priceAsc' ? 'ASC' : 'DESC';
