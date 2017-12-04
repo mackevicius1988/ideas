@@ -14,5 +14,5 @@
 Route::get('', 'PostsController@index');
 Route::get('/find', 'PostsController@find');
 Route::get('/{postId}', 'PostsController@post');
-Route::get('get/memory', 'PostsController@memory');
 Route::get('memories/{postIds}', 'PostsController@memories');
+Route::get('v1/about', 'PostsController@about');

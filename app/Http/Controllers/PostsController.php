@@ -172,4 +172,11 @@ class PostsController extends Controller
 
         return $comment->id;
     }
+
+
+    public function about(Request $request)
+    {
+        Log::info('Start');
+        return view('about');
+    }
 }

@@ -369,7 +369,6 @@
                             <div class="col-xs-12 col-sm-6" style="text-align: left">
                                 <h1 class="blog-page-post-title font-second">{{$post->price}} </h1>
                                 <span>{{$post->savings}}</span>
-
                                 <span>{{$post->availability}}</span>
 
                             </div>

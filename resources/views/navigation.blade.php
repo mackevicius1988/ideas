@@ -35,7 +35,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="ripple-group" href="#us-section">
+                            <a class="ripple-group" href="/v1/about">
                                 <span data-hover="about">about</span>
                             </a>
                         </li>
