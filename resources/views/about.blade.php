@@ -455,6 +455,22 @@
         .checked {
             color: #c59d5f;
         }
+        .aboutText {
+            background-color: black;
+            padding: 20px;
+        }
+
+        .aboutText img {
+            margin:20px
+        }
+
+        .aboutText p {
+            color: white; text-align: justify;
+            font-style: normal;
+            line-height: 1.25em;
+            font-size: 1.25em;
+            margin-bottom:20px
+        }
 
 
 
@@ -515,18 +531,18 @@
 
             <div class="row" style="margin: 1em;">
                 <div class="col-sm-6 col-xs-12" >
-                    <img src="https://images.unsplash.com/photo-1448832945950-bc85f82891bd?auto=format&fit=crop&w=1901&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" width="100%">
+                    <img src="/img/about.jpg" width="100%">
                 </div>
-                <div class="col-sm-6 col-xs-12" style="background-color: black; padding: 20px;">
-                    <img class="init-animation-4 fadeInLeft" src="http://localhost:8000/img/logo@2x.png" width="400" height="60" style="margin:20px">
-                    <p style="color: white; text-align: justify; font-style: normal; line-height: 1.5em; font-size: 1.25em;margin-bottom:20px" style="margin:20px">
-                        FAKINGOODIDEAS is a place, which the main duty is to help to get some cool ideas or goods for Your or Your loved ones lives.
+                <div class="col-sm-6 col-xs-12 aboutText">
+                    <img class="init-animation-4 fadeInLeft" src="/img/logo@2x.png" width="400" height="60">
+                    <p >
+                        FAKINGOODIDEAS is a place, which the main duty is to help to get some cool ideas or goods for You or Your loved ones.
                     </p>
-                    <p style="color: white; text-align: justify; font-style: normal; line-height: 1.5em; font-size: 1.25em;margin-bottom:20px" style="margin:20px">
+                    <p>
                         We are here for a very simple reason: We want to help to put the best ideas in one place online, which people would be able to buy and enjoy. Most of our products are related to ongoing holidays, celebrations and many more. So for example if You are looking for a perfect business present, present for Your wife, husband or kids, then FAKINGOODIDEAS is the place where You should start looking at!
                         Most of items that are listed on our site do return a small commission for product referral and that is helping us to promote new interesting products and to grow as a brand.
                     </p>
-                    <p style="color: white; text-align: justify; font-style: normal; line-height: 1.5em;  font-size: 1.25em">
+                    <p>
                         IMPORTANT: We do not carry any of the products listed on the site, nor do we directly sell anything.
                     </p>
 
