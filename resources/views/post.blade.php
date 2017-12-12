@@ -360,7 +360,7 @@
                                 @endforeach
 
                                 <span>{{$post->rating}}</span>
-                                <a class="animsition-link" href="{{$post->url}}#customerReviews">Read cusmoter reviews</a>
+                                <a class="animsition-link" href="{{$post->url}}#customerReviews">Read customers reviews</a>
                             </div>
 
                         </div>
@@ -384,7 +384,10 @@
                             <h4 class="widget-title font-second" style="margin-top: 20px">Description</h4>
                             <div class="widget-body">
                                 <div>
-                                    {{$post->description}}
+                                    <span class="font-second"> {{$post->description}}</span>
+                                <div style="width: 100%; text-align: center; padding:15px">
+                                    <a class="animsition-link" href="{{$post->url}}" style="border:1px solid black; margin: 30px; padding: 5px">Read more on amazon</a>
+                                </div>
                                 </div>
                             </div>
                         </div>
