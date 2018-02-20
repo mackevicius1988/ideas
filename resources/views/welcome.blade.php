@@ -461,12 +461,41 @@
         .grid-sizer,
         .grid-item {
             width: 24%;
-            margin-bottom: 5px;
         }
 
-        .grid-item:HOVER .details{
-            background-color: rgba(0, 0, 0,0.8);
-            color: white;
+        .grid-item {
+            width: 24%;
+
+            opacity: 0.9;
+            border: 1px solid #dddddd;
+            margin-bottom: 10px;
+            padding-bottom:10px;
+        }
+
+
+
+        .grid-item:HOVER {
+            opacity: 1;
+        }
+
+        .grid-item .details {
+            opacity: 0.7;
+
+        }
+
+        .grid-item .details .detailed{
+            opacity: 0;
+            transition: all 1.5s ease;
+        }
+
+        .grid-item:HOVER .details {
+            opacity: 1;
+
+        }
+
+        .grid-item:HOVER .details .detailed{
+            opacity: 1;
+
         }
 
         @media only screen and (max-width: 500px) {
@@ -475,6 +504,10 @@
                 margin-bottom: 5px;
                 padding: 5px;
             }
+        }
+
+        .checked {
+            color: #c59d5f;
         }
 
 

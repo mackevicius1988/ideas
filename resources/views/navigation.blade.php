@@ -31,9 +31,7 @@
                 <div class="collapse navbar-collapse" id="mobile-navbar-collapse">
                     <ul class="nav navbar-nav navbar-right cl-effect-5">
                         <li>
-                            <a class="ripple-group" href="#about-section">
-                                <span data-hover="home">home</span>
-                            </a>
+                           home
                         </li>
                         <li>
                             <a class="ripple-group" href="/v1/about">
