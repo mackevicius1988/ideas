@@ -471,7 +471,7 @@
 
         @media only screen and (max-width: 500px) {
             .grid-item {
-                width: 48%;
+                width: 100%;
                 margin-bottom: 5px;
                 padding: 5px;
             }
