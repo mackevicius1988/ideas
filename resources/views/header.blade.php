@@ -7,9 +7,10 @@
                 <div class="init-animation-2 delay0-2s" style="background-color: rgba(0,0,0, 0.5); padding: 15px; border:1px solid white; border-radius: 15px">
                     <div class="page-header-title-left">
 
+                        <img  class="init-animation-4" src="img/lg.png" width="200px"/><br />
                         <img  class="init-animation-4" src="img/logo.png" width="40%"/>
                         <div class="hs-text-6 init-animation-4 delay0-2s fadeInLeft" style="opacity: 1;">
-                            <h2  class = "headerDesc">Premium gift ideas for everyone</h2>
+                            <h2  class = "headerDesc">Modern And Unique Gift Ideas For Everyone</h2>
                         </div>
                     </div>
 

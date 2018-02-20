@@ -353,8 +353,8 @@
             }
 
             .headerDesc {
-                font-size: 2vh !important;
-                font-weight: 300;
+                font-size: 1.5vh !important;
+                font-weight: 100;
             }
             .listPrice {
                 margin-top: 10px !important;;
@@ -471,8 +471,9 @@
 
         @media only screen and (max-width: 500px) {
             .grid-item {
-                width: 100%;
+                width: 48%;
                 margin-bottom: 5px;
+                padding: 5px;
             }
         }
 
