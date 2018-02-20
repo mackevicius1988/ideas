@@ -1,29 +1,38 @@
-<ul style="list-style-type: none">
+<div class="grid">
 @foreach($posts as $post)
-    <li class = 'catalogueItem' >
+        <div class="grid-sizer"></div>
+    <div class = 'grid-item' style="border: 1px solid #ccc">
         <div style="overflow: hidden;">
+
         <a class="animsition-link" href="{{$post->id}}" data-id="{{$post->id}}" data-price="{{$post->price}}" data-largesrc="{{$post->imageUrl}}" data-title="{{$post->name}}" data-description="{{$post->desc}}">
-            <div class="catalogueItemInner" style="background: url('{{$post->imageUrl}}');background-position: center center; background-size: 85% auto;   background-repeat: no-repeat;"></div>
+
+            <img src="{{$post->imageUrl}}" width="100%"/>
+
         </a>
         </div>
 
-        <div class="details" style="border-top:1px solid #ccc; ">
+        <div class="details" style="text-align: center ">
             <div class="row">
                 <div class="col-sm-12 col-xs-12">
                     <p class="listName" style="margin : 5px 0;font-weight: 300;font-style: normal; "   >
-                        {{ str_limit($post->name, 30) }}</p>
+                        {{ $post->name}}</p>
 
                     <b class="listPrice"> {{$post->price}} </b>
                     <span style="color: #ccc;
-    font-size: 0.75em;" > {{$post->savings}} </span>
+    font-size: 0.75em;" > {{$post->savings}} </span> <br />
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
                 </div>
             </div>
         </div>
-    </li>
+    </div>
 
 @endforeach
 
-</ul>
+</div>
 {{ $posts->appends(request()->query())->links() }}
 
 

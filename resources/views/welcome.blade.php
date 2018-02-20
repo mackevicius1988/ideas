@@ -264,7 +264,7 @@
             background-color: white;
             display: inline-block;
             margin: 0 2px 3px 0;
-            padding: 5px;
+            padding: 15px;
             border: 1px solid #b8b7cb;
             font-size: 10px;
             color: black;
@@ -458,7 +458,23 @@
         }
 
 
+        .grid-sizer,
+        .grid-item {
+            width: 24%;
+            margin-bottom: 5px;
+        }
 
+        .grid-item:HOVER .details{
+            background-color: rgba(0, 0, 0,0.8);
+            color: white;
+        }
+
+        @media only screen and (max-width: 500px) {
+            .grid-item {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
 
 
     </style>
@@ -468,6 +484,7 @@
 
     <link rel="stylesheet" href="css/newsletter/reset.css"> <!-- CSS reset -->
     <link rel="stylesheet" href="css/newsletter/style.css"> <!-- Resource style -->
+
 </head>
 <body class="christmas-gift">
 
@@ -628,7 +645,17 @@
 
         })
     </script>
-
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script>
+        $('.grid').masonry({
+            // options
+            itemSelector: '.grid-item',
+            // use element for option
+            columnWidth: '.grid-sizer',
+            percentPosition: true,
+            gutter: 10
+        });
+    </script>
     <script src="js/jquery.easing.1.3.min.js"></script>
     <script src="js/jquery.animsition.min.js"></script>
     <script src="js/smoothscroll.js"></script>
