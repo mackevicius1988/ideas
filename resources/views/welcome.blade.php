@@ -478,6 +478,12 @@
         }
 
 
+        .navbar-default {
+            background-color: rgba(0,0,0,0.5);
+            padding: 20px;
+            border-color: #f5f5fa;}
+
+
     </style>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">

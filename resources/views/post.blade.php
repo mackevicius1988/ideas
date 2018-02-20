@@ -314,7 +314,7 @@
                     </div>
                     <div class="container in-page-scroll">
 
-                        <a class="animsition-link hs-text-6" href="https://fakingoodideas.com" style="color :white;">   <img  class="init-animation-4" src="img/logo.png" width="200px"/></a>
+                        <a class="animsition-link hs-text-6" href="https://fakingoodideas.com" style="color :white;">   <img  class="init-animation-4" src="img/lg.png" width="200px"/></a>
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <i  onclick="goBack()" class="fa fa-arrow-left" style="font-size: 20px; color: white; float :right" aria-hidden="true"></i>
                         <!--   onclick="goBack()" /.navbar-collapse -->

@@ -22,7 +22,8 @@
                     </button>
 
                     <a class="navbar-brand ripple-group" href="#top">
-                        <p class="pull-left font-second hs-text-6" style="font-weight: 300">Fakin Good Ideas</p>
+                        <img  class="init-animation-4" src="img/logo.png" width="200px"/>
+
                     </a>
                 </div>
 
