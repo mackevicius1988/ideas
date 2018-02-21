@@ -353,7 +353,7 @@
             }
 
             .headerDesc {
-                font-size: 1.5vh !important;
+                font-size: 12px !important;
                 font-weight: 100;
             }
             .listPrice {
@@ -438,7 +438,9 @@
 
         .headerDesc {
             font-weight: 100;
-            font-size: 4vh
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 6px;
         }
 
         .priceInput {

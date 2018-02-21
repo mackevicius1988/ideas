@@ -251,17 +251,19 @@
         }
 
         .buyNow:HOVER {
-            background: #551313;
+            background: black;
             color:white !important;
         }
 
         .buyNow {
-            border-radius: 15px;
-            color: white;
-            background: #000;
+            color: black;
+            background: white;
+            letter-spacing: 3px;
+            padding: 10px 80px;
+
             border: 1px solid black;
-            padding: 10px 50px;
-            margin-right: 15px
+            font-weight: 200;
+            margin: 0 auto;
         }
 
         .padding20 {
@@ -270,6 +272,18 @@
 
         .textCenter {
             text-align: center
+        }
+
+        .money {
+            letter-spacing: 3px;
+        }
+
+        .navItem {
+            float: right;
+            color: white;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin: 5px 10px;
         }
 
     </style>
@@ -301,12 +315,15 @@
         <div class="position-relative">
             <!-- sticky: 1) add class="sticky-navbar" to #nav-wrapper | 2) remove navbar-fixed-top navbar-transparent class from #nav -->
             <div id="nav-wrapper" class="transp-nav">
-
+                
                 <nav style="    padding: 10px;
     padding-top: 20px;background-color: black" id="nav"
                      class="navbar navbar-default navbar-fixed-top navbar-transparent ripple-group-parent init-animation-1"
                      role="navigation">
                     <!-- progressbar -->
+
+
+
                     <div id="scroll-progressbar" class="scroll-progressbar">
                         <div>
                             <span class="scroll-shadow"></span>
@@ -314,9 +331,15 @@
                     </div>
                     <div class="container in-page-scroll">
 
-                        <a class="animsition-link hs-text-6" href="https://fakingoodideas.com" style="color :white;">   <img  class="init-animation-4" src="img/lg.png" width="200px"/></a>
+                        <a class="animsition-link hs-text-6"
+                           href="https://fakingoodideas.com" style="color :white;">
+                            <img  class="init-animation-4" src="img/logo.png" width="200px" /></a>
                         <!-- Brand and toggle get grouped for better mobile display -->
-                        <i  onclick="goBack()" class="fa fa-arrow-left" style="font-size: 20px; color: white; float :right" aria-hidden="true"></i>
+                        <a class="navItem">HOME</a>
+                        <a class="navItem">ABOUT US</a>
+                        <a class="navItem">SHOP</a>
+                        <a class="navItem">We On Social</a>
+
                         <!--   onclick="goBack()" /.navbar-collapse -->
                     </div>
                     <!-- /.container -->
@@ -332,12 +355,12 @@
             <div class="container">
 
                 <div class="row">
-                    <div class="col-sm-6 padding-right-sm-50">
+                    <div class="col-sm-8 padding-right-sm-50">
                         <!-- Post -->
                         <section class="blog-post" style="margin-bottom: 0">
                             <!-- Post Media -->
                             <div class="blog-page-media" style="height: 500px;text-align: center;">
-
+                                <h1 style="float: left; color: #333">#TechStuff</h1>
                                 <img id = "zoom1" src="{{$post->imageUrl}}" style="max-width:100%; max-height:100%;    ">
 
                             </div>
@@ -346,28 +369,33 @@
                         <div id="end-content"></div>
                     </div>
 
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
 
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12" style=" border-bottom: 1px solid #ccc; padding: 20px">
+                            <div class="col-xs-12 col-sm-12" style="text-align:center;  padding: 20px; padding-top: 50px">
                                 <i>{{$post->tags}}</i>
+                                <span class="money">$155.00 USD</span>
                                 <h1 class="blog-page-post-title font-second"
-                                    style="margin-bottom:10px;font-size: 20px">{{$post->name}} </h1>
+                                    style="margin-bottom:10px;font-size: 20px; letter-spacing: 3px">WALL SIDE SHELDS </h1>
 
+                                <p class="blog-page-post-title font-second"
+                                    style=" color: #333;font-style:normal; margin-bottom:10px;font-size: 16px;  letter-spacing: 2px">{{$post->name}} </p>
 
+                                <p style="margin-bottom: 10px; margin-top: 25px;">
                                 @foreach($stars as $star)
                                     <span class="fa fa-star {{$star}}"></span>
                                 @endforeach
+                                </p>
 
-                                <span>{{$post->rating}}</span>
+                                <span style="letter-spacing: 3px">{{$post->rating}}</span><br />
                                 <a class="animsition-link" href="{{$post->url}}#customerReviews">Read customers reviews</a>
                             </div>
 
                         </div>
 
                         <div class="row">
-                            <div class="col-xs-12 col-sm-6" style="text-align: left">
-                                <h1 class="blog-page-post-title font-second">{{$post->price}} </h1>
+                            <div class="col-xs-12 col-sm-6" style="text-align: center">
+                                <!--h1 class="blog-page-post-title font-second">{{$post->price}} </h1-->
                                 <span>{{$post->savings}}</span>
                                 <span>{{$post->availability}}</span>
 
@@ -378,10 +406,10 @@
 
                             <div class="row">
                                 <div class="col-xs-12 padding20 textCenter">
-                                    <a class="buyNow animsition-link " href="{{$post->url}}"><b>BUY ON AMAZON</b></a>
+                                    <a class="buyNow animsition-link " href="{{$post->url}}">BUY ON AMAZON</a>
                                 </div>
                             </div>
-                            <h4 class="widget-title font-second" style="margin-top: 20px">Description</h4>
+                            <!--h4 class="widget-title font-second" style="margin-top: 20px">Description</h4>
                             <div class="widget-body">
                                 <div>
                                     <span class="font-second"> {{$post->description}}</span>
@@ -389,7 +417,7 @@
                                     <a class="animsition-link" href="{{$post->url}}" style="border:1px solid black; margin: 30px; padding: 5px">Read more on amazon</a>
                                 </div>
                                 </div>
-                            </div>
+                            </div-->
                         </div>
 
                     </div><div>

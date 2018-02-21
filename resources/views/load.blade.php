@@ -2,9 +2,7 @@
 @foreach($posts as $post)
         <div class="grid-sizer"></div>
     <div class = 'grid-item' style="">
-        <div style="position: absolute; left: 10px; top:10px">
-            SAVE
-        </div>
+
         <div style="overflow: hidden;">
 
         <a class="animsition-link" href="{{$post->id}}" data-id="{{$post->id}}" data-price="{{$post->price}}" data-largesrc="{{$post->imageUrl}}" data-title="{{$post->name}}" data-description="{{$post->desc}}">
@@ -17,7 +15,7 @@
         <div class="details" style="text-align: center ">
             <div class="row">
                 <div class="col-sm-12 col-xs-12">
-                    <p class="listName" style="margin : 5px 0;font-weight: 300;font-style: normal; "   >HP telefonic soni</p>
+                    <p class="listName" style="margin : 5px 0;font-weight: 300;font-style: normal;letter-spacing: 3px "   >HP telefonic sonic super meg 65MB</p>
 
 
                     <b > {{$post->price}} </b>
