@@ -48,4 +48,10 @@ class Posts extends Model
         return $this->hasMany('App\Comment', 'postId');
     }
 
+
+    public function images()
+    {
+        return $this->hasMany('App\Image', 'postId');
+    }
+
 }

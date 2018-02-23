@@ -355,13 +355,24 @@
             <div class="container">
 
                 <div class="row">
-                    <div class="col-sm-8 padding-right-sm-50">
+                    <div class="col-sm-6 padding-right-sm-50">
                         <!-- Post -->
                         <section class="blog-post" style="margin-bottom: 0">
                             <!-- Post Media -->
-                            <div class="blog-page-media" style="height: 500px;text-align: center;">
+                            <div  style="height: 500px;text-align: center;">
                                 <h1 style="float: left; color: #333">#TechStuff</h1>
-                                <img id = "zoom1" src="{{$post->imageUrl}}" style="max-width:100%; max-height:100%;    ">
+                                <div class="row">
+                                    <div class="col-xs-12" style="text-align: center">
+                                        <img id = "zoom1" src="{{$post->imageUrl}}" style="max-width:450px;     ">
+                                    </div>
+                                    <div class="col-xs-12" style="text-align: center">
+                                        @foreach($post->images as $image)
+                                            <img src="{{$image->imageUrl}}" width="80px" style="float: left">
+                                        @endforeach
+
+                                    </div>
+                                </div>
+
 
                             </div>
                             <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a044870d03de004"></script>
@@ -369,7 +380,7 @@
                         <div id="end-content"></div>
                     </div>
 
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
 
                         <div class="row">
                             <div class="col-xs-12 col-sm-12" style="text-align:center;  padding: 20px; padding-top: 50px">
@@ -555,14 +566,7 @@
                 window.history.back();
             }
         </script>
-    <script>
-        $('#zoom1').elevateZoom({
-            zoomType: "inner",
-            cursor: "crosshair",
-            zoomWindowFadeIn: 1000,
-            zoomWindowFadeOut: 1000
-        });
-    </script>
+
 </div>
 </body>
 </html>

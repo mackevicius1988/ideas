@@ -4180,7 +4180,7 @@ body {
 }
 .blog-page-media {
   position: relative;
-  max-height: 600px;
+
   overflow: hidden;
 }
 .parallax-img {
