@@ -288,6 +288,11 @@
 
     </style>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="/css/gallery/vendor/magic/magic.min.css">
+    <link rel="stylesheet" href="/css/gallery/vendor/animate/animate.min.css">
+
+    <link rel="stylesheet" href="/css/gallery/jquery.desoslide.css">
 </head>
 <body>
 
@@ -362,19 +367,36 @@
                             <div  style="height: 500px;text-align: center;">
                                 <h1 style="float: left; color: #333">#TechStuff</h1>
                                 <div class="row">
-                                    <div class="col-xs-12" style="text-align: center">
-                                        <img id = "zoom1" src="{{$post->imageUrl}}" style="max-width:450px;     ">
-                                    </div>
-                                    <div class="col-xs-12" style="text-align: center">
-                                        @foreach($post->images as $image)
-                                            <img src="{{$image->imageUrl}}" width="80px" style="float: left">
-                                        @endforeach
+                                    <div id="slideshow5" class="col-lg-12"></div>
+                                </div>
 
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <ul id="slideshow5_thumbs" class="desoslide-thumbs-horizontal list-inline text-center">
+                                            <li>
+                                                <a href="{{$post->imageUrl}}">
+                                                    <img src="{{$post->imageUrl}}" alt="dolmens" width="120px">
+                                                </a>
+                                            </li>
+
+                                            @foreach($post->images as $image)
+                                                <li>
+                                                    <a href="{{$image->imageUrl}}">
+                                                        <img src="{{$image->imageUrl}}" alt="dolmens" width="80px">
+                                                    </a>
+                                                </li>
+
+                                            @endforeach
+
+                                        </ul>
                                     </div>
                                 </div>
 
 
-                            </div>
+                                </div>
+
+
+
                             <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a044870d03de004"></script>
                         </section>
                         <div id="end-content"></div>
@@ -434,6 +456,19 @@
                     </div><div>
 
                     </div>
+
+                    <div class="row">
+                        <div class="col-sm-12" style="padding:20px">
+                            <h1 style="width: 100%; text-align: center">RELATED PRODUCTS</h1>
+
+                            @foreach($post->images as $image)
+                                <img src="{{$image->imageUrl}}" width="80px" style="float: left; margin: 30px; cursor: pointer">
+                            @endforeach
+
+                        </div>
+                    </div>
+
+
 
                     <div class="row">
                         <div class="col-sm-6">
@@ -559,9 +594,10 @@
     <script src="js/contactForm.js"></script>
     <script src="js/scripts.min.js"></script>
 
-    <script src='js/jquery.elevatezoom.js'></script>
-
+        <script src="js/gallery/jquery.desoslide.min.js"></script>
+        <script src="js/gallery/app/demo.js"></script>
         <script>
+
             function goBack() {
                 window.history.back();
             }
