@@ -364,7 +364,7 @@
                         <!-- Post -->
                         <section class="blog-post" style="margin-bottom: 0">
                             <!-- Post Media -->
-                            <div  style="height: 500px;text-align: center;">
+                            <div  style="max-height: 500px;text-align: center;">
                                 <h1 style="float: left; color: #333">#TechStuff</h1>
                                 <div class="row">
                                     <div id="slideshow5" class="col-lg-12"></div>
