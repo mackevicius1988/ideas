@@ -443,10 +443,11 @@
 
                     <div class="row">
                         <div class="col-sm-12" style="padding:20px">
-                            <h1 style="width: 100%; text-align: center">RELATED PRODUCTS</h1>
+                            <h1 style="width: 100%; text-align: center; color: #3c3c3c">RELATED</h1>
 
                             @foreach($post->images as $image)
-                                <img src="{{$image->imageUrl}}" width="80px" style="float: left; margin: 30px; cursor: pointer">
+                                <img src="{{$image->imageUrl}}" width="200px" style="float: left; margin: 30px; cursor: pointer">
+
                             @endforeach
 
                         </div>
