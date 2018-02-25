@@ -55,6 +55,15 @@
     <style>
 
         @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+        @font-face {
+            font-family: Questrial;
+            src: url("fonts/Questrial-Regular.otf") format("opentype");
+        }
+
+        @font-face {
+            font-family: Futura;
+            src: url("fonts/UniversalisADFStd-Regular.otf") format("opentype");
+        }
 
         body {
             font-family: 'Open Sans', sans-serif;
@@ -253,6 +262,8 @@
         .buyNow:HOVER {
             background: black;
             color:white !important;
+            font-family: "Questrial";
+            border: 1px solid white;
         }
 
         .buyNow {
@@ -260,7 +271,7 @@
             background: white;
             letter-spacing: 3px;
             padding: 10px 80px;
-
+            font-family: "Questrial";
             border: 1px solid black;
             font-weight: 200;
             margin: 0 auto;
@@ -276,6 +287,10 @@
 
         .money {
             letter-spacing: 3px;
+            font-family: "Futura";
+            font-size: 1.2em;
+            text-transform: uppercase;
+
         }
 
         .navItem {
@@ -284,6 +299,19 @@
             letter-spacing: 3px;
             text-transform: uppercase;
             margin: 5px 10px;
+        }
+
+        .categoryDesc {
+            font-size: 1.5em;
+            margin:10px;
+            letter-spacing: 3px;
+            font-weight: normal;
+            line-height: 1.4;
+            font-family: "Futura";
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            -webkit-font-smoothing: antialiased;
+            color: #656565;
         }
 
     </style>
@@ -383,12 +411,7 @@
                                         </ul>
                                     </div>
                                 </div>
-
-
                                 </div>
-
-
-
                             <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a044870d03de004"></script>
                         </section>
                         <div id="end-content"></div>
@@ -400,30 +423,30 @@
                             <div class="col-xs-12 col-sm-12" style="text-align:center;  padding: 20px; padding-top: 50px">
                                 <i>{{$post->tags}}</i>
                                 <span class="money">{{$post->price}} USD</span> <br />
-                                <span style="text-align: center">{{$post->savings}}</span>
+                                <span style="text-align: center;    font-family: 'Futura';">{{$post->savings}}</span>
 
-
-                                <h1 class="blog-page-post-title font-second"
-                                    style="margin-bottom:10px;font-size: 20px; letter-spacing: 3px">SMART TECHNOLOGY IDEAS </h1>
+                                <h1 class="categoryDesc">SMART TECHNOLOGY IDEAS </h1>
 
                                 <p class="blog-page-post-title font-second"
-                                    style=" color: #333;font-style:normal; margin-bottom:10px;font-size: 16px;  letter-spacing: 2px">{{$post->name}} </p>
+                                    style="     font-family: 'Futura', sans-serif;color: #333;font-style:normal; margin-bottom:10px;font-size: 18px;  letter-spacing: 2px">{{$post->name}} </p>
 
                                 <p style="margin-bottom: 10px; margin-top: 25px;">
-                                @foreach($stars as $star)
-                                    <span class="fa fa-star {{$star}}"></span>
-                                @endforeach
+                                    @foreach($stars as $star)
+                                        <span class="fa fa-star {{$star}}"></span>
+                                    @endforeach
                                 </p>
+                                <span style="letter-spacing: 3px;font-family: 'Futura'">{{$post->rating}}</span><br />
+                                <a class="animsition-link" href="{{$post->url}}#customerReviews" style="font-family: 'Futura'">Read customers reviews</a>
 
-                                <span style="letter-spacing: 3px">{{$post->rating}}</span><br />
-                                <a class="animsition-link" href="{{$post->url}}#customerReviews">Read customers reviews</a>
+
+
                             </div>
 
                         </div>
 
                         <div class="row">
                             <div class="col-xs-12 col-sm-12" style="text-align: center">
-                                <span style="text-align: center">{{$post->availability}}</span>
+                                <span style="text-align: center; font-family: 'Open Sans'">{{$post->availability}}</span>
                             </div>
                         </div>
                         <!--/ End widget search -->
