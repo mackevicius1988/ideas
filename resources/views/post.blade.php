@@ -340,10 +340,7 @@
                            href="https://fakingoodideas.com" style="color :white;">
                             <img  class="init-animation-4" src="img/logo.png" width="200px" /></a>
                         <!-- Brand and toggle get grouped for better mobile display -->
-                        <a class="navItem">HOME</a>
-                        <a class="navItem">ABOUT US</a>
-                        <a class="navItem">SHOP</a>
-                        <a class="navItem">We On Social</a>
+                    
 
                         <!--   onclick="goBack()" /.navbar-collapse -->
                     </div>
@@ -365,7 +362,7 @@
                         <section class="blog-post" style="margin-bottom: 0">
                             <!-- Post Media -->
                             <div  style="max-height: 400px;text-align: center;">
-                             
+
                                 <div class="row">
                                     <div id="slideshow5" class="col-lg-9" style="float: none; margin: 0 auto; "></div>
                                 </div>
