@@ -467,9 +467,6 @@
 
         .grid-item {
             width: 24%;
-
-            opacity: 0.9;
-            border: 1px solid #dddddd;
             margin-bottom: 10px;
             padding-bottom:10px;
         }
@@ -478,11 +475,26 @@
 
         .grid-item:HOVER {
             opacity: 1;
+            border: 1px solid #eeeeee;
         }
 
         .grid-item .details {
             opacity: 0.7;
 
+        }
+        .grid-item .details .listName {
+
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1em;
+            font-style: normal;
+            margin-bottom:5px;
+        }
+
+
+        .money {
+
+            letter-spacing: 3px;
         }
 
         .grid-item .details .detailed{

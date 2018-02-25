@@ -15,10 +15,10 @@
         <div class="details" style="text-align: center ">
             <div class="row">
                 <div class="col-sm-12 col-xs-12">
-                    <p class="listName" style="margin : 5px 0;font-weight: 300;font-style: normal;letter-spacing: 3px "   >HP telefonic sonic super meg 65MB</p>
+                    <p class="listName"> {{ str_limit($post->name, 30) }}</p>
 
-
-                    <b > {{$post->price}} </b>
+                    <span class="money">{{$post->price}} USD</span>
+                  
                     <div class="detailed">
                     <span style="color: #ccc;
     font-size: 0.75em;" > {{$post->savings}} </span> <br />
