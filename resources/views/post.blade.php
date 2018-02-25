@@ -352,7 +352,7 @@
         <!-- Do not remove the div below if you want to a sticky navbar! -->
         <div id="about-section"></div>
         <!-- section -->
-        <div class="section" style="padding-top: 100px; padding-left: 10px; padding-right: 10px">
+        <div class="section" style="padding-top: 70px; padding-left: 10px; padding-right: 10px">
 
             <div class="container">
 
@@ -394,14 +394,17 @@
                         <div id="end-content"></div>
                     </div>
 
-                    <div class="col-sm-6">
+                    <div class="col-sm-6" style="margin-top: 30px;">
 
                         <div class="row">
                             <div class="col-xs-12 col-sm-12" style="text-align:center;  padding: 20px; padding-top: 50px">
                                 <i>{{$post->tags}}</i>
-                                <span class="money">$155.00 USD</span>
+                                <span class="money">{{$post->price}} USD</span> <br />
+                                <span style="text-align: center">{{$post->savings}}</span>
+
+
                                 <h1 class="blog-page-post-title font-second"
-                                    style="margin-bottom:10px;font-size: 20px; letter-spacing: 3px">WALL SIDE SHELDS </h1>
+                                    style="margin-bottom:10px;font-size: 20px; letter-spacing: 3px">SMART TECHNOLOGY IDEAS </h1>
 
                                 <p class="blog-page-post-title font-second"
                                     style=" color: #333;font-style:normal; margin-bottom:10px;font-size: 16px;  letter-spacing: 2px">{{$post->name}} </p>
@@ -419,11 +422,8 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-xs-12 col-sm-6" style="text-align: center">
-                                <!--h1 class="blog-page-post-title font-second">{{$post->price}} </h1-->
-                                <span>{{$post->savings}}</span>
-                                <span>{{$post->availability}}</span>
-
+                            <div class="col-xs-12 col-sm-12" style="text-align: center">
+                                <span style="text-align: center">{{$post->availability}}</span>
                             </div>
                         </div>
                         <!--/ End widget search -->
@@ -434,15 +434,7 @@
                                     <a class="buyNow animsition-link " href="{{$post->url}}">BUY ON AMAZON</a>
                                 </div>
                             </div>
-                            <!--h4 class="widget-title font-second" style="margin-top: 20px">Description</h4>
-                            <div class="widget-body">
-                                <div>
-                                    <span class="font-second"> {{$post->description}}</span>
-                                <div style="width: 100%; text-align: center; padding:15px">
-                                    <a class="animsition-link" href="{{$post->url}}" style="border:1px solid black; margin: 30px; padding: 5px">Read more on amazon</a>
-                                </div>
-                                </div>
-                            </div-->
+
                         </div>
 
                     </div><div>

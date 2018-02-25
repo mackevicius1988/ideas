@@ -121,7 +121,7 @@ class PostsController extends Controller
         if ($post->ratingIndex != 0)
             $ratingIndex = round($post->ratingIndex);
                 if ($ratingIndex != 0) {
-                    for($i = 0; $i <= $ratingIndex; $i++) {
+                    for($i = 0; $i < $ratingIndex; $i++) {
                         array_push($stars, 'checked');
                     }
                 }
