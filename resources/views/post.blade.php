@@ -340,7 +340,7 @@
                            href="https://fakingoodideas.com" style="color :white;">
                             <img  class="init-animation-4" src="img/logo.png" width="200px" /></a>
                         <!-- Brand and toggle get grouped for better mobile display -->
-                    
+
 
                         <!--   onclick="goBack()" /.navbar-collapse -->
                     </div>
@@ -370,11 +370,6 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <ul id="slideshow5_thumbs" class="desoslide-thumbs-horizontal list-inline text-center">
-                                            <li>
-                                                <a href="{{$post->imageUrl}}">
-                                                    <img src="{{$post->imageUrl}}" alt="dolmens" width="120px">
-                                                </a>
-                                            </li>
 
                                             @foreach($post->images as $image)
                                                 <li>
