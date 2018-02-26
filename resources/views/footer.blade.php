@@ -1,4 +1,4 @@
-<footer class="footer-section section no-padding-bottom ">
+<footer class="footer-section section no-padding-bottom " style="padding-top:0">
 <div class="footer-bottom" style="padding: 5px">
     <div class="row">
         <div class="col-sm-4 col-xs-12 footerHeader">
