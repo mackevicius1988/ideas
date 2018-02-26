@@ -262,7 +262,6 @@
         .buyNow:HOVER {
             background: black;
             color:white !important;
-            font-family: "Questrial";
             border: 1px solid white;
         }
 
@@ -446,7 +445,7 @@
 
                         <div class="row">
                             <div class="col-xs-12 col-sm-12" style="text-align: center">
-                                <span style="text-align: center; font-family: 'Open Sans'">{{$post->availability}}</span>
+                                <span style="text-align: center; font-family: 'Futura'">{{$post->availability}}</span>
                             </div>
                         </div>
                         <!--/ End widget search -->

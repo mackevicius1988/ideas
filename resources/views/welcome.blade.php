@@ -85,7 +85,15 @@
     <!-- Styles -->
     <style>
         @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+        @font-face {
+            font-family: Questrial;
+            src: url("fonts/Questrial-Regular.otf") format("opentype");
+        }
 
+        @font-face {
+            font-family: Futura;
+            src: url("fonts/UniversalisADFStd-Regular.otf") format("opentype");
+        }
         body {
             font-family: 'Open Sans', sans-serif;
             overflow-y: hidden !important;
@@ -338,7 +346,11 @@
 
 
             .listName {
-                font-size: 16px;
+
+                letter-spacing: 3px;
+                font-family: "Futura";
+                font-size: 1.2em;
+                text-transform: uppercase;
             }
 
             #mySidebar {
@@ -469,6 +481,7 @@
             width: 24%;
             margin-bottom: 10px;
             padding-bottom:10px;
+            border: 1px solid white;
         }
 
 
@@ -483,7 +496,7 @@
 
         }
         .grid-item .details .listName {
-
+            font-family: "Questrial";
             text-transform: uppercase;
             letter-spacing: 1px;
             font-size: 1em;
@@ -493,8 +506,11 @@
 
 
         .money {
-
             letter-spacing: 3px;
+            font-family: "Futura";
+            font-size: 1.2em;
+            text-transform: uppercase;
+
         }
 
         .grid-item .details .detailed{
@@ -531,6 +547,7 @@
             border-color: #f5f5fa;}
 
 
+
     </style>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -538,7 +555,7 @@
 
     <link rel="stylesheet" href="css/newsletter/reset.css"> <!-- CSS reset -->
     <link rel="stylesheet" href="css/newsletter/style.css"> <!-- Resource style -->
-
+    <link rel="stylesheet" href="css/footer/style.css"> <!-- Resource style -->
 </head>
 <body class="christmas-gift">
 
@@ -573,28 +590,9 @@
 
 
         </section>
-        <footer class="footer-section section no-padding-bottom ">
 
-            <div class="cd-form-wrapper cd-container" style="margin: 10px auto 50px auto;">
-                <form class="cd-form">
-                    <label class="cd-label" for="cd-email">Sign up for Newsletter</label>
-                    <input type="email" id="cd-email" class="cd-email" name="cd-email" placeholder="Enter your email address">
-                    <input type="submit" class="cd-submit" value="Submit" style="background-color: #551313">
-                    <div class="cd-loading"></div>
-                </form>
+            @include('footer')
 
-                <div data-type="message" class="cd-response cd-response-error">Ops! Error message here</div>
-                <div data-type="message" class="cd-response-success"><p>Great! Success message here</p></div>
-                <div data-type="message" class="cd-response cd-response-notification">Hey! Notification message here</div>
-            </div>
-
-            <div class="footer-bottom" style="padding: 5px">
-                <!-- Copyright -->
-                <a class="footer-bottom-text font-second" href="" target="_blank">Fakin good ideas © 2017. All Right
-                    Reserved.</a>
-                <!-- End Copyright -->
-            </div>
-        </footer>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
