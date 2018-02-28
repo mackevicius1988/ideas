@@ -250,8 +250,8 @@
             border-radius: 15px;
             text-transform: uppercase;
             font-family: "Questrial";
-            background: rgba(0,0,0,0.7);
-            color: white !important;
+            background: white;
+            color: black !important;
             transition: all 1s ease;
         }
 
