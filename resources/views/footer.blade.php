@@ -14,11 +14,11 @@
             <h1>ABOUT</h1>
             <hr class="hr--underline">
             <p class="footerAbout">
-                'We think JM&Sons is the perfect marriage of our skill sets - wood working and design. The furniture we produce is hand crafted in Toronto from the highest quality salvaged wood and raw metals.'
+                'FAKINGOODIDEAS is a place, which the main duty is to help to get some cool ideas or goods for You or Your loved ones.'
                 <br />
                 We hope you enjoy.
                 <br />
-                J&M
+                FAKINGOODIDEAS
             </p>
         </div>
         <div class="col-sm-4 col-xs-12 footerHeader">

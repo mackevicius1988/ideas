@@ -587,11 +587,8 @@
                     </div>
                 </div>
             </div>
-
-
         </section>
-
-            @include('footer')
+        @include('footer')
 
     </div>
     <script src="js/jquery.min.js"></script>
@@ -698,14 +695,18 @@
         })
     </script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script>
-        $('.grid').masonry({
-            // options
-            itemSelector: '.grid-item',
-            // use element for option
-            columnWidth: '.grid-sizer',
-            percentPosition: true,
-            gutter: 10
+        var $grid = $('.grid').imagesLoaded( function() {
+            // init Masonry after all images have loaded
+            $grid.masonry({
+                // options
+                itemSelector: '.grid-item',
+                // use element for option
+                columnWidth: '.grid-sizer',
+                percentPosition: true,
+                gutter: 10
+            });
         });
     </script>
     <script src="js/jquery.easing.1.3.min.js"></script>

@@ -561,17 +561,10 @@
             <!--/ End container -->
         </div>
         <!--/ End section -->
-        <footer class="footer-section section no-padding-bottom ">
-            <div class="footer-bottom">
-                <!-- Copyright -->
-                <a class="footer-bottom-text font-second" href="" target="_blank">Fakin good ideas © 2017. All Right
-                    Reserved.</a>
-                <!-- End Copyright -->
-            </div>
-        </footer>
+
         <!--/ End Footer Section -->
     </div>
-
+        @include('footer')
 
     <script src="js/jquery.min.js"></script>
     <script src="js/comments.js"></script>
