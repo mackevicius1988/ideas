@@ -22,7 +22,7 @@ class Posts extends Model
         'tags',
         'imageUrl',
         'availability',
-        'category');
+        'categoryId');
 
 
     public function category()

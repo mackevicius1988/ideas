@@ -10,7 +10,7 @@
                         <img  class="init-animation-4" src="img/lg.png" width="200px"/><br />
                         <img  class="init-animation-4" src="img/logo.png" width="40%"/>
                         <div class="hs-text-6 init-animation-4 delay0-2s fadeInLeft" style="opacity: 1;">
-                            <h2  class = "headerDesc">Modern And Unique Gift Ideas For Everyone</h2>
+                            <h2  class = "headerDesc">Stylish and fashionable tech accessories and gadgets</h2>
                         </div>
                     </div>
 

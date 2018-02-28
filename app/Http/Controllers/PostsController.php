@@ -37,7 +37,7 @@ class PostsController extends Controller
 
     public function find(Request $request)
     {
-
+        DB::connection()->enableQueryLog();
         $scroll = true;
 
         $query = $request->get('query');
@@ -45,8 +45,8 @@ class PostsController extends Controller
         $priceTo = $request->get('priceMax');
         $order = $request->get('order');
         $categoryIds = $request->get('tagsIds');
-        $addTag = $request->get('addTag');
-
+        $categoryId = $request->get('addTag');
+        Log::info( $categoryId);
         $categoryIdsArray = [];
         $builder = Posts::select('id', 'name', 'price', 'imageUrl');
         if ($query != '') {
@@ -61,6 +61,9 @@ class PostsController extends Controller
             $builder = $builder->where('priceIndex', '<', $priceTo);
         }
 
+        if ($categoryId) {
+            $builder = $builder->where('categoryId', '=', $categoryId);
+        }
 
         $savesClass = $order == 'saves' ? 'categorySelected' : '';
         $priceAscClass = $order == 'priceAsc' ? 'categorySelected' : '';
@@ -73,6 +76,8 @@ class PostsController extends Controller
             $builder = $builder->orderBy($order, $direction);
         }
 
+
+        /**
         Log::info($categoryIdsArray);
         if ($categoryIds) {
             $categoryIdsArray = explode(',', $categoryIds);
@@ -82,13 +87,14 @@ class PostsController extends Controller
                 $query->whereIn('tagId', $categoryIdsArray);
             });
         }
+         * **/
 
         $posts = $builder->paginate(16);
-
+        Log::info($posts);
         $tags = Category::all();
 
         foreach ($tags as $tag) {
-                if (in_array($tag->id, $categoryIdsArray))
+                if ($tag->id == $categoryId)
                     $tag['class'] = 'categorySelected';
         }
 
@@ -96,7 +102,8 @@ class PostsController extends Controller
         $price20 = $priceTo == 20 ?  'categorySelected' : '';
         $price50 = $priceFrom == 50 ?  'categorySelected' : '';
 
-
+        $queries = DB::getQueryLog();
+        Log::info($queries);
 
         return view('welcome', [
             'posts' => $posts,

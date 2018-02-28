@@ -31,13 +31,21 @@
                 <div class="collapse navbar-collapse" id="mobile-navbar-collapse">
                     <ul class="nav navbar-nav navbar-right cl-effect-5">
                         <li>
-                           home
-                        </li>
-                        <li>
-                            <a class="ripple-group" href="/v1/about">
-                                <span data-hover="about">about</span>
+                            <a class="ripple-group" href="#" style="color:white !important;">
+                                <span data-hover="home" style="color:white !important;">home</span>
                             </a>
                         </li>
+                        <li>
+                            <a class="ripple-group" href="#" style="color:white !important;">
+                                <span data-hover="SHOP" style="color:white !important;">SHOP</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ripple-group" href="/v1/about" style="color:white !important;">
+                                <span data-hover="about" style="color:white !important;">about</span>
+                            </a>
+                        </li>
+
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->

@@ -5,7 +5,7 @@
         <div class="col-sm-8">
             <div class="tags" style="text-align: center">
                 @foreach($tags as $tag)
-                    <a style="padding: 10px; border-radius: 15px;" class="categoryItem {{$tag->class}}"
+                    <a class="categoryItem {{$tag->class}}"
                        data-id='{{$tag->id}}'>#{{$tag->name}}
 
                     </a>

@@ -241,17 +241,24 @@
         }
 
         .categoryItem {
-
             cursor: pointer;
             letter-spacing: 4px !important;
-            background-color: white;
             display: inline-block;
-            margin: 0 2px 5px 0;
-            padding: 5px 7px;
+            margin: 0 2px 5px 0 !important;
             border: 1px solid #b8b7cb;
-
-            font-weight: 400;
+            padding: 10px !important;
+            border-radius: 15px;
             text-transform: uppercase;
+            font-family: "Questrial";
+            background: rgba(0,0,0,0.7);
+            color: white !important;
+            transition: all 1s ease;
+        }
+
+        .categoryItem:HOVER, .sortItem:HOVER {
+            color: #fff !important;
+            border: 1px solid #ccc  !important;;
+            background: rgb(0,0,0);
         }
 
         .priceItem {
@@ -274,19 +281,16 @@
             margin: 0 2px 3px 0;
             padding: 15px;
             border: 1px solid #b8b7cb;
-            font-size: 10px;
+            font-size: 0.75em;
             color: black;
             font-weight: 400;
             text-transform: uppercase;
         }
 
-        .categoryItem:HOVER, .sortItem:HOVER {
-            background-color: #551313;
-            color: #fff !important;
-        }
+
 
         .categorySelected {
-            background-color: #551313;
+            background-color: #000;
             color: #fff !important;
         }
 
@@ -367,6 +371,7 @@
             .headerDesc {
                 font-size: 12px !important;
                 font-weight: 100;
+                font-family: 'Questrial';
             }
             .listPrice {
                 margin-top: 10px !important;;
@@ -508,7 +513,7 @@
         .money {
             letter-spacing: 3px;
             font-family: "Futura";
-            font-size: 1.2em;
+            font-size: 1em;
             text-transform: uppercase;
 
         }
@@ -681,12 +686,12 @@
                     var tagId = $(this).attr("data-id");
                     $('#addTag').val(tagId);
                     var alreadySelected = $('#tagIds').val();
-
+                    /**
                     if ($(this).hasClass('categorySelected'))
                         $('#tagIds').val(alreadySelected + ',' + tagId);
                     else
                         $('#tagIds').val(alreadySelected.replace(',' + tagId, ''));
-
+                    **/
                  $('#searchForm').submit();
 
                 });
