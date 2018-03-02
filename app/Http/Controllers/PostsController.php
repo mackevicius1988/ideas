@@ -137,10 +137,14 @@ class PostsController extends Controller
         }
         Log::info($stars);
 
+        $categoyId = $post->categoryId;
+        $raletdItems =  Posts::select('id', 'name', 'price', 'imageUrl')->orderBy('saves', 'DESC')->where('categoryId', $categoyId)->limit(4)->get();
+
         return view('post', [
             'post' => $post,
             'comments' => $comments,
-            'stars' => $stars
+            'stars' => $stars,
+            'raletdItems' => $raletdItems
         ]);
 
     }

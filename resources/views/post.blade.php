@@ -318,7 +318,7 @@
             -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
             filter: grayscale(100%);
             transition: all 0.5s ease;
-            width: 100%;
+            width: 80%;
             cursor:pointer;
 
         }
@@ -326,12 +326,7 @@
         .relatedImage:HOVER {
             -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
             filter: grayscale(0%);
-
         }
-
-
-
-
     </style>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
@@ -461,16 +456,15 @@
                         <div class="col-sm-12" style="padding:20px">
                             <h1 style="width: 100%; text-align: center; color: #3c3c3c; margin-bottom: 2em">RELATED</h1>
 
-                            @foreach($post->images as $image)
+                            @foreach($raletdItems as $relatedItem)
                                 <div class="col-xs-12 col-sm-3" style="text-align: center">
-                                    <img src="{{$image->imageUrl}}"  class="relatedImage">
-                                    <p class="listName" style="font-style: normal; padding: 0; margin: 0"> {{ str_limit($post->name, 40) }}</p>
+                                    <img src="{{$relatedItem->imageUrl}}"  class="relatedImage">
+                                    <p class="listName" style="font-style: normal; padding: 0; margin: 0"> {{ str_limit($relatedItem->name, 40) }}</p>
 
-                                    <span class="money">{{$post->price}} USD</span>
+                                    <span class="money">{{$relatedItem->price}} USD</span>
 
                                     <div class="detailed">
-                                    <span style="color: #ccc;
-    font-size: 0.75em;"> {{$post->savings}} </span> <br/>
+                                    <span style="color: #ccc; font-size: 0.75em;"> {{$relatedItem->savings}} </span> <br/>
                                         <span class="fa fa-star checked"></span>
                                         <span class="fa fa-star checked"></span>
                                         <span class="fa fa-star checked"></span>
