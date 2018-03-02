@@ -243,7 +243,7 @@
         .categoryItem {
             cursor: pointer;
             letter-spacing: 4px !important;
-            display: inline-block;
+            display: block;
             margin: 0 2px 5px 0 !important;
             border: 1px solid #b8b7cb;
             padding: 10px !important;
@@ -279,9 +279,9 @@
             background-color: white;
             display: inline-block;
             margin: 0 2px 3px 0;
-            padding: 15px;
+            padding: 7px;
             border: 1px solid #b8b7cb;
-            font-size: 0.75em;
+            font-size: 0.55em;
             color: black;
             font-weight: 400;
             text-transform: uppercase;
@@ -489,11 +489,19 @@
             border: 1px solid white;
         }
 
-
+        .grid-item img {
+            -webkit-filter: grayscale(10%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(10%);
+        }
 
         .grid-item:HOVER {
             opacity: 1;
             border: 1px solid #eeeeee;
+        }
+
+        .grid-item:HOVER img{
+            -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(0%);
         }
 
         .grid-item .details {

@@ -15,7 +15,7 @@
         <div class="details" style="text-align: center ">
             <div class="row">
                 <div class="col-sm-12 col-xs-12">
-                    <p class="listName"> {{ str_limit($post->name, 30) }}</p>
+                    <p class="listName"> {{ str_limit($post->name, 40) }}</p>
 
                     <span class="money">{{$post->price}} USD</span>
                   
@@ -27,6 +27,8 @@
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star  checked"></span>
+                    <br />
+                    <span style="letter-spacing: 3px;font-family: 'Futura'; color: #999; font-size: 0.75em">{{$post->rating}}</span>
                     </div>
                 </div>
             </div>

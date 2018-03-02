@@ -2,7 +2,7 @@
 
     {!! Form::open(array('url' => 'find', 'method' => 'get' ,'class' => 'form', 'id'=>'searchForm')) !!}
     <div class="row ">
-        <div class="col-sm-8">
+        <div class="col-sm-6"  style="text-align: center">
             <div class="tags" style="text-align: center">
                 @foreach($tags as $tag)
                     <a class="categoryItem {{$tag->class}}"
@@ -10,8 +10,7 @@
 
                     </a>
               @endforeach
-              <a style="padding: 10px; border-radius: 15px;" class="priceItem {{$price20}}" id="price20">Under 20$</a>
-              <a style="padding: 10px; border-radius: 15px;" class="priceItem {{$price50}}" id="price50">OVER 50$</a>
+
                     {!! Form::text('tagsIds', null, array( 'id' => 'tagIds')) !!}
                     {!! Form::hidden('addTag', null, array( 'id' => 'addTag')) !!}
 
@@ -25,7 +24,13 @@
                                )) !!}
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3" style="text-align: center; padding-top: 20px">
+            <div class="tags" style="text-align: center">
+            <a style="padding: 10px; border-radius: 15px;" class="priceItem {{$price20}}" id="price20">Under 20$</a>
+            <a style="padding: 10px; border-radius: 15px;" class="priceItem {{$price50}}" id="price50">OVER 50$</a>
+            </div>
+        </div>
+        <div class="col-sm-3"  style="text-align: center">
             <h2 class="hs-text-6" ; style="margin-top: 15px ;text-align:right">Sort by:</h2>
             <div style="margin-bottom: 20px">
                 <a data-id="saves" class="sortItem {{$savesClass}}" style="border-radius: 10px">POPULARITY</a>

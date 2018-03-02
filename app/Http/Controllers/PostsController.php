@@ -19,7 +19,7 @@ class PostsController extends Controller
 
     public function index(Request $request)
     {
-        $posts = Posts::select('id', 'name', 'price', 'imageUrl')->orderBy('saves', 'DESC')->paginate(16);
+        $posts = Posts::select('id', 'name', 'price', 'imageUrl', 'rating')->orderBy('saves', 'DESC')->paginate(16);
         $tags = Category::all();
         $scroll = $request->get('page');
 
@@ -48,7 +48,7 @@ class PostsController extends Controller
         $categoryId = $request->get('addTag');
         Log::info( $categoryId);
         $categoryIdsArray = [];
-        $builder = Posts::select('id', 'name', 'price', 'imageUrl');
+        $builder = Posts::select('id', 'name', 'price', 'imageUrl', 'rating');
         if ($query != '') {
             $builder = $builder->where('name', 'LIKE', '%' . $query . '%');
         }

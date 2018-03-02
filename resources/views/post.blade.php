@@ -290,7 +290,7 @@
             font-family: "Futura";
             font-size: 1.2em;
             text-transform: uppercase;
-
+            color: black;
         }
 
         .navItem {
@@ -302,12 +302,13 @@
         }
 
         .categoryDesc {
-            font-size: 1.5em;
+            font-size: 1.25em;
             margin: 10px;
+            margin-top:30px;
             letter-spacing: 3px;
             font-weight: normal;
             line-height: 1.4;
-            font-family: "Futura";
+            font-family: "Questrial";
             text-transform: uppercase;
             letter-spacing: 2px;
             -webkit-font-smoothing: antialiased;
@@ -334,6 +335,10 @@
     <link rel="stylesheet" href="/css/gallery/vendor/animate/animate.min.css">
 
     <link rel="stylesheet" href="/css/gallery/jquery.desoslide.css">
+
+    <link rel="stylesheet" href="css/newsletter/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/newsletter/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/footer/style.css"> <!-- Resource style -->
 </head>
 <body>
 
@@ -378,7 +383,7 @@
                                     <div id="slideshow5" class="col-lg-9" style="float: none; margin: 0 auto; "></div>
                                 </div>
 
-                                <div class="row">
+                                <div class="row" style="margin-top: 10px">
                                     <div class="col-lg-12">
                                         <ul id="slideshow5_thumbs"
                                             class="desoslide-thumbs-horizontal list-inline text-center">
@@ -386,7 +391,7 @@
                                             @foreach($post->images as $image)
                                                 <li>
                                                     <a href="{{$image->imageUrl}}">
-                                                        <img src="{{$image->imageUrl}}" alt="dolmens" width="80px">
+                                                        <img src="{{$image->imageUrl}}" alt="dolmens" width="70px">
                                                     </a>
                                                 </li>
 
@@ -422,11 +427,9 @@
                                         <span class="fa fa-star {{$star}}"></span>
                                     @endforeach
                                 </p>
-                                <span style="letter-spacing: 3px;font-family: 'Futura'">{{$post->rating}}</span><br/>
+                                <span style="letter-spacing: 3px;font-family: 'Futura'; color: black">{{$post->rating}}</span><br/>
                                 <a class="animsition-link" href="{{$post->url}}#customerReviews"
                                    style="font-family: 'Futura'">Read customers reviews</a>
-
-
                             </div>
 
                         </div>
@@ -454,23 +457,17 @@
 
                     <div class="row">
                         <div class="col-sm-12" style="padding:20px">
-                            <h1 style="width: 100%; text-align: center; color: #3c3c3c; margin-bottom: 2em">RELATED</h1>
+                            <h3 class="categoryDesc" style="text-align: center">RELATED</h3>
 
                             @foreach($raletdItems as $relatedItem)
                                 <div class="col-xs-12 col-sm-3" style="text-align: center">
+                                    <a class="animsition-link" href="https://fakingoodideas.com/{{$relatedItem->id}}">
                                     <img src="{{$relatedItem->imageUrl}}"  class="relatedImage">
-                                    <p class="listName" style="font-style: normal; padding: 0; margin: 0"> {{ str_limit($relatedItem->name, 40) }}</p>
+                                    <p class="listName" style="font-family:'Questrial'; padding:10px;font-style: normal; margin: 0; "> {{ str_limit($relatedItem->name, 40) }}</p>
 
                                     <span class="money">{{$relatedItem->price}} USD</span>
 
-                                    <div class="detailed">
-                                    <span style="color: #ccc; font-size: 0.75em;"> {{$relatedItem->savings}} </span> <br/>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star  checked"></span>
-                                    </div>
+                                    </a>
                                 </div>
                             @endforeach
 
@@ -481,7 +478,7 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <section class="blog-comment-section" style="margin-top: 0">
-                                <h2 class="blog-page-post-title margin-bottom-60 font-second">Comments</h2>
+                                <h2 class="blog-page-post-title margin-bottom-60 font-second" style="color: black">Comments</h2>
                                 <ul class="media-list text comment-list clearlist">
 
 
@@ -507,7 +504,7 @@
                             </section>
 
                             <section class="blog-comment-section">
-                                <h2 class="blog-page-post-title font-second margin-bottom-60">Leave a reply</h2>
+                                <h2 class="blog-page-post-title font-second margin-bottom-60" style="color: black">Leave a reply</h2>
                                 <!-- Form -->
                                 <form>
                                     <fieldset>
@@ -516,7 +513,7 @@
                                             <div class="input col-xs-12 col-sm-6 padding-bottom-xs-50 padding-bottom-40">
                                                 <label class="input-label" for="name">
                                                 <span class="input-label-content font-second"
-                                                      data-content="name">name *</span>
+                                                      data-content="name" style="color: black">name *</span>
                                                 </label>
                                                 <input class="input-field" type="text" name="name" id="name"
                                                        required="">
@@ -524,7 +521,7 @@
 
                                             <div class="input col-xs-12 col-sm-6 padding-bottom-xs-50 padding-bottom-40">
                                                 <label class="input-label" for="email">
-                                                    <span class="input-label-content font-second" data-content="email">email *</span>
+                                                    <span class="input-label-content font-second" data-content="email" style="color: black">email *</span>
                                                 </label>
                                                 <input class="input-field" type="email" name="email" id="email"
                                                        required="">
@@ -532,7 +529,7 @@
                                         </div>
                                         <div class="row margin-bottom-20 margin-top-xs-10">
                                             <div class="message col-xs-12 ">
-                                                <label class="textarea-label font-second" for="message">message
+                                                <label class="textarea-label font-second" for="message" style="color: black">message
                                                     *</label>
                                                 <textarea class="input-field textarea" name="message" id="message"
                                                           required=""></textarea>
