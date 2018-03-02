@@ -5,9 +5,11 @@
             <h1>MAIN MENU</h1>
             <hr class="hr--underline">
             <ul class="footerMainMenu">
-                <li>HOME</li>
-                <li>SHOP</li>
-                <li>ABOUT US</li>
+                <li>
+                    <a href="https://www.fakingoodideas.com">HOME</a>
+                </li>
+                <li><a href="https://www.fakingoodideas.com">SHOP</a></li>
+                <li><a href="https://www.fakingoodideas.com/v1/about">ABOUT US</a></li>
             </ul>
         </div>
         <div class="col-sm-4 col-xs-12 footerHeader">
@@ -17,7 +19,7 @@
                 'FAKINGOODIDEAS is a place, which the main duty is to help to get some cool ideas or goods for You or Your loved ones.'
                 <br />
                 We hope you enjoy.
-                <br />
+                <br /><br />
                 FAKINGOODIDEAS
             </p>
         </div>

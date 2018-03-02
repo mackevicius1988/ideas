@@ -473,7 +473,7 @@
         }
 
         .checked {
-            color: #c59d5f;
+            color: #AC9751;
         }
 
 
