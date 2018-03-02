@@ -569,6 +569,17 @@
     <link rel="stylesheet" href="css/newsletter/reset.css"> <!-- CSS reset -->
     <link rel="stylesheet" href="css/newsletter/style.css"> <!-- Resource style -->
     <link rel="stylesheet" href="css/footer/style.css"> <!-- Resource style -->
+    <!-- Hotjar Tracking Code for https://fakingoodideas.com -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:800589,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
 </head>
 <body class="christmas-gift">
 
