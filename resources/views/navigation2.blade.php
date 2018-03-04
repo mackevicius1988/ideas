@@ -21,7 +21,7 @@
                    href="https://fakingoodideas.com" style="color :white;">
                     <img  class="init-animation-4" src="img/logo.png" width="200px" /></a>
                 <!-- Brand and toggle get grouped for better mobile display -->
-                
+
 
                 <!--   onclick="goBack()" /.navbar-collapse -->
             </div>

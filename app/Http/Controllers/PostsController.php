@@ -19,7 +19,7 @@ class PostsController extends Controller
 
     public function index(Request $request)
     {
-        $posts = Posts::select('id', 'name', 'price', 'imageUrl', 'rating')->orderBy('saves', 'DESC')->paginate(196);
+        $posts = Posts::select('id', 'name', 'price', 'imageUrl', 'rating')->orderBy('saves', 'DESC')->paginate(16);
         $tags = Category::orderBy('order', 'ASC')->get();
         $scroll = $request->get('page');
         $catName = 'FAKINGOODIDEAS';
