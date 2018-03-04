@@ -2,36 +2,37 @@
 
     {!! Form::open(array('url' => 'find', 'method' => 'get' ,'class' => 'form', 'id'=>'searchForm')) !!}
     <div class="row ">
-        <div class="col-sm-6"  style="text-align: center">
-            <div class="tags" style="text-align: center">
-                @foreach($tags as $tag)
-                    <a class="categoryItem {{$tag->class}}"
-                       data-id='{{$tag->id}}'>#{{$tag->name}}
+        @foreach($tags as $tag)
+            <div class="col-xs-12 col-sm-6 col-md-3 categoryBlock">
+                <a class="categoryItem" data-id='{{$tag->id}}'>
+                    <img src="{{$tag->image}}" style="    display: inline-block;
+    height: auto;
+    max-width: 100%;" class="{{$tag->class}}"/>
+                    <div class="nameBlock">
+                        <h5>{{$tag->name}}</h5>
+                        <span class="catDesc">{{$tag->desc}}</span>
+                    </div>
+                </a>
 
-                    </a>
-              @endforeach
-
-                    {!! Form::text('tagsIds', null, array( 'id' => 'tagIds')) !!}
-                    {!! Form::hidden('addTag', null, array( 'id' => 'addTag')) !!}
-
-                {!! Form::hidden('priceMin', null,
-                          array(
-                              'id' => 'priceMin',
-                                 )) !!}
-                {!! Form::hidden('priceMax', null,
-                          array(
-                              'id' => 'priceMax',
-                               )) !!}
             </div>
+        @endforeach
+        {!! Form::hidden('addTag', null, array( 'id' => 'addTag')) !!}
+    </div>
+    <div class="container">
+    <div class="row ">
+        <div class="col-sm-12"  style="text-align: left; padding:20px; padding-left: 120px;padding-top: 40px">
+
+            <h1 style="color: black ; font-size: 1.25em">{{$catName}}</h1>
+            <span class="catDesc">{{$catDesc}}</span>
+
+        </div>
+        <div class="col-sm-6" style="text-align: center; padding-top: 20px">
+
         </div>
         <div class="col-sm-3" style="text-align: center; padding-top: 20px">
-            <div class="tags" style="text-align: center">
-            <a style="padding: 10px; border-radius: 15px;" class="priceItem {{$price20}}" id="price20">Under 20$</a>
-            <a style="padding: 10px; border-radius: 15px;" class="priceItem {{$price50}}" id="price50">OVER 50$</a>
-            </div>
+
         </div>
         <div class="col-sm-3"  style="text-align: center">
-            <h2 class="hs-text-6" ; style="margin-top: 15px ;text-align:right">Sort by:</h2>
             <div style="margin-bottom: 20px">
                 <a data-id="saves" class="sortItem {{$savesClass}}" style="border-radius: 10px">POPULARITY</a>
                 <a data-id="priceDesc" class="sortItem {{$priceDescClass}}" style="border-radius: 10px">$ HIGH to LOW</a>
@@ -41,6 +42,6 @@
             </div>
         </div>
     </div>
-
+    </div>
     {!! Form::close() !!}
 </div>

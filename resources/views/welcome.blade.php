@@ -242,20 +242,16 @@
 
         .categoryItem {
             cursor: pointer;
-            letter-spacing: 4px !important;
             display: block;
-            margin: 0 2px 5px 0 !important;
-            border: 1px solid #b8b7cb;
-            padding: 10px !important;
-            border-radius: 15px;
+            border: 1px solid white;
+            padding: 0;
             text-transform: uppercase;
             font-family: "Questrial";
-            background: white;
             color: black !important;
             transition: all 1s ease;
         }
 
-        .categoryItem:HOVER, .sortItem:HOVER {
+        .sortItem:HOVER {
             color: #fff !important;
             border: 1px solid #ccc  !important;;
             background: rgb(0,0,0);
@@ -289,10 +285,7 @@
 
 
 
-        .categorySelected {
-            background-color: #000;
-            color: #fff !important;
-        }
+
 
         .fa-bookmark {
             font-size: 32px
@@ -559,6 +552,55 @@
             padding: 20px;
             border-color: #f5f5fa;}
 
+        .categoryBlock {
+            margin:0;
+            overflow: hidden !important;
+            padding: 0;
+            text-align: left;
+        }
+
+        .categoryBlock img {
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+            transition: all 0.7s ease;
+        }
+
+        .categoryBlock  img.categorySelected {
+            -webkit-filter: grayscale(0%) !important; /* Safari 6.0 - 9.0 */
+            filter: grayscale(0%)!important;
+
+        }
+
+        .categoryBlock:HOVER img {
+            -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(0%);
+
+        }
+
+
+        .categoryBlock .nameBlock  {
+            font-weight: 100;
+            position: absolute;
+            bottom: 10%;
+            margin: 0;
+            color: #fff;
+            width: 100%;
+            letter-spacing: 3px;
+            font-family: "Questrial";
+            background: rgba(0,0,0,0.7);
+            padding: 10px;
+            padding-left: 20px;
+        }
+
+        .categoryBlock:HOVER .nameBlock  {
+            color: #c59d5f;
+        }
+
+        .catDesc {
+            font-size: 0.75em;
+            color: #ccc;
+        }
+
 
 
     </style>
@@ -602,7 +644,7 @@
     @include('navigation')
 
     <div id="page-2">
-        <section id="about-section" class="about-section section" style="padding: 15px;padding-top: 80px">
+        <section id="about-section" class="about-section section" style="padding: 15px;padding-top: 60px">
             @include('tags')
             <div class="container">
                 <div class="main" style="text-align: center">
@@ -701,8 +743,8 @@
 
             $(function () {
                 $('.categoryItem').click(function (e) {
-                    $(this).toggleClass('categorySelected');
                     var tagId = $(this).attr("data-id");
+                    console.log(tagId);
                     $('#addTag').val(tagId);
                     var alreadySelected = $('#tagIds').val();
                     /**

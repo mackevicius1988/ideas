@@ -19,9 +19,11 @@ class PostsController extends Controller
 
     public function index(Request $request)
     {
-        $posts = Posts::select('id', 'name', 'price', 'imageUrl', 'rating')->orderBy('saves', 'DESC')->paginate(16);
-        $tags = Category::all();
+        $posts = Posts::select('id', 'name', 'price', 'imageUrl', 'rating')->orderBy('saves', 'DESC')->paginate(196);
+        $tags = Category::orderBy('order', 'ASC')->get();
         $scroll = $request->get('page');
+        $catName = 'FAKINGOODIDEAS';
+        $catDesc = 'Exclusive ideas for you';
 
         return view('welcome', [
             'posts' => $posts,
@@ -31,7 +33,9 @@ class PostsController extends Controller
             'price50' => '',
             'savesClass' => 'categorySelected',
             'priceAscClass' => '',
-            'priceDescClass' => ''
+            'priceDescClass' => '',
+            'catName' => $catName,
+            'catDesc' => $catDesc
         ]);
     }
 
@@ -44,7 +48,7 @@ class PostsController extends Controller
         $priceFrom = $request->get('priceMin');
         $priceTo = $request->get('priceMax');
         $order = $request->get('order');
-        $categoryIds = $request->get('tagsIds');
+
         $categoryId = $request->get('addTag');
         Log::info( $categoryId);
         $categoryIdsArray = [];
@@ -91,11 +95,16 @@ class PostsController extends Controller
 
         $posts = $builder->paginate(16);
         Log::info($posts);
-        $tags = Category::all();
-
+        $tags = Category::orderBy('order', 'ASC')->get();
+        $catName = 'FAKINGOODIDEAS';
+        $catDesc = 'Exclusive ideas for you';
         foreach ($tags as $tag) {
-                if ($tag->id == $categoryId)
+                if ($tag->id == $categoryId) {
                     $tag['class'] = 'categorySelected';
+                    $catName = $tag->name;
+                    $catDesc = $tag->desc;
+                }
+
         }
 
 
@@ -113,7 +122,9 @@ class PostsController extends Controller
             'price50' => $price50,
             'savesClass' => $savesClass,
             'priceAscClass' => $priceAscClass,
-            'priceDescClass' => $priceDescClass
+            'priceDescClass' => $priceDescClass,
+            'catName' => $catName,
+            'catDesc' => $catDesc
         ]);
     }
 
