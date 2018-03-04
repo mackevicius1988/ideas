@@ -27,7 +27,7 @@
     <meta property="og:title" content="FAKINGOODIDEAS"/>
     <meta name="description"
           content="Fashionable, stylish and smart tech accesories for your devices at FAKINGOODIDEAS.COM"/>
-    <meta property="og:image" content="https://fakingoodideas.com/img/img.jpg"/>
+    <meta property="og:image" content="https://fakingoodideas.com/img/og.jpg"/>
 
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
