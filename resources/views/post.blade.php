@@ -270,7 +270,7 @@
             color: black;
             background: white;
             letter-spacing: 3px;
-            padding: 10px 80px;
+            padding: 10px 60px;
             font-family: "Questrial";
             border: 1px solid black;
             font-weight: 200;
@@ -455,7 +455,7 @@
 
                             <div class="row">
                                 <div class="col-xs-12 padding20 textCenter">
-                                    <a class="buyNow animsition-link " href="{{$post->url}}">BUY ON AMAZON</a>
+                                    <a class="buyNow animsition-link" href="{{$post->url}}">BUY ON AMAZON</a>
                                 </div>
                             </div>
 

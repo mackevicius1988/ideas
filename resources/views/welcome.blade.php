@@ -12,22 +12,22 @@
 
         gtag('config', 'UA-109033621-1');
     </script>
-    <title>Christmas Gifts, Presents and Gift Ideas - Buy from fakingoodideas.com</title>
+    <title>FAKINGOODIDEAS</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="copyright" content="Copyright ©2017">
+    <meta name="copyright" content="Copyright ©2018">
     <meta name="description"
-          content="Christmas Gifts for everyone! From amazing gadgets through to unusual Christmas presents, there's a perfect Xmas Gift for everyone at Fakingoodideas!"/>
+          content="Fashionable, stylish and smart tech accesories for your devices at FAKINGOODIDEAS.COM"/>
     <meta name="robots" content="index,follow">
 
     <meta property="og:url" content="http://fakingoodideas.com"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Fakin good ideas"/>
-    <meta property="og:description"
-          content="Christmas Gifts for everyone! From amazing gadgets through to unusual Christmas presents, there's a perfect Xmas Gift for everyone at Fakingoodideas!"/>
-    <meta property="og:image" content="https://images-na.ssl-images-amazon.com/images/I/71EJ6shbuYL._SL1500_.jpg"/>
+    <meta property="og:title" content="FAKINGOODIDEAS"/>
+    <meta name="description"
+          content="Fashionable, stylish and smart tech accesories for your devices at FAKINGOODIDEAS.COM"/>
+    <meta property="og:image" content="https://fakingoodideas.com/img/img.jpg"/>
 
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
